@@ -8,7 +8,7 @@
           <NuxtContent :document="document" />
         </article>
        <AppPageBottom :document="document" />
-      <AppPrevNext :prev="prev" :next="next" />
+<!--      <AppPrevNext :prev="prev" :next="next" />-->
     </div>
     <AppToc v-if="!document.fullscreen" :toc="document.toc" />
   </div>
@@ -20,16 +20,16 @@ export default {
   async asyncData({ $content, params }) {
     const document = await $content('documentation', params.slug).fetch();
 
-    const [prev, next] = await $content('documentation', { deep: true })
-      .only(['title', 'slug'])
-      .sortBy('position', 'asc')
-      .surround(params.slug)
-      .fetch()
+    // const [prev, next] = await $content('documentation', { deep: true })
+    //   .only(['title', 'slug'])
+    //   .sortBy('position', 'asc')
+    //   .surround(params.slug)
+    //   .fetch()
 
     return {
       document,
-      prev,
-      next
+      // prev,
+      // next
     }
   },
   transition: {

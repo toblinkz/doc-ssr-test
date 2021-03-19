@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="prev || next"
-    class="flex  lg:px-8 pt-4 border-t dark:border-gray-800"
+    class="flex  lg:px-8 pt-4  dark:border-gray-800"
 
   >
 

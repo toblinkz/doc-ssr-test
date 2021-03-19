@@ -63,4 +63,16 @@ table td,table th{
     top: 4rem;
   }
 }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(-48deg, #0DCBE5 -30%, #365899 60%) !important;
+  outline: 1px solid #7D838B !important;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px !important;
+}
+::-webkit-scrollbar {
+  width: 9px !important;
+  height: auto !important;
+  background: #fff !important;
+}
 

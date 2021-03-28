@@ -9,7 +9,12 @@ export { default as CodeBlock } from '../..\\components\\CodeBlock.vue'
 export { default as CodeGroup } from '../..\\components\\CodeGroup.vue'
 export { default as IconArrowLeft } from '../..\\components\\IconArrowLeft.vue'
 export { default as IconArrowRight } from '../..\\components\\IconArrowRight.vue'
+export { default as InboxNavigationComponent } from '../..\\components\\InboxNavigationComponent.vue'
+export { default as InsightsNavigationComponent } from '../..\\components\\InsightsNavigationComponent.vue'
 export { default as Logo } from '../..\\components\\Logo.vue'
+export { default as QuickNavigationCard } from '../..\\components\\QuickNavigationCard.vue'
+export { default as SwitchNavigationComponent } from '../..\\components\\SwitchNavigationComponent.vue'
+export { default as TokenNavigationComponent } from '../..\\components\\TokenNavigationComponent.vue'
 export { default as IconsBuiltWithNuxtDark } from '../..\\components\\icons\\BuiltWithNuxtDark.vue'
 export { default as IconsBuiltWithNuxtLight } from '../..\\components\\icons\\BuiltWithNuxtLight.vue'
 export { default as IconsIconBadgeCheck } from '../..\\components\\icons\\IconBadgeCheck.vue'
@@ -41,7 +46,12 @@ export const LazyCodeBlock = import('../..\\components\\CodeBlock.vue' /* webpac
 export const LazyCodeGroup = import('../..\\components\\CodeGroup.vue' /* webpackChunkName: "components/code-group" */).then(c => c.default || c)
 export const LazyIconArrowLeft = import('../..\\components\\IconArrowLeft.vue' /* webpackChunkName: "components/icon-arrow-left" */).then(c => c.default || c)
 export const LazyIconArrowRight = import('../..\\components\\IconArrowRight.vue' /* webpackChunkName: "components/icon-arrow-right" */).then(c => c.default || c)
+export const LazyInboxNavigationComponent = import('../..\\components\\InboxNavigationComponent.vue' /* webpackChunkName: "components/inbox-navigation-component" */).then(c => c.default || c)
+export const LazyInsightsNavigationComponent = import('../..\\components\\InsightsNavigationComponent.vue' /* webpackChunkName: "components/insights-navigation-component" */).then(c => c.default || c)
 export const LazyLogo = import('../..\\components\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => c.default || c)
+export const LazyQuickNavigationCard = import('../..\\components\\QuickNavigationCard.vue' /* webpackChunkName: "components/quick-navigation-card" */).then(c => c.default || c)
+export const LazySwitchNavigationComponent = import('../..\\components\\SwitchNavigationComponent.vue' /* webpackChunkName: "components/switch-navigation-component" */).then(c => c.default || c)
+export const LazyTokenNavigationComponent = import('../..\\components\\TokenNavigationComponent.vue' /* webpackChunkName: "components/token-navigation-component" */).then(c => c.default || c)
 export const LazyIconsBuiltWithNuxtDark = import('../..\\components\\icons\\BuiltWithNuxtDark.vue' /* webpackChunkName: "components/icons-built-with-nuxt-dark" */).then(c => c.default || c)
 export const LazyIconsBuiltWithNuxtLight = import('../..\\components\\icons\\BuiltWithNuxtLight.vue' /* webpackChunkName: "components/icons-built-with-nuxt-light" */).then(c => c.default || c)
 export const LazyIconsIconBadgeCheck = import('../..\\components\\icons\\IconBadgeCheck.vue' /* webpackChunkName: "components/icons-icon-badge-check" */).then(c => c.default || c)

@@ -2,7 +2,7 @@
 title: Authentication
 description: 'Termii Authentication'
 position: 2
-category: Home
+category: Authentication
 ---
 
 Termii authenticates your API requests using your account’s API key.

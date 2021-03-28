@@ -1,8 +1,8 @@
 ---
 title: Search
 description: 'Termii provides RESTful API which is based on simple HTTP POST/GET requests. Our API lets you create, send, and verify messages, as well as, track your delivery statistics.'
-position: 13
-category: Insight
+position: 16
+category: Insights
 ---
 
 The search API allows businesses verify phone numbers and automatically detect their status as well as current network. It also tells if the number has activated the do-not-disturb settings.

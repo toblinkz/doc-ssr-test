@@ -1,7 +1,7 @@
 ---
 title: Messaging
 description: 'Termii Messaging'
-position: 5
+position: 8
 category: Switch
 ---
 

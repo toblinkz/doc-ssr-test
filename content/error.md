@@ -2,7 +2,7 @@
 title: Error 
 description: 'API response error'
 position: 3
-category: Home
+category: Error
 ---
 
 Termii's API is a  RESTful API which is based on simple HTTP POST/GET requests.

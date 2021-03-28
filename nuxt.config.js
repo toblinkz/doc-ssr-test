@@ -18,7 +18,10 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '@assets/font/karla/css/karla.css',
-    '@assets/css/main.css'
+    '@assets/css/main.css',
+    '@assets/icons/entypo/css/entypo.css',
+    '@assets/icons/fontawesome/styles.min.css',
+    '@assets/icons/icomoon/styles.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)

@@ -1,7 +1,7 @@
 ---
 title: Templates
 description: 'Termii  Templates'
-position: 7
+position: 10
 category: Switch
 ---
 

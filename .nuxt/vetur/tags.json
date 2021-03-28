@@ -32,8 +32,23 @@
   "IconArrowRight": {
     "description": "Auto imported from components/IconArrowRight.vue"
   },
+  "InboxNavigationComponent": {
+    "description": "Auto imported from components/InboxNavigationComponent.vue"
+  },
+  "InsightsNavigationComponent": {
+    "description": "Auto imported from components/InsightsNavigationComponent.vue"
+  },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
+  },
+  "QuickNavigationCard": {
+    "description": "Auto imported from components/QuickNavigationCard.vue"
+  },
+  "SwitchNavigationComponent": {
+    "description": "Auto imported from components/SwitchNavigationComponent.vue"
+  },
+  "TokenNavigationComponent": {
+    "description": "Auto imported from components/TokenNavigationComponent.vue"
   },
   "IconsBuiltWithNuxtDark": {
     "description": "Auto imported from components/icons/BuiltWithNuxtDark.vue"

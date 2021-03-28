@@ -1,8 +1,8 @@
 ---
 title: History
 description: 'Termii provides RESTful API which is based on simple HTTP POST/GET requests. Our API lets you create, send, and verify messages, as well as, track your delivery statistics.'
-position: 15
-category: Insight
+position: 18
+category: Insights
 ---
 
 This Inbox API returns reports for messages sent across the sms, voice & whatsapp channels. Reports can either display all messages on termii or a single message.

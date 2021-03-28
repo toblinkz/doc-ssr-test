@@ -1,7 +1,7 @@
 ---
 title: Sender ID
 description: 'Termii Sender Id'
-position: 4
+position: 7
 category: Switch
 ---
 A Sender ID is the name or number that identifies the sender of an SMS message.

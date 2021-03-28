@@ -1,8 +1,8 @@
 ---
 title: Status
 description: 'Termii provides RESTful API which is based on simple HTTP POST/GET requests. Our API lets you create, send, and verify messages, as well as, track your delivery statistics.'
-position: 14
-category: Insight
+position: 17
+category: Insights
 ---
 
 The status API allows businesses to detect if a number is fake or has ported to a new network.

@@ -26,12 +26,11 @@ export default {
         error({ statusCode: 404, message: "Page not found" });
       });
 
-    const [prev, next] = await $content('')
-      .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
-      .surround(params.slug)
+    const [prev, next] = await $content('/', { deep: true })
+      .only(['title', 'path', 'to'])
+      .sortBy('position', 'asc')
+      .surround(params.slug, { before: 1, after: 1 })
       .fetch()
-
     return {
       document,
       prev,

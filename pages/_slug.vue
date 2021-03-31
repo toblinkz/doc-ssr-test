@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap-reverse" >
+  <div class="flex flex-wrap-reverse bg-color" >
     <div class="w-full py-4 lg:pt-8 lg:pb-4 dark:border-gray-800 lg:w-3/4">
         <article class="prose dark:prose-dark max-w-none lg:px-8">
           <h1 class="flex items-center justify-between">
@@ -19,7 +19,6 @@ export default {
 
   async asyncData({ $content, params, error }) {
     const slug = params.slug || "index";
-    console.log(slug)
     const document = await $content(slug)
       .fetch()
       .catch(err => {

@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Termii Documentation
 description: 'Termii Authentication'
 position: 1
 category: Home

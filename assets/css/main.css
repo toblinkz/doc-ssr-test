@@ -79,4 +79,11 @@ table td,table th{
   color: #1a202c;
   text-decoration: none;
 }
+.bg-color{
+  background-color: #f9fbfc;
+}
+.prose {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 

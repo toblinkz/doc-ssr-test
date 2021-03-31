@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-4 pb-4 lg:px-8 flex flex-col sm:flex-row justify-between">
+  <div class="pt-4  pb-4 lg:px-8 flex flex-col sm:flex-row justify-between">
     <a
 
       target="_blank"

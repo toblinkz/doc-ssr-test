@@ -6,7 +6,7 @@
    <div class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)">
      <ul class="p-10 ">
        <li class="mb-4">
-         <p class="mb-2 text-black tracking-wider font-bold text-sm lg:text-xs cursor-pointer">
+         <p class="mb-2 text-gray-700 font-semibold tracking-wider  text-sm lg:text-xs cursor-pointer">
          <NuxtLink
            to="/"
          >
@@ -15,7 +15,7 @@
          </p>
        </li>
        <li class="mb-4">
-           <p class="mb-2 text-black  tracking-wider font-bold text-sm lg:text-xs cursor-pointer">
+           <p class="mb-2 text-gray-700  tracking-wider font-semibold text-sm lg:text-xs cursor-pointer">
              <NuxtLink to="authentication">
                <i class="entypo-home"></i> Authentication
              </NuxtLink>
@@ -23,7 +23,7 @@
        </li>
        <li class="mb-4">
 
-           <p class="mb-2 text-black  tracking-wider font-bold text-sm lg:text-xs cursor-pointer">
+           <p class="mb-2 text-gray-700  tracking-wider font-semibold text-sm lg:text-xs cursor-pointer">
              <NuxtLink to="error">
                <i class="entypo-cancel-circled"></i> Error
              </NuxtLink>
@@ -32,7 +32,7 @@
        </li>
 
        <li class="mb-4">
-         <p  @click="toggleInboxDropdown" class="mb-2 text-black  tracking-wider font-bold text-sm lg:text-xs cursor-pointer">
+         <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
            <nuxt-link
              to="inbox"
            >
@@ -55,7 +55,7 @@
        </li>
        <li class="mb-4">
 
-           <p class="mb-2 text-black  tracking-wider font-bold text-sm lg:text-xs cursor-pointer" @click="toggleSwitchDropdown">
+           <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleSwitchDropdown">
              <nuxt-link to="switch">
                <i class="entypo-list"></i>Switch
              </nuxt-link>
@@ -98,7 +98,7 @@
          </ul>
        </li>
        <li class="mb-4">
-           <p class="mb-2 text-black  tracking-wider font-bold text-sm lg:text-xs cursor-pointer" @click="toggleTokenDropdown">
+           <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleTokenDropdown">
              <nuxt-link to="token">
                <i class="entypo-light-up"></i>Token
              </nuxt-link>
@@ -132,7 +132,7 @@
        </li>
        <li class="mb-4">
 
-           <p class="mb-2 text-black tracking-wider font-bold text-sm lg:text-xs cursor-pointer" @click="toggleInsightsDropdown">
+           <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleInsightsDropdown">
              <nuxt-link to="insights">
                <i class="icon-graph"></i>Insights
              </nuxt-link>

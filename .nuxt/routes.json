@@ -3,12 +3,14 @@
     "name": "index",
     "path": "/",
     "component": "/Users/ayomideawe/Sandbox/termii-documentation/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_a098c436"
   },
   {
     "name": "slug",
     "path": "/:slug",
     "component": "/Users/ayomideawe/Sandbox/termii-documentation/pages/_slug.vue",
-    "chunkName": "pages/_slug"
+    "chunkName": "pages/_slug",
+    "_name": "_a40606c6"
   }
 ]

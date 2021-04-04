@@ -12,10 +12,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_45c4dce5 from 'nuxt_plugin_plugin_45c4dce5' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_pluginclient_73f3431b from 'nuxt_plugin_pluginclient_73f3431b' // Source: .\\content\\plugin.client.js (mode: 'client')
-import nuxt_plugin_pluginserver_4ca696ba from 'nuxt_plugin_pluginserver_4ca696ba' // Source: .\\content\\plugin.server.js (mode: 'server')
-import nuxt_plugin_vuescrollactive_41e62aee from 'nuxt_plugin_vuescrollactive_41e62aee' // Source: ..\\plugins\\vue-scrollactive (mode: 'all')
+import nuxt_plugin_plugin_0a9504fa from 'nuxt_plugin_plugin_0a9504fa' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_pluginclient_e3326102 from 'nuxt_plugin_pluginclient_e3326102' // Source: ./content/plugin.client.js (mode: 'client')
+import nuxt_plugin_pluginserver_17bf7df2 from 'nuxt_plugin_pluginserver_17bf7df2' // Source: ./content/plugin.server.js (mode: 'server')
+import nuxt_plugin_vuescrollactive_41e62aee from 'nuxt_plugin_vuescrollactive_41e62aee' // Source: ../plugins/vue-scrollactive (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -61,7 +61,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"termii-documentation-v2","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"Termii | Developers","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -175,16 +175,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_45c4dce5 === 'function') {
-    await nuxt_plugin_plugin_45c4dce5(app.context, inject)
+  if (typeof nuxt_plugin_plugin_0a9504fa === 'function') {
+    await nuxt_plugin_plugin_0a9504fa(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_pluginclient_73f3431b === 'function') {
-    await nuxt_plugin_pluginclient_73f3431b(app.context, inject)
+  if (process.client && typeof nuxt_plugin_pluginclient_e3326102 === 'function') {
+    await nuxt_plugin_pluginclient_e3326102(app.context, inject)
   }
 
-  if (process.server && typeof nuxt_plugin_pluginserver_4ca696ba === 'function') {
-    await nuxt_plugin_pluginserver_4ca696ba(app.context, inject)
+  if (process.server && typeof nuxt_plugin_pluginserver_17bf7df2 === 'function') {
+    await nuxt_plugin_pluginserver_17bf7df2(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vuescrollactive_41e62aee === 'function') {

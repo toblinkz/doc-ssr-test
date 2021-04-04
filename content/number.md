@@ -14,11 +14,11 @@ https://termii.com/api/sms/number/send
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 
-Options | Description |
---- | --- |
-to* |*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 2349012672711`)  | 
-sms* |*string*<br>Text of a message that would be sent to the destination phone number  | 
-api_key* | *string*<br> Your API key (It can be found on your Termii dashboard). | 
+Options | Required | Description |
+--- | --- | --- |
+api_key | yes | *string*<br> Your API key (It can be found on your Termii dashboard). | 
+to | yes |*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 2349012672711`)  | 
+sms | yes |*string*<br>Text of a message that would be sent to the destination phone number  | 
 
 <code-group>
    <code-block label="JSON" active>

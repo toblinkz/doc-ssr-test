@@ -4,7 +4,9 @@ description: 'Termii provides RESTful API which is based on simple HTTP POST/GET
 category: Token
 ---
 
-Welcome to Termii Developer Documentation. Explore our guide on integrating Termii's APIs to create, send, verify messages and track your delivery statistics.
+Token allows businesses generate, send and verify one-time-passwords.
+
+The Token API is organised around using HTTP verbs and REST. Our API  accepts and returns JSON formatted payload.
 
 ## Quick Navigation
 

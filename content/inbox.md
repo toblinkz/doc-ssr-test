@@ -1,11 +1,11 @@
 ---
 title: Inbox
 description: 'Termii provides RESTful API which is based on simple HTTP POST/GET requests. Our API lets you create, send, and verify messages, as well as, track your delivery statistics.'
-position: 4
+position: 6
 Category: Inbox
 ---
 
-Welcome to Termii Developer Documentation. Explore our guide on integrating Termii's APIs to create, send, verify messages and track your delivery statistics.
+ Receive inbound messages (WhatsApp & SMS) directly in your application through your set webhook url
 
 ## Quick Navigation
 

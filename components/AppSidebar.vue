@@ -10,14 +10,14 @@
          <NuxtLink
            to="/"
          >
-           <i class="entypo-home"></i>Home
+           Home
          </NuxtLink>
          </p>
        </li>
        <li class="mb-4">
            <p class="mb-2 text-gray-700  tracking-wider font-semibold text-sm lg:text-xs cursor-pointer">
              <NuxtLink to="authentication">
-               <i class="entypo-home"></i> Authentication
+                Authentication
              </NuxtLink>
            </p>
        </li>
@@ -25,39 +25,17 @@
 
            <p class="mb-2 text-gray-700  tracking-wider font-semibold text-sm lg:text-xs cursor-pointer">
              <NuxtLink to="error">
-               <i class="entypo-cancel-circled"></i> Error
+                Error
              </NuxtLink>
            </p>
 
        </li>
 
        <li class="mb-4">
-         <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
-           <nuxt-link
-             to="inbox"
-           >
-             <i class="entypo-mail"></i>Inbox
-           </nuxt-link>
-         </p>
-
-
-         <ul v-if="show_inbox_dropdown" >
-           <li class="text-gray-700 dark:text-gray-300">
-             <NuxtLink
-               to="incoming"
-               class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
-             >
-               Incoming
-             </NuxtLink>
-           </li>
-
-         </ul>
-       </li>
-       <li class="mb-4">
 
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleSwitchDropdown">
              <nuxt-link to="switch">
-               <i class="entypo-list"></i>Switch
+               Switch
              </nuxt-link>
            </p>
 
@@ -100,7 +78,7 @@
        <li class="mb-4">
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleTokenDropdown">
              <nuxt-link to="token">
-               <i class="entypo-light-up"></i>Token
+              Token
              </nuxt-link>
            </p>
          <ul v-if="show_token_dropdown">
@@ -134,7 +112,7 @@
 
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleInsightsDropdown">
              <nuxt-link to="insights">
-               <i class="icon-graph"></i>Insights
+               Insights
              </nuxt-link>
            </p>
 
@@ -181,7 +159,27 @@
            </li>
          </ul>
        </li>
+       <li class="mb-4">
+         <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
+           <nuxt-link
+             to="inbox"
+           >Inbox
+           </nuxt-link>
+         </p>
 
+
+         <ul v-if="show_inbox_dropdown" >
+           <li class="text-gray-700 dark:text-gray-300">
+             <NuxtLink
+               to="incoming"
+               class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+             >
+               Incoming
+             </NuxtLink>
+           </li>
+
+         </ul>
+       </li>
      </ul>
    </div>
  </aside>

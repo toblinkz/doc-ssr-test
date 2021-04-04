@@ -7,36 +7,114 @@ category: Switch
 A Sender ID is the name or number that identifies the sender of an SMS message.
 This API allows businesses retrieve the status of all registered sender ID and request registration of sender ID through GET and POST request type respectively.
 
-### Get Sender ID
+## Fetch Sender ID
 <b>Endpoint : </b>
 `
 https://termii.com/api/sender-id?api_key=api-key
 `<br> <br> <b>Request Type : </b>**`GET`**
 
 
-#### Response:
+#### Sample Response:
 ```
   {
-  current_page: 1,
-  data: [
-      {
-          sender_id: "Acme Corp",
-          status: "unblock",
-          company: "Acme Company",
-          usecase: "Hello Musa, your registration with Acme has been approved, your confirmation code is 1234",
-          created_at: "2020-05-06 04:42:36"
-      },
-      {
-          sender_id: "Hooli",
-          status: "unblock",
-          company: "Hooli",
-          usecase: "Hello Galvin, Your Hooli security code is now ready",
-          created_at: "2020-05-05 15:23:49"
-      }
-  ]
+      "current_page": 1,
+      "data": [
+          {
+              "sender_id": "ACME Key",
+              "status": "unblock",
+              "company": ACME,
+              "usecase": null,
+              "country": null,
+              "created_at": "2021-03-29 16:51:53"
+          },
+          {
+              "sender_id": "ACME Alert",
+              "status": "unblock",
+              "company": ACME,
+              "usecase": null,
+              "country": null,
+              "created_at": "2021-03-29 16:51:09"
+          },
+          {
+              "sender_id": "ACME Wall",
+              "status": "unblock",
+              "company": ACME,
+              "usecase": null,
+              "country": null,
+              "created_at": "2021-03-29 16:50:38"
+          },
+          {
+              "sender_id": "Hooli",
+              "status": "unblock",
+              "company": Hooli,
+              "usecase": null,
+              "country": null,
+              "created_at": "2021-03-26 13:19:16"
+          },
+          {
+              "sender_id": "Google",
+              "status": "unblock",
+              "company": null,
+              "usecase": null,
+              "country": null,
+              "created_at": "2021-01-19 17:41:30"
+          },
+          {
+              "sender_id": "Facebook",
+              "status": "unblock",
+              "company": null,
+              "usecase": null,
+              "country": null,
+              "created_at": "2021-01-19 17:41:14"
+          },
+          {
+              "sender_id": "Algolo NG",
+              "status": "unblock",
+              "company": null,
+              "usecase": null,
+              "country": null,
+              "created_at": "2020-12-21 18:04:58"
+          },
+          {
+              "sender_id": "Relert",
+              "status": "unblock",
+              "company": Hooli,
+              "usecase": null,
+              "country": null,
+              "created_at": "2020-12-18 00:32:08"
+          },
+          {
+              "sender_id": "HolHol",
+              "status": "unblock",
+              "company": Hooli,
+              "usecase": null,
+              "country": null,
+              "created_at": "2020-12-16 11:45:43"
+          },
+          {
+              "sender_id": "CleanCo",
+              "status": "unblock",
+              "company": Clean Corp,
+              "usecase": null,
+              "country": null,
+              "created_at": "2020-12-08 16:43:56"
+          }
+      ],
+      "first_page_url": "https://termii.com/api/sender-id?page=1",
+      "from": 1,
+      "last_page": 47,
+      "last_page_url": "https://termii.com/api/sender-id?page=47",
+      "next_page_url": "https://termii.com/api/sender-id?page=2",
+      "path": "https://termii.com/api/sender-id",
+      "per_page": 10,
+      "prev_page_url": null,
+      "to": 15,
+      "total": 704
   }
 ```
-### Request Sender ID
+
+
+## Request Sender ID
 
 <b>Endpoint : </b>
 `
@@ -56,23 +134,21 @@ company* |*string*<br> Represents the name of the company with the sender ID.  |
 
   ```bash
  {
-        "api_key":"Your API key",
-        "sender_id": "Acme",
-        "usecase": "Your OTP code is zxsds",
-        "company": "Acme Corp"
-    }
+    "api_key":"Your API key",
+    "sender_id": "Acme",
+    "usecase": "Your OTP code is zxsds",
+    "company": "Acme Corp"
+ }
   ```
 
   </code-block>
   <code-block label="JavaScript">
 
   ```bash
-  var data = {
-                   "api_key":"Your API key",
-                   "sender_id": "Acme",
-                   "usecase": "Your OTP code is zxsds",
-                   "company": "Acme Corp"
-            };
+  var data = {  "api_key":"Your API key",
+                "sender_id": "Acme",
+                "usecase": "Your OTP code is zxsds",
+                "company": "Acme Corp" };
 
 var data = JSON.stringify(data);
 
@@ -97,12 +173,11 @@ xhr.send(data);
 
   ```bash
  var request = require('request');
-var data = {
-            "api_key":"Your API key",
+var data = {"api_key":"Your API key",
             "sender_id": "Acme",
             "usecase": "Your OTP code is zxsds",
-            "company": "Acme Corp"
-            };
+            "company": "Acme Corp"};
+
 var options = {
   'method': 'POST',
   'url': 'https://termii.com/api/sender-id/request',
@@ -213,10 +288,10 @@ echo $response;
 
 
 ```JSON
-   {
-     "code": "ok",
-     "message": "Sender Id requested. You will be contacted by your account manager."       
-   }
+{
+	"code": "ok",
+	"message": "Sender Id requested. You will be contacted by your account manager."       
+}
 ```
 
 

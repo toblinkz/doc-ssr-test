@@ -6,7 +6,7 @@
         <div class="mx-6 my-4 ">
           <div class="flex items-center  font-medium font-bold text-base text-blue-700 mb-4">Switch<icon-arrow-right class="w-4 h-4 ml-1 flex-shrink-0"/></div>
           <p class="font-normal text-gray-dark text-sm mb-2">
-            Lorem ipsum dolor sit amet, consectetur
+            Deliver messages efficiently.
           </p>
         </div>
       </nuxt-link>
@@ -15,7 +15,7 @@
         <div class="mx-6 my-4 ">
           <div class="flex items-center font-medium font-bold text-base text-blue-700 mb-4">Token<icon-arrow-right class="w-4 h-4 ml-1 flex-shrink-0"/></div>
           <p class="font-normal text-gray-dark text-sm mb-2">
-            Lorem ipsum dolor sit amet, consectetur
+            Secure transactions for users.
           </p>
         </div>
       </nuxt-link>
@@ -26,7 +26,7 @@
         <div class="mx-6 my-4 ">
           <div class="flex items-center font-medium font-bold text-base text-blue-700 mb-4">Insights<icon-arrow-right class="w-4 h-4 ml-1 flex-shrink-0"/></div>
           <p class="font-normal text-gray-dark text-sm mb-2">
-            Lorem ipsum dolor sit amet, consectetur
+            Retrieve real-time reports
           </p>
         </div>
       </nuxt-link>
@@ -35,7 +35,7 @@
         <div class="mx-6 my-4 ">
           <div class="flex items-center font-medium font-bold text-base text-blue-700 mb-4">Errors<icon-arrow-right class="w-4 h-4 ml-1 flex-shrink-0"/></div>
           <p class="font-normal text-gray-dark text-sm mb-2">
-            Lorem ipsum dolor sit amet, consectetur
+            Error responses and codes
           </p>
         </div>
       </nuxt-link>

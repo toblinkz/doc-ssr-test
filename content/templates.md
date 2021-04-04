@@ -7,19 +7,20 @@ category: Switch
 
 Templates is a feature that helps businesses set a template for the one-time-passwords (pins) sent to their customers via whatsapp or sms.
 
+## Device Template
 
 <b>Endpoint : </b>
 `
 https://termii.com/api/device/send/template
 `<br><br> <b>Request Type : </b>**`POST`**
 
-Options | Description |
---- | --- |
-phone_number* |*string*<br> The destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490126727", "23490126545"]`  | 
-device_id |*string*<br>Represents the Device ID for Whatsapp. It can be Alphanumeric. It should be passed when the message is sent via whatsapp (It can be found on the manage device page on your Termii dashboard) | 
-template_id* | *string*<br>  The ID of the template used| 
-api_key* |*string*<br> Your API key (It can be found on your Termii dashboard). |  
-data* |*object*<br> Represents an object of `key: value` pair. The keys for the data object can be found on the device subscription page on your dashboard. (`Example: {"product_name": "Termii",  "otp" : 120435, }`)| 
+Options | Required | Description |
+--- | --- | ---|
+phone_number | yes |*string*<br> The destination phone number. Phone number must be in the international format (`Example: 23490126727`).  | 
+device_id | yes |*string*<br>Represents the Device ID for Whatsapp. It can be Alphanumeric. It should be passed when the message is sent via whatsapp (It can be found on the manage device page on your Termii dashboard) | 
+template_id | yes | *string*<br>  The ID of the template used| 
+api_key | yes | *string*<br> Your API key (It can be found on your Termii dashboard). |  
+data | yes |*object*<br> Represents an object of `key: value` pair. The keys for the data object can be found on the device subscription page on your dashboard. (`Example: {"product_name": "Termii",  "otp" : 120435, }`)| 
 
 
 <code-group>
@@ -29,7 +30,7 @@ data* |*object*<br> Represents an object of `key: value` pair. The keys for the 
    {
        "phone_number": "2347880234567",
        "device_id": "talert",
-       "template_id": "Hi there, testing Termii",
+       "template_id": "1493-csdn3-ns34w-sd3434-dfdf",
        "api_key": "plain",
        "data": {
            "product_name": "Termii",
@@ -46,7 +47,7 @@ data* |*object*<br> Represents an object of `key: value` pair. The keys for the 
  var data = {
               "phone_number": "2347880234567",
               "device_id": "talert",
-              "template_id": "Hi there, testing Termii",
+              "template_id": "1493-csdn3-ns34w-sd3434-dfdf",
               "api_key": "plain",
              "data": {
                  "product_name": "Termii",
@@ -81,7 +82,7 @@ xhr.send(data);
 var data = {
                "phone_number": "2347880234567",
                "device_id": "talert",
-               "template_id": "Hi there, testing Termii",
+               "template_id": "1493-csdn3-ns34w-sd3434-dfdf",
                "api_key": "plain",
                "data": {
                    "product_name": "Termii",
@@ -117,7 +118,7 @@ headers = {'Content-Type': 'application/json'}
 data = {
          "phone_number": "2347880234567",
          "device_id": "talert",
-         "template_id": "Hi there, testing Termii",
+         "template_id": "1493-csdn3-ns34w-sd3434-dfdf",
          "api_key": "plain",
          "data": {
              "product_name": "Termii",
@@ -138,7 +139,7 @@ var client = new RestClient("https://termii.com/api/device/send/template");
 client.Timeout = -1;
 var request = new RestRequest(Method.GET);
 request.AddHeader("Content-Type", "application/json");
-request.AddParameter("application/json", " {\r\n \"phone_number\": \"2347880234567\",\r\n  \"device_id\": \"talert\",\r\n \"template_id\": \"Hi there, testing Termii\",\r\n  \"api_key\": \"plain\",\r\n  \"data\": {\r\n   \"product_name\": \"Termii\",\r\n   \"otp\" : 120435,\r\n  \"expiry_time\": \"10 minutes\"\r\n     } \r\n   }",  
+request.AddParameter("application/json", " {\r\n \"phone_number\": \"2347880234567\",\r\n  \"device_id\": \"talert\",\r\n \"template_id\": \"1493-csdn3-ns34w-sd3434-dfdf\",\r\n  \"api_key\": \"plain\",\r\n  \"data\": {\r\n   \"product_name\": \"Termii\",\r\n   \"otp\" : 120435,\r\n  \"expiry_time\": \"10 minutes\"\r\n     } \r\n   }",  
                     ParameterType.RequestBody);
 IRestResponse response = client.Execute(request);
 Console.WriteLine(response.Content);
@@ -150,7 +151,7 @@ Console.WriteLine(response.Content);
 Unirest.setTimeouts(0, 0);
 HttpResponse<String> response = Unirest.POST(" https://termii.com/api/device/send/template")
   .header("Content-Type", "application/json")
-  .body(" {\r\n \"phone_number\": \"2347880234567\",\r\n \"device_id\": \"talert\",\r\n \"template_id\": \"Hi there, testing Termii\",\r\n \"api_key\": \"plain\",\r\n \"data\": {\r\n \"product_name\": \"Termii\",\r\n \"otp\" : 120435,\r\n \"expiry_time\": \"10 minutes\"\r\n } \r\n   }")
+  .body(" {\r\n \"phone_number\": \"2347880234567\",\r\n \"device_id\": \"talert\",\r\n \"template_id\": \"1493-csdn3-ns34w-sd3434-dfdf\",\r\n \"api_key\": \"plain\",\r\n \"data\": {\r\n \"product_name\": \"Termii\",\r\n \"otp\" : 120435,\r\n \"expiry_time\": \"10 minutes\"\r\n } \r\n   }")
   .asString();
 
   ```
@@ -172,7 +173,7 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS =>' {
        "phone_number": "2347880234567",
        "device_id": "talert",
-       "template_id": "Hi there, testing Termii",
+       "template_id": "1493-csdn3-ns34w-sd3434-dfdf",
        "api_key": "plain",
        "data": {
            "product_name": "Termii",

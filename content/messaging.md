@@ -5,29 +5,36 @@ position: 8
 category: Switch
 ---
 
-The Messaging API allows businesses send text messages to their customers. 
-The API accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.
-This API allows businesses send text messages to their customers across different messaging channels. 
-These channels are routes (dnd, whatsapp, generic) via which your messages are delivered to your customers.
+This API allows businesses send text messages to their customers across different messaging channels.
+The API accepts JSON request payload and returns JSON encoded responses, and uses standard HTTP response codes.
 
-<alert>DND stands for Do-Not-Disturb and phone numbers with DND settings activated are blocked from receiving messages by the telcom providers. 
-  To ensure your messages deliver to your customer, use the dnd channel.
+<alert>
+<b>Note for Nigerian customers:</b> DND stands for Do-Not-Disturb and phone numbers with DND settings activated are blocked from receiving messages from the generic route by the Mobile Network Operators. 
+To deliver messages to phone numbers on DND, the Termii DND route needs to be activated on your account. Kindly reach out to our support team --Add Intercom trigger here--
 </alert>
 
 ## Send message
-<b>Endpoint : </b>
-`
-https://termii.com/api/sms/send
-`<br><br> <b>Request Type : </b>**`POST`**
+<b>Endpoint : </b> `https://termii.com/api/sms/send`
+<br><br> <b>Request Type : </b>**`POST`**
 
-Options | Description |
+<b> Messaging Channels/Routes </b>
+Channel | Description |
 --- | --- |
-api_key* |*string*<br> Your API key (It can be found on your Termii dashboard). | 
-to* |*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  | 
-from* |*string*<br>Represents a sender ID for sms or Device ID for Whatsapp which can be Alphanumeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  | 
-sms* | *string*<br> Text of a message that would be sent to the destination phone number| 
-type* |*string*<br>  The kind of message that is sent, which is  a `plain` message.  | 
-channel* |*string*<br> This is the route through which the message is sent. It is either `dnd`, `whatsapp`, or `generic` | 
+generic |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+dnd |*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  | 
+whatsapp |*string*<br>Represents a sender ID for sms or Device ID for Whatsapp which can be Alphanumeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  | 
+
+
+
+<b>Body params</b>
+Options | required |Description |
+--- | --- | --- |
+api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+to |yes|*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  | 
+from |yes|*string*<br>Represents a sender ID for sms which can be Alphanumeric or Device name for Whatsapp. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  | 
+sms |yes| *string*<br> Text of a message that would be sent to the destination phone number| 
+type |yes|*string*<br>  The kind of message that is sent, which is  a `plain` message.  | 
+channel |yes|*string*<br> This is the route through which the message is sent. It is either `dnd`, `whatsapp`, or `generic` | 
 
 
 

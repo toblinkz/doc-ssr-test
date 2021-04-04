@@ -13,19 +13,19 @@ https://termii.com/api/sms/otp/send
 `<br><br> <b>Request Type : </b> **`POST`**
 
 
-Options | Description |
---- | --- |
-api_key* |*string*<br> Your API key (It can be found on your Termii dashboard). | 
-message_type* | Enum: `"NUMERIC"` `"ALPHANUMERIC"`<br> Type of message that will be generated and sent as part of the OTP message. You can set message type to numeric or alphanumeric  | 
-to* | *string*<br> The destination phone number. Phone number must be in the international format (`Example: 23490126727`)| 
-from* |*string*<br> Represents a sender ID which can be alphanumeric or numeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)   | 
-channel* |*string*<br> This is the route through which the message is sent. It is either `dnd`, `WhatsApp`, or `generic` | 
-pin_attempts* | Enum: `"NUMERIC"` `"ALPHANUMERIC"`<br> Type of PIN code that will be generated and sent as part of the OTP message. It has a minimum of one attempt. | 
-pin_time_to_live* |*integer*<br>Example: `1`<br> Represents how long the PIN is valid before expiration. The time is in minutes. The minimum time value is 0 and the maximum time value is 60  | 
-pin_length* |*integer*<br> Example: `4` <br> The length of the PIN code.It has a minimum of 4 and maximum of 8.| 
-pin_placeholder* |*string*<br>Example: `"< 1234 >"` <br> PIN placeholder. Right before sending the message, PIN code placeholder will be replaced with generate PIN code. | 
-message_text* |*string*<br> Text of a message that would be sent to the destination phone number |
-pin_type* | Enum: `"NUMERIC"` `"ALPHANUMERIC"`<br> Type of PIN code that will be generated and sent as part of the OTP message. You can set PIN type to numeric or alphanumeric |  
+Options |Required| Description |
+--- | --- | --- |
+api_key |yes|*string*<br> Your API key (It can be found on your Termii dashboard). | 
+message_type |yes| Enum: `"NUMERIC"` `"ALPHANUMERIC"`<br> Type of message that will be generated and sent as part of the OTP message. You can set message type to numeric or alphanumeric  | 
+to |yes |*string*<br> The destination phone number. Phone number must be in the international format (`Example: 23490126727`)| 
+from |yes|*string*<br> Represents a sender ID which can be alphanumeric or numeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)   | 
+channel |yes|*string*<br> This is the route through which the message is sent. It is either `dnd`, `WhatsApp`, or `generic` | 
+pin_attempts |yes| Enum: `"NUMERIC"` `"ALPHANUMERIC"`<br> Type of PIN code that will be generated and sent as part of the OTP message. It has a minimum of one attempt. | 
+pin_time_to_live |yes|*integer*<br>Example: `1`<br> Represents how long the PIN is valid before expiration. The time is in minutes. The minimum time value is 0 and the maximum time value is 60  | 
+pin_length |yes|*integer*<br> Example: `4` <br> The length of the PIN code.It has a minimum of 4 and maximum of 8.| 
+pin_placeholder |yes|*string*<br>Example: `"< 1234 >"` <br> PIN placeholder. Right before sending the message, PIN code placeholder will be replaced with generate PIN code. | 
+message_text |yes|*string*<br> Text of a message that would be sent to the destination phone number |
+ 
 
 
 <code-group>

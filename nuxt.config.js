@@ -16,6 +16,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  script: [
+    {src: '/js/swiftype.js'}
+  ],
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
@@ -43,6 +46,10 @@ export default {
     color: '#1991bd',
     height: '2px',
     throttle: 0
+  },
+  loadingIndicator: {
+    name: '~/termii_bird_loader.html',
+    background: 'white'
   },
   content: {
     markdown: {

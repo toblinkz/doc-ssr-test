@@ -1,6 +1,6 @@
 <template>
  <aside
-   class="w-full lg:w-1/5 lg:block fixed lg:relative inset-0 mt-16 lg:mt-0 z-30 bg-white dark:bg-gray-900 lg:bg-transparent lg:dark:bg-transparent hidden"
+   class="w-full lg:w-1/5 lg:block fixed lg:relative inset-0 mt-16 lg:mt-0 z-30 bg-white dark:bg-gray-900 lg:bg-transparent lg:dark:bg-transparent"
    :class="{ 'block': menu, 'hidden': !menu }"
  >
    <div class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)">
@@ -10,14 +10,14 @@
          <NuxtLink
            to="/"
          >
-           Home
+           <i class="entypo-home mr-2"></i>Home
          </NuxtLink>
          </p>
        </li>
        <li class="mb-4">
            <p class="mb-2 text-gray-700  tracking-wider font-semibold text-sm lg:text-xs cursor-pointer">
              <NuxtLink to="authentication">
-                Authentication
+               <i class="entypo-lock"></i> Authentication
              </NuxtLink>
            </p>
        </li>
@@ -25,7 +25,7 @@
 
            <p class="mb-2 text-gray-700  tracking-wider font-semibold text-sm lg:text-xs cursor-pointer">
              <NuxtLink to="error">
-                Error
+               <i class="entypo-code mr-2"></i>Error
              </NuxtLink>
            </p>
 
@@ -35,7 +35,7 @@
 
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleSwitchDropdown">
              <nuxt-link to="switch">
-               Switch
+               <i class="entypo-switch mr-2"></i>Switch
              </nuxt-link>
            </p>
 
@@ -78,7 +78,7 @@
        <li class="mb-4">
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleTokenDropdown">
              <nuxt-link to="token">
-              Token
+               <i class="entypo-link mr-2"></i>Token
              </nuxt-link>
            </p>
          <ul v-if="show_token_dropdown">
@@ -112,7 +112,7 @@
 
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleInsightsDropdown">
              <nuxt-link to="insights">
-               Insights
+               <i class="entypo-chart-line mr-2"></i>Insights
              </nuxt-link>
            </p>
 
@@ -163,7 +163,8 @@
          <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
            <nuxt-link
              to="inbox"
-           >Inbox
+           >
+             <i class="entypo-chat mr-2"></i>Inbox
            </nuxt-link>
          </p>
 
@@ -195,6 +196,16 @@ export default {
        show_token_dropdown: false,
        show_insights_dropdown: false
     }
+  },
+  computed:{
+    menu: {
+      get () {
+        return this.$store.state.menu.open
+      },
+      set (val) {
+        this.$store.commit('menu/toggle', val)
+      }
+    },
   },
   methods:{
     toggleInboxDropdown(){

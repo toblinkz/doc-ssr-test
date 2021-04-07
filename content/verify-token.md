@@ -1,11 +1,11 @@
 ---
 title: Verify Token
 description: 'Termii provides RESTful API which is based on simple HTTP POST/GET requests. Our API lets you create, send, and verify messages, as well as, track your delivery statistics.'
-position: 12
+position: 11
 category: Token
 ---
 
-The verify token API, checks tokens sent to customers and returns a response confirming the status of the token. A token can either be confirmed as verified or expired based on the timer set for the token.
+Verify token API, checks tokens sent to customers and returns a response confirming the status of the token. A token can either be confirmed as verified or expired based on the timer set for the token.
 
 
 <b>Endpoint :</b>
@@ -13,11 +13,11 @@ The verify token API, checks tokens sent to customers and returns a response con
 https://termii.com/api/sms/otp/verify
 `<br> <br> <b>Request Type : </b>**`POST`**
 
-Options | Description |
---- | --- |
-api_key* |*string*<br> Your API key (It can be found on your Termii dashboard). | 
-pin_id* |*string*<br> ID of the PIN sent (Example: `"c8dcd048-5e7f-4347-8c89-4470c3af0b"`)  | 
-pin* | *string*<br> The PIN code (Example: `"195558"`)| 
+Options | Required | Description |
+--- | --- | --- |
+api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+pin_id | yes |*string*<br> ID of the PIN sent (Example: `"c8dcd048-5e7f-4347-8c89-4470c3af0b"`)  | 
+pin | yes | *string*<br> The PIN code (Example: `"195558"`)| 
 
 
 <blockquote>This API requires a numeric or alphanumeric token to have been sent out to a customer. 
@@ -94,20 +94,18 @@ var request = require('request');
  <code-block label="Python" >
 
   ```bash
-import http.client
-import json
-conn = http.client.HTTPSConnection("https://termii.com/api/sms/otp/verify")
-headers = {'Content-Type': 'application/json'}
-        
-data = {
-         "api_key": "Your API Key",
-          "pin_id": "NUMERIC",
-          "pin": "2348109477743",
-          
-        }
-conn.request("POST", "", data, headers)
-response = conn.getresponse()
-print(response.read().decode())
+import requests
+url = "https://termii.com/api/sms/otp/verify"
+payload = {
+            "api_key": "Your API Key",
+            "pin_id": "NUMERIC",
+            "pin": "2348109477743",
+         }
+headers = {
+  'Content-Type': 'application/json',
+}
+response = requests.request("POST", url, headers=headers, json=payload)
+print(response.text)
    ```
   </code-block>
 

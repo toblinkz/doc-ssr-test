@@ -1,7 +1,7 @@
 ---
 title: Sender ID
 description: 'Termii Sender Id'
-position: 7
+position: 5
 category: Switch
 ---
 A Sender ID is the name or number that identifies the sender of an SMS message.
@@ -67,38 +67,7 @@ https://termii.com/api/sender-id?api_key=api-key
               "country": null,
               "created_at": "2021-01-19 17:41:14"
           },
-          {
-              "sender_id": "Algolo NG",
-              "status": "unblock",
-              "company": null,
-              "usecase": null,
-              "country": null,
-              "created_at": "2020-12-21 18:04:58"
-          },
-          {
-              "sender_id": "Relert",
-              "status": "unblock",
-              "company": Hooli,
-              "usecase": null,
-              "country": null,
-              "created_at": "2020-12-18 00:32:08"
-          },
-          {
-              "sender_id": "HolHol",
-              "status": "unblock",
-              "company": Hooli,
-              "usecase": null,
-              "country": null,
-              "created_at": "2020-12-16 11:45:43"
-          },
-          {
-              "sender_id": "CleanCo",
-              "status": "unblock",
-              "company": Clean Corp,
-              "usecase": null,
-              "country": null,
-              "created_at": "2020-12-08 16:43:56"
-          }
+         
       ],
       "first_page_url": "https://termii.com/api/sender-id?page=1",
       "from": 1,
@@ -122,12 +91,12 @@ https://termii.com/api/sender-id/request
 `<br> <br> <b>Request Type : </b><span class="lio" style="color:red !important"> <code>POST</code></span>
 
 
-Options | Description |
---- | --- |
-api_key* |*string*<br> Your API key (It can be found on your Termii dashboard).  | 
-sender_id* |*string*<br>Represents the ID of the sender which can be alphanumeric or numeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  | 
-usecase* | *string*<br>A sample of the type of message sent. | 
-company* |*string*<br> Represents the name of the company with the sender ID.  | 
+Options |Required | Description |
+--- | --- | --- |
+api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard).  | 
+sender_id | yes |*string*<br>Represents the ID of the sender which can be alphanumeric or numeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  | 
+usecase | yes | *string*<br>A sample of the type of message sent. | 
+company | yes | *string*<br> Represents the name of the company with the sender ID.  | 
 
 <code-group>
    <code-block label="JSON" active>
@@ -197,20 +166,20 @@ request(options, function (error, response) {
  <code-block label="Python">
 
   ```bash
- import http.client
-import json
-conn = http.client.HTTPSConnection("https://termii.com/api/sender-id/request")
-headers = {'Content-Type': 'application/json'}
-    
-data = {
-         "api_key":"Your API key",
-         "sender_id": "Acme",
-         "usecase": "Your OTP code is zxsds",
-         "company": "Acme Corp"
-          }
-conn.request("POST", "", data, headers)
-response = conn.getresponse()
-print(response.read().decode())
+ 
+import requests
+url = "https://termii.com/api/sender-id/request"
+payload = {
+           "api_key":"Your API key",
+           "sender_id": "Acme",
+           "usecase": "Your OTP code is zxsds",
+           "company": "Acme Corp"
+         }
+headers = {
+  'Content-Type': 'application/json',
+}
+response = requests.request("GET", url, headers=headers, json=payload)
+print(response.text)
   ```
   </code-block>
 

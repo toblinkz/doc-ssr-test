@@ -1,7 +1,7 @@
 ---
 title: Messaging
 description: 'Termii Messaging'
-position: 8
+position: 6
 category: Switch
 ---
 
@@ -27,7 +27,7 @@ whatsapp |*string*<br>Represents a sender ID for sms or Device ID for Whatsapp w
 
 
 <b>Body params</b>
-Options | required |Description |
+Options | Required |Description |
 --- | --- | --- |
 api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
 to |yes|*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  | 
@@ -116,22 +116,21 @@ request(options, function (error, response) {
  <code-block label="Python" >
 
   ```bash
-  import http.client
-import json
-conn = http.client.HTTPSConnection("https://termii.com/api/sms/send")
-headers = {'Content-Type': 'application/json'}
-
-data = {
-      "to": "2347880234567",
-       "from": "talert",
-       "sms": "Hi there, testing Termii ",
-       "type": "plain",
-       "channel": "generic",
-       "api_key": "Your API Key"
-      }
-conn.request("POST", "", data, headers)
-response = conn.getresponse()
-print(response.read().decode())
+import requests
+url = "https://termii.com/api/sms/send"
+payload = {
+            "to": "2347880234567",
+             "from": "talert",
+             "sms": "Hi there, testing Termii ",
+             "type": "plain",
+             "channel": "generic",
+             "api_key": "Your API Key"
+         }
+headers = {
+  'Content-Type': 'application/json',
+}
+response = requests.request("POST", url, headers=headers, json=payload)
+print(response.text)
 
    ```
   </code-block>

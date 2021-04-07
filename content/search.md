@@ -12,10 +12,10 @@ The search API allows businesses verify phone numbers and automatically detect t
 https://termii.com/api/check/dnd?api_key=my_api_key&phone_number=phone_number
 `<br> <br> <b>Request Type : </b> **`GET`**
 
-Options | Description |
---- | --- |
-api_key* |*string*<br> Your API key (It can be found on your Termii dashboard). | 
-phone_number* |*string*<br>Represents the phone number to be verified. Phone number must be in the international format (`Example: 23490126727`)   | 
+Options | Required | Description |
+--- | --- | --- |
+api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+phone_number | yes |*string*<br>Represents the phone number to be verified. Phone number must be in the international format (`Example: 23490126727`)   | 
 
 
 <blockquote>DND represents Do-Not-Distrub routes and messages sent to phone numbers with DND settings activated are blocked by telcom providers. 
@@ -88,18 +88,17 @@ xhr.send(data);
  <code-block label="Python" >
 
   ```bash
-import http.client
-import json
-conn = http.client.HTTPSConnection("https://termii.com/api/check/dnd")
-headers = {'Content-Type': 'application/json'}
-    
-data = {
-         "api_key": "Your API key",
-         "phone_number": "2348753243651"
-       }
-conn.request("GET", "", data, headers)
-response = conn.getresponse()
-print(response.read().decode())
+import requests
+url = "https://termii.com/api/check/dnd"
+payload = {
+           "api_key": "Your API key",
+           "phone_number": "2348753243651"
+         }
+headers = {
+  'Content-Type': 'application/json',
+}
+response = requests.request("GET", url, headers=headers, json=payload)
+print(response.text)
    ```
   </code-block>
 

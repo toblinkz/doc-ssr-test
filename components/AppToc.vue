@@ -1,13 +1,13 @@
 <template>
   <div v-if="toc.length" class="w-full lg:w-1/4 block relative">
-    <div class="fixed overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)">
+    <div class="md:fixed overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)">
       <nav class="py-4 lg:py-8 lg:pl-8 lg:pr-2">
         <p class="mb-3 lg:mb-2 text-black uppercase tracking-wider font-bold text-sm lg:text-xs">ON THIS PAGE</p>
-        <scrollactive highlight-first-item active-class="text-primary-500" :offset="0" tag="ul">
+        <scrollactive highlight-first-item active-class="active-class" tag="ul">
           <li
             v-for="link of toc"
             :key="link.id"
-            class="text-gray-700 dark:text-gray-300"
+            class="text-gray-700  "
             :class="{
               ' dark:border-gray-800 first:border-t-0': link.depth === 2
             }"
@@ -44,5 +44,8 @@ export default {
 </script>
 
 <style scoped>
-
+.active-class{
+  color: #406DAD;
+  font-weight: 600;
+}
 </style>

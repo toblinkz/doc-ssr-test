@@ -13,9 +13,9 @@ The Balance API returns your total balance and balance information from your wal
 https://termii.com/api/get-balance?api_key=YourAPIKey
 `<br><br> <b>Request Type : </b> **`GET`**
 
-Options | Description |
---- | --- |
-api_key* |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+Options | Required | Description |
+--- | --- | --- |
+api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
 
 
 

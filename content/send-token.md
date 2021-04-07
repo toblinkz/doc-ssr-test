@@ -1,7 +1,7 @@
 ---
 title: Send Token
 description: 'Termii Send Token'
-position: 11
+position: 10
 category: Token
 ---
 
@@ -123,27 +123,27 @@ xhr.send(data);
  <code-block label="Python" >
 
   ```bash
- import http.client
-import json
-conn = http.client.HTTPSConnection("https://termii.com/api/sms/otp/send")
-headers = {'Content-Type': 'application/json'}
-        
-data = {
-        "api_key" : "Your API key",
-        "message_type" : "NUMERIC",
-        "to" : "eg. 2348109077743",
-        "from" : "Aproved Sender or Device IDs",
-        "channel" : "dnd",
-        "pin_attempts" : 10,
-        "pin_time_to_live" :  5,
-        "pin_length" : 6,
-        "pin_placeholder" : "< 1234 >",
-        "message_text" : "Your pin is < 1234 >",
-        "pin_type" : "NUMERIC"
-        }
-conn.request("POST", "", data, headers)        
-response = conn.getresponse()
-print(response.read().decode())
+import requests
+url = "https://termii.com/api/sms/otp/send"
+payload = {
+           "api_key" : "Your API key",
+            "message_type" : "NUMERIC",
+            "to" : "eg. 2348109077743",
+            "from" : "Aproved Sender or Device IDs",
+            "channel" : "dnd",
+            "pin_attempts" : 10,
+            "pin_time_to_live" :  5,
+            "pin_length" : 6,
+            "pin_placeholder" : "< 1234 >",
+            "message_text" : "Your pin is < 1234 >",
+            "pin_type" : "NUMERIC"
+         }
+headers = {
+  'Content-Type': 'application/json',
+}
+response = requests.request("POST", url, headers=headers, json=payload)
+print(response.text)
+
    ```
   </code-block>
 

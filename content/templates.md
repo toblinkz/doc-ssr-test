@@ -1,7 +1,7 @@
 ---
 title: Templates
 description: 'Termii  Templates'
-position: 10
+position: 8
 category: Switch
 ---
 
@@ -110,25 +110,27 @@ request(options, function (error, response) {
  <code-block label="Python" >
 
   ```bash
- import http.client
-import json
-conn = http.client.HTTPSConnection(" https://termii.com/api/device/send/template")
-headers = {'Content-Type': 'application/json'}
 
-data = {
-         "phone_number": "2347880234567",
-         "device_id": "talert",
-         "template_id": "1493-csdn3-ns34w-sd3434-dfdf",
-         "api_key": "plain",
-         "data": {
-             "product_name": "Termii",
-             "otp" : 120435,
-             "expiry_time": "10 minutes"
+
+import requests
+url = "https://termii.com/api/device/send/template"
+payload = {
+            "phone_number": "2347880234567",
+             "device_id": "talert",
+             "template_id": "1493-csdn3-ns34w-sd3434-dfdf",
+             "api_key": "plain",
+             "data": {
+                 "product_name": "Termii",
+                 "otp" : 120435,
+                 "expiry_time": "10 minutes"
+             }
          }
-      }
-conn.request("POST", "", data, headers)
-response = conn.getresponse()
-print(response.read().decode())
+headers = {
+  'Content-Type': 'application/json',
+}
+response = requests.request("POST", url, headers=headers, json=payload)
+print(response.text)
+
    ```
   </code-block>
 

@@ -1,7 +1,7 @@
 ---
 title: Number
 description: 'Termii Number'
-position: 9
+position: 7
 category: Switch
 ---
 
@@ -91,20 +91,19 @@ request(options, function (error, response) {
  <code-block label="Python">
 
   ```bash
- import http.client
-import json
-conn = http.client.HTTPSConnection("https://termii.com/api/sms/number/send")
-headers = {'Content-Type': 'application/json'}
-   
-data = {
-         "to": "2347089229611",
-         "sms": "Hi there, testing Termii",
-         "api_key": "Your API Key"
-        }   
-conn.request("POST", "", data, headers)
-response = conn.getresponse()
-print(response.read().decode())
 
+import requests
+url = "https://termii.com/api/sms/number/send"
+payload = {
+             "to": "2347089229611",
+             "sms": "Hi there, testing Termii",
+             "api_key": "Your API Key"
+         }
+headers = {
+  'Content-Type': 'application/json',
+}
+response = requests.request("POST", url, headers=headers, json=payload)
+print(response.text)
   ```
   </code-block>
 

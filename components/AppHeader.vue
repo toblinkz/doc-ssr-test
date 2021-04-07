@@ -1,5 +1,7 @@
 <template>
-  <nav class="fixed top-0 w-full z-40 border-b shadow border-transparent">
+  <nav class="fixed bg-color top-0 w-full z-40 border-b shadow border-transparent"
+       @click="scrollToTop"
+  >
     <div class="container mx-auto flex-1 px-4 lg:px-8">
        <div class="flex items-center justify-between h-16">
          <div class="lg:w-1/5 flex items-center pr-4">
@@ -30,6 +32,15 @@
                Dashboard
              </a>
            </div>
+           <button
+             class="lg:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 focus:outline-none -mr-2"
+             aria-label="Menu"
+             @click.stop="menu = !menu"
+           >
+             <IconX v-if="menu" class="w-5 h-5" />
+             <IconMenu v-else class="w-5 h-5" />
+           </button>
+
          </div>
        </div>
     </div>
@@ -38,7 +49,40 @@
 
 <script>
 export default {
-name: "AppHeader"
+name: "AppHeader",
+data () {
+    return {
+      scrolled: 0
+    }
+  },
+  computed:{
+    menu: {
+      get () {
+        return this.$store.state.menu.open
+      },
+      set (val) {
+        this.$store.commit('menu/toggle', val)
+      }
+    },
+  },
+  beforeMount () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll () {
+      this.scrolled = window.scrollY > 0
+    },
+    scrollToTop () {
+      if (window.innerWidth >= 1280) {
+        return
+      }
+      window.scrollTo(0, 0)
+    },
+    noop () { }
+  }
 }
 </script>
 

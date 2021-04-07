@@ -32,6 +32,12 @@
   "IconArrowRight": {
     "description": "Auto imported from components/IconArrowRight.vue"
   },
+  "IconMenu": {
+    "description": "Auto imported from components/IconMenu.vue"
+  },
+  "IconX": {
+    "description": "Auto imported from components/IconX.vue"
+  },
   "InboxNavigationComponent": {
     "description": "Auto imported from components/InboxNavigationComponent.vue"
   },
@@ -83,9 +89,6 @@
   "IconsIconInformationCircle": {
     "description": "Auto imported from components/icons/IconInformationCircle.vue"
   },
-  "IconsIconMenu": {
-    "description": "Auto imported from components/icons/IconMenu.vue"
-  },
   "IconsIconMoon": {
     "description": "Auto imported from components/icons/IconMoon.vue"
   },
@@ -100,9 +103,6 @@
   },
   "IconsIconTwitter": {
     "description": "Auto imported from components/icons/IconTwitter.vue"
-  },
-  "IconsIconX": {
-    "description": "Auto imported from components/icons/IconX.vue"
   },
   "IconsIconXCircle": {
     "description": "Auto imported from components/icons/IconXCircle.vue"

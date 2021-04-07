@@ -12,11 +12,11 @@ The status API allows businesses to detect if a number is fake or has ported to 
 https://termii.com/api/insight/number/query?phone_number=phone_number&api_key=api_key&country_code=NG
 `<br> <br> <b>Request Type : </b> **`GET`**
 
-Options | Description |
---- | --- |
-api_key* |*string*<br> Your API key (It can be found on your Termii dashboard). | 
-phone_number* |*string*<br>Represents the phone number to be verified. Phone number must be in the international format (`Example: 2348753243651`)   | 
-country_code* |*string*<br>Represents short alphabetic codes developed to represent countries (`Example: NG `) .
+Options | Required | Description |
+--- | --- |  --- |
+api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+phone_number| yes |*string*<br>Represents the phone number to be verified. Phone number must be in the international format (`Example: 2348753243651`)   | 
+country_code| yes |*string*<br>Represents short alphabetic codes developed to represent countries (`Example: NG `) .
 
 
 <code-group>
@@ -91,19 +91,19 @@ xhr.send(data);
  <code-block label="Python" >
 
   ```bash
-import http.client
-import json
-conn = http.client.HTTPSConnection(" https://termii.com/api/insight/number/query")
-headers = {'Content-Type': 'application/json'}
-    
-data = {
-         "api_key": "Your API key",
-         "phone_number": "2348753243651",
-         "country_code": "NG"
-       }
-conn.request("GET", "", data, headers)
-response = conn.getresponse()
-print(response.read().decode())
+import requests
+url = "https://termii.com/api/insight/number/query"
+payload = {
+           "api_key": "Your API key",
+           "phone_number": "2348753243651",
+           "country_code": "NG"
+         }
+headers = {
+  'Content-Type': 'application/json',
+}
+response = requests.request("GET", url, headers=headers, json=payload)
+print(response.text)
+
    ```
   </code-block>
 

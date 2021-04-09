@@ -19,10 +19,13 @@
            <AppSearch  class="lg:block"></AppSearch>
          </div>
          <div class="lg:w-1/5 flex items-center pl-8 lg:pl-16">
-            <a
-              class="font-semibold leading-none text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 text-base mr-2"
-              exact-active-class="text-primary-500"
-            >v1.1.0</a>
+<!--            <a-->
+<!--              class="font-semibold leading-none text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 text-base mr-2"-->
+<!--              exact-active-class="text-primary-500"-->
+<!--            >v1</a>-->
+           <select class="bg-color font-semibold cursor-pointer text-base">
+              <option class="p-3 cursor-pointer rounded-lg">v1</option>
+           </select>
            <div class="flex items-center">
              <a
                href="https://accounts.termii.com/#/"

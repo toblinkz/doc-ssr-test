@@ -259,7 +259,9 @@ echo $response;
 ```JSON
 {
 	"code": "ok",
-	"message": "Sender Id requested. You will be contacted by your account manager."       
+	"message": "Sender Id requested. You will be  contacted by your account manager."
+  
+  
 }
 ```
 

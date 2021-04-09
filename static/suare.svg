@@ -1,0 +1,14 @@
+<svg width="2560px" height="654px" viewBox="0 0 2560 654" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="ELEMENTS-HEADER" transform="translate(319.000000, 0.000000)">
+    <polygon fill="#FF5967" transform="translate(196.412755, 7.384856) rotate(10.000000) translate(-196.412755, -7.384856) " points="196.412755 1.38485603 204.912755 13.384856 187.912755 13.384856"></polygon>
+    <polygon fill="#8DD941" transform="translate(227.842287, 333.860082) rotate(190.000000) translate(-227.842287, -333.860082) " points="227.842287 325.036553 240.342287 342.683612 215.342287 342.683612"></polygon>
+    <polygon fill="#FF8126" transform="translate(1738.000000, 184.470588) rotate(180.000000) translate(-1738.000000, -184.470588) " points="1738 176 1750 192.941176 1726 192.941176"></polygon>
+    <circle fill="#FF8126" cx="212.5" cy="638.5" r="15.5"></circle>
+    <circle fill="#FFD659" cx="1715" cy="417" r="12"></circle>
+    <circle fill="#FF5967" cx="1447" cy="85" r="14"></circle>
+    <rect fill="#4DA6FF" transform="translate(817.977241, 446.977241) rotate(30.000000) translate(-817.977241, -446.977241) " x="808.477241" y="437.477241" width="19" height="19"></rect>
+    <rect fill="#FFC926" transform="translate(12.176271, 231.176271) rotate(70.000000) translate(-12.176271, -231.176271) " x="2.67627126" y="221.676271" width="19" height="19"></rect>
+    <rect fill="#8DD941" transform="translate(1517.846875, 254.846875) rotate(80.000000) translate(-1517.846875, -254.846875) " x="1509.34688" y="246.346875" width="17" height="17"></rect>
+    <polygon fill="#FFD659" transform="translate(1017.945101, 157.571990) rotate(-20.000000) translate(-1017.945101, -157.571990) " points="1017.9451 148.042578 1031.4451 167.101402 1004.4451 167.101402"></polygon>
+  </g>
+</svg>

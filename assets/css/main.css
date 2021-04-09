@@ -86,6 +86,20 @@ table td,table th{
   font-size: 0.95rem;
   line-height: 1.5;
 }
+.prose code {
+  background-color: #649dc31f !important;
+}
 
-
+.prose pre code {
+  background-color: transparent !important;
+}
+pre[class*="language-"] {
+  overflow: auto;
+  position: relative;
+  margin: 0 !important;
+  padding: 1.25em 1em;
+}
+.prose pre {
+  border-radius: 0.2rem;
+}
 

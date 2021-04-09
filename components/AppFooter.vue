@@ -3,7 +3,6 @@
     <div class="h-full w-full container mx-auto px-4 lg:px-8 flex items-center justify-between">
       <div class="flex items-end">
         <a href="#common-errors" rel="noopener">
-           Test
         </a>
       </div>
       <div class="flex items-center space-x-4">

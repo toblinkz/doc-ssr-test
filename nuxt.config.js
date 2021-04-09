@@ -17,7 +17,9 @@ export default {
     ]
   },
   script: [
-    {src: '/js/swiftype.js'}
+    {src: '/js/swiftype.js'},
+    {src: '/js/intercom.js'},
+    {src: '/js/feedback.js'}
   ],
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -46,6 +48,9 @@ export default {
     color: '#1991bd',
     height: '2px',
     throttle: 0
+  },
+  generate: {
+    fallback: true, // if you want to use '404.html' instead of the default '200.html'
   },
   loadingIndicator: {
     name: '~/termii_bird_loader.html',

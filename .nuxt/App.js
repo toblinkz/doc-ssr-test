@@ -2,25 +2,25 @@ import Vue from 'vue'
 import { decode, parsePath, withoutBase, withoutTrailingSlash, normalizeURL } from 'ufo'
 
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
-import NuxtError from '..\\layouts\\error.vue'
+import NuxtError from '../layouts/error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '..\\node_modules\\@nuxtjs\\tailwindcss\\lib\\files\\tailwind.css'
+import '../node_modules/@nuxtjs/tailwindcss/lib/files/tailwind.css'
 
-import '..\\assets\\font\\karla\\css\\karla.css'
+import '../assets/font/karla/css/karla.css'
 
-import '..\\assets\\css\\main.css'
+import '../assets/css/main.css'
 
-import '..\\assets\\icons\\entypo\\css\\entypo.css'
+import '../assets/icons/entypo/css/entypo.css'
 
-import '..\\assets\\icons\\fontawesome\\styles.min.css'
+import '../assets/icons/fontawesome/styles.min.css'
 
-import '..\\assets\\icons\\icomoon\\styles.css'
+import '../assets/icons/icomoon/styles.css'
 
-import '..\\..\\node_modules\\prism-themes\\themes\\prism-material-oceanic.css'
+import '../node_modules/prism-themes/themes/prism-material-oceanic.css'
 
-import _6f6c098b from '..\\layouts\\default.vue'
+import _6f6c098b from '../layouts/default.vue'
 
 const layouts = { "_default": sanitizeComponent(_6f6c098b) }
 

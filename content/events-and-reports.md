@@ -5,6 +5,12 @@ position: 14
 category: Insights
 ---
 
+Events are our way of letting you know when something happens on your account. When an event occurs, we create an ``Event`` object.
+Verifying events
+It is important to verify that an event originated from Termii. 
+You can verify an event by validating the signature, a valid event is raised with an header ``X-Termii-Signature`` which is a ```HMAC SHA512``` signature of the event payload signed with your secret key.
+
+## Outbound Message
 An outbound message is a message routed from a client or an application and delivered to the end user's mobile phone.
 You can receive the outbound message status update reports directly in your application using Termii's Webhook Notiifcation.
 Add your webhook url in your <a href="https://termii.com/account/webhook/config">termii developer console</a>

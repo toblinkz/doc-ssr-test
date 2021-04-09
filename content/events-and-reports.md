@@ -4,9 +4,12 @@ description: 'Termii provides RESTful API which is based on simple HTTP POST/GET
 position: 14
 category: Insights
 ---
+### Introduction 
 
 Events are our way of letting you know when something happens on your account. When an event occurs, we create an ``Event`` object.
-Verifying events
+
+### Verifying events
+
 It is important to verify that an event originated from Termii. 
 You can verify an event by validating the signature, a valid event is raised with an header ``X-Termii-Signature`` which is a ```HMAC SHA512``` signature of the event payload signed with your secret key.
 

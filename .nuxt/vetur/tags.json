@@ -1,4 +1,7 @@
 {
+  "AppCopyButton": {
+    "description": "Auto imported from components/AppCopyButton.vue"
+  },
   "AppFooter": {
     "description": "Auto imported from components/AppFooter.vue"
   },
@@ -31,6 +34,12 @@
   },
   "IconArrowRight": {
     "description": "Auto imported from components/IconArrowRight.vue"
+  },
+  "IconClipboardCheck": {
+    "description": "Auto imported from components/IconClipboardCheck.vue"
+  },
+  "IconClipboardCopy": {
+    "description": "Auto imported from components/IconClipboardCopy.vue"
   },
   "IconMenu": {
     "description": "Auto imported from components/IconMenu.vue"
@@ -70,12 +79,6 @@
   },
   "IconsIconChevronRight": {
     "description": "Auto imported from components/icons/IconChevronRight.vue"
-  },
-  "IconsIconClipboardCheck": {
-    "description": "Auto imported from components/icons/IconClipboardCheck.vue"
-  },
-  "IconsIconClipboardCopy": {
-    "description": "Auto imported from components/icons/IconClipboardCopy.vue"
   },
   "IconsIconExclamationCircle": {
     "description": "Auto imported from components/icons/IconExclamationCircle.vue"

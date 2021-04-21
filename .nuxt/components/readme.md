@@ -6,6 +6,7 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
+- `<AppCopyButton>` | `<app-copy-button>` (components/AppCopyButton.vue)
 - `<AppFooter>` | `<app-footer>` (components/AppFooter.vue)
 - `<AppHeader>` | `<app-header>` (components/AppHeader.vue)
 - `<AppPageBottom>` | `<app-page-bottom>` (components/AppPageBottom.vue)
@@ -17,6 +18,8 @@ You can directly use them in pages and other components without the need to impo
 - `<CodeGroup>` | `<code-group>` (components/CodeGroup.vue)
 - `<IconArrowLeft>` | `<icon-arrow-left>` (components/IconArrowLeft.vue)
 - `<IconArrowRight>` | `<icon-arrow-right>` (components/IconArrowRight.vue)
+- `<IconClipboardCheck>` | `<icon-clipboard-check>` (components/IconClipboardCheck.vue)
+- `<IconClipboardCopy>` | `<icon-clipboard-copy>` (components/IconClipboardCopy.vue)
 - `<IconMenu>` | `<icon-menu>` (components/IconMenu.vue)
 - `<IconX>` | `<icon-x>` (components/IconX.vue)
 - `<InboxNavigationComponent>` | `<inbox-navigation-component>` (components/InboxNavigationComponent.vue)
@@ -30,8 +33,6 @@ You can directly use them in pages and other components without the need to impo
 - `<IconsIconBadgeCheck>` | `<icons-icon-badge-check>` (components/icons/IconBadgeCheck.vue)
 - `<IconsIconCheckCircle>` | `<icons-icon-check-circle>` (components/icons/IconCheckCircle.vue)
 - `<IconsIconChevronRight>` | `<icons-icon-chevron-right>` (components/icons/IconChevronRight.vue)
-- `<IconsIconClipboardCheck>` | `<icons-icon-clipboard-check>` (components/icons/IconClipboardCheck.vue)
-- `<IconsIconClipboardCopy>` | `<icons-icon-clipboard-copy>` (components/icons/IconClipboardCopy.vue)
 - `<IconsIconExclamationCircle>` | `<icons-icon-exclamation-circle>` (components/icons/IconExclamationCircle.vue)
 - `<IconsIconExternalLink>` | `<icons-icon-external-link>` (components/icons/IconExternalLink.vue)
 - `<IconsIconGithub>` | `<icons-icon-github>` (components/icons/IconGithub.vue)

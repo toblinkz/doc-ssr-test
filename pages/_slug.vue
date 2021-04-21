@@ -15,8 +15,20 @@
 </template>
 
 <script>
-export default {
+import Vue from "vue";
+import AppCopyButton from "@/components/AppCopyButton";
 
+export default {
+  mounted () {
+    setTimeout(() => {
+      const blocks = document.getElementsByClassName('nuxt-content-highlight')
+      for (const block of blocks) {
+        const CopyButton = Vue.extend(AppCopyButton)
+        const component = new CopyButton().$mount()
+        block.appendChild(component.$el)
+      }
+    }, 100)
+  },
   async asyncData({ $content, params, error }) {
     const slug = params.slug || "index";
     const document = await $content(slug)

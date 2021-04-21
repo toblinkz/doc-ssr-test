@@ -14,13 +14,13 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      {src: '/js/intercom.js'},
+      {src: '/js/feedback.js'}
+    ],
   },
-  script: [
-    {src: '/js/swiftype.js'},
-    {src: '/js/intercom.js'},
-    {src: '/js/feedback.js'}
-  ],
+
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [

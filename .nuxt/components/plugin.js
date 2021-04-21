@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
 const components = {
+  AppCopyButton: () => import('../..\\components\\AppCopyButton.vue' /* webpackChunkName: "components/app-copy-button" */).then(c => c.default || c),
   AppFooter: () => import('../..\\components\\AppFooter.vue' /* webpackChunkName: "components/app-footer" */).then(c => c.default || c),
   AppHeader: () => import('../..\\components\\AppHeader.vue' /* webpackChunkName: "components/app-header" */).then(c => c.default || c),
   AppPageBottom: () => import('../..\\components\\AppPageBottom.vue' /* webpackChunkName: "components/app-page-bottom" */).then(c => c.default || c),
@@ -12,6 +13,8 @@ const components = {
   CodeGroup: () => import('../..\\components\\CodeGroup.vue' /* webpackChunkName: "components/code-group" */).then(c => c.default || c),
   IconArrowLeft: () => import('../..\\components\\IconArrowLeft.vue' /* webpackChunkName: "components/icon-arrow-left" */).then(c => c.default || c),
   IconArrowRight: () => import('../..\\components\\IconArrowRight.vue' /* webpackChunkName: "components/icon-arrow-right" */).then(c => c.default || c),
+  IconClipboardCheck: () => import('../..\\components\\IconClipboardCheck.vue' /* webpackChunkName: "components/icon-clipboard-check" */).then(c => c.default || c),
+  IconClipboardCopy: () => import('../..\\components\\IconClipboardCopy.vue' /* webpackChunkName: "components/icon-clipboard-copy" */).then(c => c.default || c),
   IconMenu: () => import('../..\\components\\IconMenu.vue' /* webpackChunkName: "components/icon-menu" */).then(c => c.default || c),
   IconX: () => import('../..\\components\\IconX.vue' /* webpackChunkName: "components/icon-x" */).then(c => c.default || c),
   InboxNavigationComponent: () => import('../..\\components\\InboxNavigationComponent.vue' /* webpackChunkName: "components/inbox-navigation-component" */).then(c => c.default || c),
@@ -25,8 +28,6 @@ const components = {
   IconsIconBadgeCheck: () => import('../..\\components\\icons\\IconBadgeCheck.vue' /* webpackChunkName: "components/icons-icon-badge-check" */).then(c => c.default || c),
   IconsIconCheckCircle: () => import('../..\\components\\icons\\IconCheckCircle.vue' /* webpackChunkName: "components/icons-icon-check-circle" */).then(c => c.default || c),
   IconsIconChevronRight: () => import('../..\\components\\icons\\IconChevronRight.vue' /* webpackChunkName: "components/icons-icon-chevron-right" */).then(c => c.default || c),
-  IconsIconClipboardCheck: () => import('../..\\components\\icons\\IconClipboardCheck.vue' /* webpackChunkName: "components/icons-icon-clipboard-check" */).then(c => c.default || c),
-  IconsIconClipboardCopy: () => import('../..\\components\\icons\\IconClipboardCopy.vue' /* webpackChunkName: "components/icons-icon-clipboard-copy" */).then(c => c.default || c),
   IconsIconExclamationCircle: () => import('../..\\components\\icons\\IconExclamationCircle.vue' /* webpackChunkName: "components/icons-icon-exclamation-circle" */).then(c => c.default || c),
   IconsIconExternalLink: () => import('../..\\components\\icons\\IconExternalLink.vue' /* webpackChunkName: "components/icons-icon-external-link" */).then(c => c.default || c),
   IconsIconGithub: () => import('../..\\components\\icons\\IconGithub.vue' /* webpackChunkName: "components/icons-icon-github" */).then(c => c.default || c),

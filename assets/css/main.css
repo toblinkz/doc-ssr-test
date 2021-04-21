@@ -75,7 +75,7 @@ table td,table th{
 }
 ::-webkit-scrollbar {
   width: 9px !important;
-  height: auto !important;
+  height: 5px !important;
   background: #fff !important;
 }
 .prose a {
@@ -105,4 +105,41 @@ pre[class*="language-"] {
 .prose pre {
   border-radius: 0.2rem;
 }
+.nuxt-content-highlight{
+  position: relative !important;
+}
+.nuxt-content .nuxt-content-highlight>.copy:hover {
 
+  --bg-opacity: 1;
+  background-color: #4a5568;
+  background-color: rgba(74,85,104,var(--bg-opacity));
+}
+.nuxt-content .nuxt-content-highlight>.copy {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 1;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+  padding: .5rem;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255,255,255,var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #2d3748;
+  background-color: rgba(45,55,72,var(--bg-opacity));
+  font-size: .875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  border-radius: .375rem;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #fff;
+  border-color: rgba(255,255,255,var(--border-opacity));
+  font-weight: 600;
+  margin-right: .75rem;
+  margin-bottom: .75rem;
+}
+button, input {
+  overflow: visible;
+}

@@ -15,6 +15,9 @@
 </template>
 
 <script>
+import AppCopyButton from "@/components/AppCopyButton";
+import Vue from "vue";
+
 export default {
   name: "index",
   data(){
@@ -25,7 +28,17 @@ export default {
         }
     }
   },
-
+  mounted () {
+    setTimeout(() => {
+      const blocks = document.getElementsByClassName('nuxt-content-highlight')
+        console.log('kk', blocks)
+      for (const block of blocks) {
+        const CopyButton = Vue.extend(AppCopyButton)
+        const component = new CopyButton().$mount()
+        block.appendChild(component.$el)
+      }
+    }, 100)
+  },
   async asyncData({ $content, params, error }) {
     const document = await $content("index")
       .fetch()

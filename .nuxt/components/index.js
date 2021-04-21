@@ -1,3 +1,4 @@
+export { default as AppCopyButton } from '../..\\components\\AppCopyButton.vue'
 export { default as AppFooter } from '../..\\components\\AppFooter.vue'
 export { default as AppHeader } from '../..\\components\\AppHeader.vue'
 export { default as AppPageBottom } from '../..\\components\\AppPageBottom.vue'
@@ -9,6 +10,8 @@ export { default as CodeBlock } from '../..\\components\\CodeBlock.vue'
 export { default as CodeGroup } from '../..\\components\\CodeGroup.vue'
 export { default as IconArrowLeft } from '../..\\components\\IconArrowLeft.vue'
 export { default as IconArrowRight } from '../..\\components\\IconArrowRight.vue'
+export { default as IconClipboardCheck } from '../..\\components\\IconClipboardCheck.vue'
+export { default as IconClipboardCopy } from '../..\\components\\IconClipboardCopy.vue'
 export { default as IconMenu } from '../..\\components\\IconMenu.vue'
 export { default as IconX } from '../..\\components\\IconX.vue'
 export { default as InboxNavigationComponent } from '../..\\components\\InboxNavigationComponent.vue'
@@ -22,8 +25,6 @@ export { default as IconsBuiltWithNuxtLight } from '../..\\components\\icons\\Bu
 export { default as IconsIconBadgeCheck } from '../..\\components\\icons\\IconBadgeCheck.vue'
 export { default as IconsIconCheckCircle } from '../..\\components\\icons\\IconCheckCircle.vue'
 export { default as IconsIconChevronRight } from '../..\\components\\icons\\IconChevronRight.vue'
-export { default as IconsIconClipboardCheck } from '../..\\components\\icons\\IconClipboardCheck.vue'
-export { default as IconsIconClipboardCopy } from '../..\\components\\icons\\IconClipboardCopy.vue'
 export { default as IconsIconExclamationCircle } from '../..\\components\\icons\\IconExclamationCircle.vue'
 export { default as IconsIconExternalLink } from '../..\\components\\icons\\IconExternalLink.vue'
 export { default as IconsIconGithub } from '../..\\components\\icons\\IconGithub.vue'
@@ -35,6 +36,7 @@ export { default as IconsIconTranslate } from '../..\\components\\icons\\IconTra
 export { default as IconsIconTwitter } from '../..\\components\\icons\\IconTwitter.vue'
 export { default as IconsIconXCircle } from '../..\\components\\icons\\IconXCircle.vue'
 
+export const LazyAppCopyButton = import('../..\\components\\AppCopyButton.vue' /* webpackChunkName: "components/app-copy-button" */).then(c => c.default || c)
 export const LazyAppFooter = import('../..\\components\\AppFooter.vue' /* webpackChunkName: "components/app-footer" */).then(c => c.default || c)
 export const LazyAppHeader = import('../..\\components\\AppHeader.vue' /* webpackChunkName: "components/app-header" */).then(c => c.default || c)
 export const LazyAppPageBottom = import('../..\\components\\AppPageBottom.vue' /* webpackChunkName: "components/app-page-bottom" */).then(c => c.default || c)
@@ -46,6 +48,8 @@ export const LazyCodeBlock = import('../..\\components\\CodeBlock.vue' /* webpac
 export const LazyCodeGroup = import('../..\\components\\CodeGroup.vue' /* webpackChunkName: "components/code-group" */).then(c => c.default || c)
 export const LazyIconArrowLeft = import('../..\\components\\IconArrowLeft.vue' /* webpackChunkName: "components/icon-arrow-left" */).then(c => c.default || c)
 export const LazyIconArrowRight = import('../..\\components\\IconArrowRight.vue' /* webpackChunkName: "components/icon-arrow-right" */).then(c => c.default || c)
+export const LazyIconClipboardCheck = import('../..\\components\\IconClipboardCheck.vue' /* webpackChunkName: "components/icon-clipboard-check" */).then(c => c.default || c)
+export const LazyIconClipboardCopy = import('../..\\components\\IconClipboardCopy.vue' /* webpackChunkName: "components/icon-clipboard-copy" */).then(c => c.default || c)
 export const LazyIconMenu = import('../..\\components\\IconMenu.vue' /* webpackChunkName: "components/icon-menu" */).then(c => c.default || c)
 export const LazyIconX = import('../..\\components\\IconX.vue' /* webpackChunkName: "components/icon-x" */).then(c => c.default || c)
 export const LazyInboxNavigationComponent = import('../..\\components\\InboxNavigationComponent.vue' /* webpackChunkName: "components/inbox-navigation-component" */).then(c => c.default || c)
@@ -59,8 +63,6 @@ export const LazyIconsBuiltWithNuxtLight = import('../..\\components\\icons\\Bui
 export const LazyIconsIconBadgeCheck = import('../..\\components\\icons\\IconBadgeCheck.vue' /* webpackChunkName: "components/icons-icon-badge-check" */).then(c => c.default || c)
 export const LazyIconsIconCheckCircle = import('../..\\components\\icons\\IconCheckCircle.vue' /* webpackChunkName: "components/icons-icon-check-circle" */).then(c => c.default || c)
 export const LazyIconsIconChevronRight = import('../..\\components\\icons\\IconChevronRight.vue' /* webpackChunkName: "components/icons-icon-chevron-right" */).then(c => c.default || c)
-export const LazyIconsIconClipboardCheck = import('../..\\components\\icons\\IconClipboardCheck.vue' /* webpackChunkName: "components/icons-icon-clipboard-check" */).then(c => c.default || c)
-export const LazyIconsIconClipboardCopy = import('../..\\components\\icons\\IconClipboardCopy.vue' /* webpackChunkName: "components/icons-icon-clipboard-copy" */).then(c => c.default || c)
 export const LazyIconsIconExclamationCircle = import('../..\\components\\icons\\IconExclamationCircle.vue' /* webpackChunkName: "components/icons-icon-exclamation-circle" */).then(c => c.default || c)
 export const LazyIconsIconExternalLink = import('../..\\components\\icons\\IconExternalLink.vue' /* webpackChunkName: "components/icons-icon-external-link" */).then(c => c.default || c)
 export const LazyIconsIconGithub = import('../..\\components\\icons\\IconGithub.vue' /* webpackChunkName: "components/icons-icon-github" */).then(c => c.default || c)

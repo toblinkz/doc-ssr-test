@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.fade-in {
+			animation: fadeIn ease 3s;
+			-webkit-animation: fadeIn ease 3s;
+			-moz-animation: fadeIn ease 3s;
+			-o-animation: fadeIn ease 3s;
+			-ms-animation: fadeIn ease 3s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		@-moz-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		@-webkit-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		@-o-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		@-ms-keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+
+		.centered {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			/* bring your own prefixes */
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+<div class="centered">
+	<div class="fade-in"  >
+		<img src="/termii_bird.svg"   width="150px" height="auto">
+	</div>
+</div>
+</body>
+</html>

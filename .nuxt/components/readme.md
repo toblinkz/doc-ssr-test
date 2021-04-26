@@ -1,0 +1,46 @@
+# Discovered Components
+
+This is an auto-generated list of components discovered by [nuxt/components](https://github.com/nuxt/components).
+
+You can directly use them in pages and other components without the need to import them.
+
+**Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
+
+- `<AlgoliaAppSearch>` | `<algolia-app-search>` (components/AlgoliaAppSearch.vue)
+- `<AppCopyButton>` | `<app-copy-button>` (components/AppCopyButton.vue)
+- `<AppFooter>` | `<app-footer>` (components/AppFooter.vue)
+- `<AppHeader>` | `<app-header>` (components/AppHeader.vue)
+- `<AppPageBottom>` | `<app-page-bottom>` (components/AppPageBottom.vue)
+- `<AppPrevNext>` | `<app-prev-next>` (components/AppPrevNext.vue)
+- `<AppSearch>` | `<app-search>` (components/AppSearch.vue)
+- `<AppSidebar>` | `<app-sidebar>` (components/AppSidebar.vue)
+- `<AppToc>` | `<app-toc>` (components/AppToc.vue)
+- `<CodeBlock>` | `<code-block>` (components/CodeBlock.vue)
+- `<CodeGroup>` | `<code-group>` (components/CodeGroup.vue)
+- `<IconArrowLeft>` | `<icon-arrow-left>` (components/IconArrowLeft.vue)
+- `<IconArrowRight>` | `<icon-arrow-right>` (components/IconArrowRight.vue)
+- `<IconClipboardCheck>` | `<icon-clipboard-check>` (components/IconClipboardCheck.vue)
+- `<IconClipboardCopy>` | `<icon-clipboard-copy>` (components/IconClipboardCopy.vue)
+- `<IconMenu>` | `<icon-menu>` (components/IconMenu.vue)
+- `<IconX>` | `<icon-x>` (components/IconX.vue)
+- `<InboxNavigationComponent>` | `<inbox-navigation-component>` (components/InboxNavigationComponent.vue)
+- `<InsightsNavigationComponent>` | `<insights-navigation-component>` (components/InsightsNavigationComponent.vue)
+- `<Logo>` | `<logo>` (components/Logo.vue)
+- `<QuickNavigationCard>` | `<quick-navigation-card>` (components/QuickNavigationCard.vue)
+- `<SwitchNavigationComponent>` | `<switch-navigation-component>` (components/SwitchNavigationComponent.vue)
+- `<TokenNavigationComponent>` | `<token-navigation-component>` (components/TokenNavigationComponent.vue)
+- `<IconsBuiltWithNuxtDark>` | `<icons-built-with-nuxt-dark>` (components/icons/BuiltWithNuxtDark.vue)
+- `<IconsBuiltWithNuxtLight>` | `<icons-built-with-nuxt-light>` (components/icons/BuiltWithNuxtLight.vue)
+- `<IconsIconBadgeCheck>` | `<icons-icon-badge-check>` (components/icons/IconBadgeCheck.vue)
+- `<IconsIconCheckCircle>` | `<icons-icon-check-circle>` (components/icons/IconCheckCircle.vue)
+- `<IconsIconChevronRight>` | `<icons-icon-chevron-right>` (components/icons/IconChevronRight.vue)
+- `<IconsIconExclamationCircle>` | `<icons-icon-exclamation-circle>` (components/icons/IconExclamationCircle.vue)
+- `<IconsIconExternalLink>` | `<icons-icon-external-link>` (components/icons/IconExternalLink.vue)
+- `<IconsIconGithub>` | `<icons-icon-github>` (components/icons/IconGithub.vue)
+- `<IconsIconInformationCircle>` | `<icons-icon-information-circle>` (components/icons/IconInformationCircle.vue)
+- `<IconsIconMoon>` | `<icons-icon-moon>` (components/icons/IconMoon.vue)
+- `<IconsIconSearch>` | `<icons-icon-search>` (components/icons/IconSearch.vue)
+- `<IconsIconSun>` | `<icons-icon-sun>` (components/icons/IconSun.vue)
+- `<IconsIconTranslate>` | `<icons-icon-translate>` (components/icons/IconTranslate.vue)
+- `<IconsIconTwitter>` | `<icons-icon-twitter>` (components/icons/IconTwitter.vue)
+- `<IconsIconXCircle>` | `<icons-icon-x-circle>` (components/icons/IconXCircle.vue)

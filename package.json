@@ -1,0 +1,27 @@
+{
+  "name": "termii-documentation-v2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.13.1",
+    "algoliasearch": "^4.9.0",
+    "core-js": "^3.6.5",
+    "instantsearch.css": "^7.4.5",
+    "nuxt": "^2.15.3",
+    "prism-themes": "^1.6.0",
+    "vue-instantsearch": "^3.6.0",
+    "vue-scrollactive": "^0.9.3",
+    "remove-markdown": "^0.3.0",
+    "nuxt-content-algolia": "^0.2.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^3.0.2",
+    "@tailwindcss/typography": "0.2.0"
+  }
+}

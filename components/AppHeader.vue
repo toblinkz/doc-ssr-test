@@ -17,6 +17,7 @@
          </div>
          <div class="flex-1 flex justify-start w-4/6">
            <AppSearch  class="lg:block"></AppSearch>
+
          </div>
          <div class="lg:w-1/5 flex items-center pl-8 lg:pl-16">
 <!--            <a-->
@@ -53,6 +54,11 @@
 <script>
 export default {
 name: "AppHeader",
+watch:{
+  '$route' (){
+     this.$store.commit('menu/close')
+  }
+},
 data () {
     return {
       scrolled: 0

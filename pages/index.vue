@@ -7,7 +7,7 @@
         </h1>
         <NuxtContent :document="document" />
       </article>
-      <AppPageBottom :document="document" />
+      <AppPageBottom :document="document" c/>
       <AppPrevNext prev="" :next="next"/>
     </div>
     <AppToc v-if="!document.fullscreen" :toc="document.toc" />
@@ -53,6 +53,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
 

@@ -6,7 +6,7 @@
         </a>
       </div>
       <div class="flex items-center space-x-4">
-        <AppColorSwitcher />
+
       </div>
     </div>
   </footer>

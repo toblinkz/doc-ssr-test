@@ -1,4 +1,7 @@
 {
+  "AlgoliaAppSearch": {
+    "description": "Auto imported from components/AlgoliaAppSearch.vue"
+  },
   "AppCopyButton": {
     "description": "Auto imported from components/AppCopyButton.vue"
   },

@@ -1,7 +1,7 @@
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
 
-  ssr: true,
+  ssr: false,
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -13,13 +13,18 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:"stylesheet", href:"https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" }
     ],
     script: [
       {src: '/js/intercom.js'},
-      {src: '/js/feedback.js'}
+      {src: '/js/feedback.js'},
+      {src: "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js", body: true},
+      {src: '/js/docsearch.js', body: true},
+
     ],
   },
+
 
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -34,6 +39,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '@/plugins/vue-scrollactive',
+
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

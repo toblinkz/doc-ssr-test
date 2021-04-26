@@ -52,7 +52,7 @@ Object.defineProperty(Vue.prototype, '$nuxt', {
 
 Vue.use(Meta, {"keyName":"head","attribute":"data-n-head","ssrAttribute":"data-n-head-ssr","tagIDKeyName":"hid"})
 
-const defaultTransition = {"name":"page","mode":"out-in","appear":false,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
+const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
 
 const originalRegisterModule = Vuex.Store.prototype.registerModule
 
@@ -72,15 +72,12 @@ async function createApp(ssrContext, config = {}) {
   // Add this.$router into store actions/mutations
   store.$router = router
 
-  // Fix SSR caveat https://github.com/nuxt/nuxt.js/issues/3757#issuecomment-414689141
-  store.registerModule = registerModule
-
   // Create Root instance
 
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Termii | Developers","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"script":[{"src":"\u002Fjs\u002Fintercom.js"},{"src":"\u002Fjs\u002Ffeedback.js"}],"style":[]},
+    head: {"title":"Termii | Developers","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fdocsearch.js@2\u002Fdist\u002Fcdn\u002Fdocsearch.min.css"}],"script":[{"src":"\u002Fjs\u002Fintercom.js"},{"src":"\u002Fjs\u002Ffeedback.js"},{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fdocsearch.js@2\u002Fdist\u002Fcdn\u002Fdocsearch.min.js","body":true},{"src":"\u002Fjs\u002Fdocsearch.js","body":true}],"style":[]},
 
     store,
     router,

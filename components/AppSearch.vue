@@ -1,55 +1,34 @@
 <template>
-  <div class="w-full relative flex flex-col justify-between">
+  <div  class=" w-full relative flex flex-col justify-between">
     <div
       class="w-full relative"
-      @keydown.down="increment"
-      @keydown.up="decrement"
-      @keydown.enter="go"
+
     >
-<!--      <label for="search" class="sr-only">Search</label>-->
       <div class="relative">
         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <IconSearch class="h-5 w-5 text-gray-500" />
+<!--          <IconSearch class="h-5 w-5 text-gray-500" />-->
         </div>
         <input
-          v-model="query"
+          id="docsearch"
           class="block st-default-search-input w-full pl-10 pr-3 py-2 truncate leading-5 placeholder-gray-500 border border-transparent text-gray-700 dark:text-white dark-focus:text-white focus:border-gray-300 dark-focus:border-gray-700 rounded-md focus:outline-none focus:bg-white dark-focus:bg-gray-900 bg-gray-200 dark:bg-gray-800"
-          :class="{ 'rounded-b-none': focus && (searching || results.length) }"
           type="search"
           autocomplete="off"
           placeholder="Search Documentation"
-          @focus="onFocus"
-          @blur="onBlur"
         />
       </div>
+
+        <script async  src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" ></script>
+        <script async>
+          docsearch({
+            apiKey: 'a7562cc1fc374082307c28b6f550d708',
+            indexName: 'termii',
+            inputSelector: '#docsearch', // CSS selector to target the <input />
+            debug: false, // Set to `true` if you want to inspect the dropdown
+          });
+        </script>
+
+
     </div>
-<!--    <ul-->
-<!--      v-show="focus && (searching || results.length)"-->
-<!--      class="z-10 absolute w-full flex-1 top-0 bg-white dark:bg-gray-900 rounded-md border border-gray-300 dark:border-gray-700 overflow-hidden"-->
-<!--      :class="{ 'rounded-t-none': focus && (searching || results.length) }"-->
-<!--      style="margin-top: 37px;"-->
-<!--    >-->
-<!--      <li v-if="searching && !results.length" class="px-4 py-2">Searching...</li>-->
-<!--      <li-->
-<!--        v-for="(result, index) of results"-->
-<!--        :key="result.slug"-->
-<!--        @mouseenter="focusIndex = index"-->
-<!--        @mousedown="go"-->
-<!--      >-->
-<!--        <NuxtLink-->
-<!--          :to="result.slug"-->
-<!--          class="flex px-4 py-2 items-center leading-5 transition ease-in-out duration-150"-->
-<!--          :class="{-->
-<!--            'text-primary-500 bg-gray-200 dark:bg-gray-800': focusIndex === index-->
-<!--          }"-->
-<!--          @click="focus = false"-->
-<!--        >-->
-<!--          <span v-if="result.category" class="font-bold">{{ result.category }}</span>-->
-<!--          <IconChevronRight  v-if="result.category" class="w-3 h-3 mx-1"></IconChevronRight>-->
-<!--          {{ result.title }}-->
-<!--        </NuxtLink>-->
-<!--      </li>-->
-<!--    </ul>-->
   </div>
 </template>
 
@@ -67,7 +46,8 @@ export default {
       focusIndex: -1,
       open: false,
       searching: false,
-      results: []
+      results: [],
+      load_script: false
     }
   },
   watch: {
@@ -80,11 +60,14 @@ export default {
       }
       this.searching = true
       this.results = await this.$content('/', { deep: true }).sortBy('position', 'asc').only(['title', 'slug', 'category', 'to']).limit(12).search(query).fetch()
-      console.log(this.results)
       this.searching = false
     }
   },
   mounted () {
+    // let docSearchScript = document.createElement('script')
+    // docSearchScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js')
+    // document.head.appendChild(docSearchScript)
+    this.load_script = true;
     window.addEventListener('keyup', this.keyup)
   },
   beforeDestroy () {
@@ -127,3 +110,4 @@ export default {
   }
 }
 </script>
+

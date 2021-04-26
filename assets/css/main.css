@@ -143,3 +143,6 @@ pre[class*="language-"] {
 button, input {
   overflow: visible;
 }
+.algolia-autocomplete{
+  width: 100%;
+}

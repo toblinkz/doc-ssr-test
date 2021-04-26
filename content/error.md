@@ -34,36 +34,59 @@ Getting Unauthorized and you are passing the right key? Check your API endpoint.
 <br>
 <b>Your account is not active: </b> 
 <br>
-Getting Unauthorized and you are passing the right key? Check your API endpoint. This could also occur when you use <b>http</b> instead of <b>https</b>
+Account has either been deactivated or disabled by the administrators. Kindly contact the administrator for more information to reactivate.
 <br>
 <br>
 <b>You are not set up on this route: </b>
 <br>
-Getting Unauthorized and you are passing the right key? Check your API endpoint. This could also occur when you use <b>http</b> instead of <b>https</b>
+In this instance, that particular country route or intended destination is not set up for the user. Do contact your account manager to activate the route.
 <br>
 <br>
 <b>Your device has reached the daily limit: </b> 
 <br>
-Getting Unauthorized and you are passing the right key? Check your API endpoint. This could also occur when you use <b>http</b> instead of <b>https</b>
+The message volume activated on your device has reached the daily message limit.
 <br>
 <br>
 <b>Invalid Sender Id: </b>
 <br>
-Getting Unauthorized and you are passing the right key? Check your API endpoint. This could also occur when you use <b>http</b> instead of <b>https</b>
+This prompt is received when the innputed sender ID is not registered or misspelt. Kindly confirm your sender ID on the dashboard or via API (TOBI - insert hyperlink).
 <br> 
 <br> 
 <b>Device not found: </b>
 <br>
-Getting Unauthorized and you are passing the right key? Check your API endpoint. This could also occur when you use <b>http</b> instead of <b>https</b>
+This occurs when your device is not registered or recognised by our system. Visit your dashboard to register your device (insert hyperlink).
 <br>
 <br>
 <b>Insufficient balance: </b>
 <br>
-Getting Unauthorized and you are passing the right key? Check your API endpoint. This could also occur when you use <b>http</b> instead of <b>https</b>
+Wallet balance is not sufficient to perform that particular transaction. Kindly visit your dashboard to top-up your account or request an invoice.
 <br>
 <br>
 <b>No active subscription on your device:</b>
 <br>
-Getting Unauthorized and you are passing the right key? Check your API endpoint. This could also occur when you use <b>http</b> instead of <b>https</b>
+Your device subscription has expired. Visit your dashboard to renew subscription.
+<br>
+<br>
+<b>Service temporarily unavailable:</b>
+<br>
+In this rare instance, Termii is experiencing a downtime. Kindly contact the administrator.
+<br>
+<br>
+<b>This service is currently not active on your account:</b>
+<br>
+The service in question is not active on your account. Kindly contact your account manager.
+<br>
+<br>
+<b>Device not active:</b>
+<br>
+Rescan device barcode to the web server and ensure the device is connected to an active internet.
+<br>
+<br>
+<b>This WhatsApp 'destination' is not in free form window and no template matched with your content:</b>
+<br>
+Rescan device barcode to the web server and ensure the device is connected to an active internet.
+
+
+
 
 

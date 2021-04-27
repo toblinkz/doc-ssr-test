@@ -10,7 +10,7 @@ The API accepts JSON request payload and returns JSON encoded responses, and use
 
 <alert>
 <b>Note for Nigerian customers:</b> DND stands for Do-Not-Disturb and phone numbers with DND settings activated are blocked from receiving messages from the generic route by the Mobile Network Operators. 
-To deliver messages to phone numbers on DND, the Termii DND route needs to be activated on your account. Kindly reach out to our support team --Add Intercom trigger here--
+To deliver messages to phone numbers on DND, the Termii DND route needs to be activated on your account. Kindly reach out to our <a id="CHATID" style="cursor: pointer; color: #406DAD">support team</a>
 </alert>
 
 ## Send message

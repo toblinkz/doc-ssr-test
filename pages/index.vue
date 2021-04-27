@@ -31,7 +31,6 @@ export default {
   mounted () {
     setTimeout(() => {
       const blocks = document.getElementsByClassName('nuxt-content-highlight')
-        console.log('kk', blocks)
       for (const block of blocks) {
         const CopyButton = Vue.extend(AppCopyButton)
         const component = new CopyButton().$mount()

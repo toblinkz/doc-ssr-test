@@ -10,7 +10,7 @@ The API accepts JSON request payload and returns JSON encoded responses, and use
 
 <alert>
 <b>Note for Nigerian customers:</b> DND stands for Do-Not-Disturb and phone numbers with DND settings activated are blocked from receiving messages from the generic route by the Mobile Network Operators. 
-To deliver messages to phone numbers on DND, the Termii DND route needs to be activated on your account. Kindly reach out to our <a id="CHATID" style="cursor: pointer; color: #406DAD">support team</a>
+To deliver messages to phone numbers on DND, the Termii DND route needs to be activated on your account. Kindly reach out to our support team --Add Intercom trigger here--
 </alert>
 
 ## Send message
@@ -29,13 +29,15 @@ whatsapp |*string*<br>Represents a sender ID for sms or Device ID for Whatsapp w
 <b>Body params</b>
 Options | Required |Description |
 --- | --- | --- |
-api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
-to |yes|*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  | 
-from |yes|*string*<br>Represents a sender ID for sms which can be Alphanumeric or Device name for Whatsapp. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  | 
-sms |yes| *string*<br> Text of a message that would be sent to the destination phone number| 
-type |yes|*string*<br>  The kind of message that is sent, which is  a `plain` message.  | 
-channel |yes|*string*<br> This is the route through which the message is sent. It is either `dnd`, `whatsapp`, or `generic` | 
-
+api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). |
+to |yes|*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  |
+from |yes|*string*<br>Represents a sender ID for sms which can be Alphanumeric or Device name for Whatsapp. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  |
+sms |yes| *string*<br> Text of a message that would be sent to the destination phone number|
+type |yes|*string*<br>  The kind of message that is sent, which is  a `plain` message.  |
+channel |yes|*string*<br> This is the route through which the message is sent. It is either `dnd`, `whatsapp`, or `generic` |
+media |no|*object*<br> This is media object, it is only available for the High Volume WhatsApp. When using the media parameter, ensure you are not using the sms parameter|
+media.url |no|*string*<br> The url to the image resource,
+media.caption |no|*string*<br> The caption that should be added to the image,
 
 
 
@@ -49,7 +51,11 @@ channel |yes|*string*<br> This is the route through which the message is sent. I
        "sms": "Hi there, testing Termii",
        "type": "plain",
        "channel": "generic",
-       "api_key": "Your API Key"    
+       "api_key": "Your API Key",
+       "media": {
+        "url": "https://media.example.com/file",
+        "caption": "your media file"
+    }    
    }
   ```
 

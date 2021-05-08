@@ -44,7 +44,7 @@ Message Sent | It means the message has been delivered, but the telcos are yet t
 Received | The message has been delivered to the recipient phone number
 Message Failed | The message failed due to poor network from the recipient end
 Rejected |It means do-not-disturb is active on the recipient phone number
-Expired | It means the message 
+Expired | It means that the device may have been switched off or out of signal for a long period of time, and the networks' validity of the message has expired
 
 
 

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
 const components = {
+  Alert: () => import('../..\\components\\Alert.vue' /* webpackChunkName: "components/alert" */).then(c => c.default || c),
   AlgoliaAppSearch: () => import('../..\\components\\AlgoliaAppSearch.vue' /* webpackChunkName: "components/algolia-app-search" */).then(c => c.default || c),
   AppCopyButton: () => import('../..\\components\\AppCopyButton.vue' /* webpackChunkName: "components/app-copy-button" */).then(c => c.default || c),
   AppFooter: () => import('../..\\components\\AppFooter.vue' /* webpackChunkName: "components/app-footer" */).then(c => c.default || c),

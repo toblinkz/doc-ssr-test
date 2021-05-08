@@ -20,8 +20,8 @@ pin_id | yes |*string*<br> ID of the PIN sent (Example: `"c8dcd048-5e7f-4347-8c8
 pin | yes | *string*<br> The PIN code (Example: `"195558"`)| 
 
 
-<blockquote>This API requires a numeric or alphanumeric token to have been sent out to a customer. 
-It collects this token when inputed by the user and confirms its status.</blockquote>
+<alert>This API requires a numeric or alphanumeric token to have been sent out to a customer. 
+It collects this token when inputed by the user and confirms its status.</alert>
 
 <code-group>
    <code-block label="JSON" active>

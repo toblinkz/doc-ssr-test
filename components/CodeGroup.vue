@@ -72,6 +72,7 @@ button {
   position: absolute;
   bottom: -2px;
   height: 2px;
+  background: #406DAD;
   transition: left 150ms, width 150ms;
 }
 

@@ -1,4 +1,7 @@
 {
+  "Alert": {
+    "description": "Auto imported from components/Alert.vue"
+  },
   "AlgoliaAppSearch": {
     "description": "Auto imported from components/AlgoliaAppSearch.vue"
   },

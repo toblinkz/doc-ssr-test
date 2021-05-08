@@ -13,10 +13,10 @@ Events are our way of letting you know when something happens on your account. W
 It is important to verify that an event originated from Termii. 
 You can verify an event by validating the signature, a valid event is raised with an header ``X-Termii-Signature`` which is a ```HMAC SHA512``` signature of the event payload signed with your secret key.
 
-## Outbound Message
+## Outbound Message (Delivery Report)
 An outbound message is a message routed from a client or an application and delivered to the end user's mobile phone.
-You can receive the outbound message status update reports directly in your application using Termii's Webhook Notiifcation.
-Add your webhook url in your <a href="https://termii.com/account/webhook/config">termii developer console</a>
+You can receive delivery status report of your messages sent in your application using Termii's Webhook Notification.
+Add your webhook url in your <a style="" href="https://termii.com/account/webhook/config">termii developer console</a>
 
 <b>Request Type : </b>
 `POST`
@@ -32,45 +32,25 @@ sender |*string*<br> Represents a sender ID for sms or Device ID for Whatsapp wh
 message |*string*<br> Text of a message that would be sent to the destination phone number | 
 sent_at |*string*<br> Represents the time the message was sent | 
 cost |*string*<br> Represent amount charged for the message sent | 
-status |*string*<br> Represents the status of the message sent.v A message can have any of the following states; <span style="color:#880000"><code>DELIVERED &#124; Message delivered to handset</code>, `DND Active on Phone Number`, `Message Failed`</span> | 
+status |*string*<br> Represents the status of the message sent. A message can have any of the following states; <span style="color:#880000"><code>DELIVERED &#124; Message delivered to handset</code>, `DND Active on Phone Number`, `Message Failed`</span> | 
 channel |*string*<br> This is the route through which the message is sent. It is either dnd, whatsapp, or generic | 
 
+<b>Status of messages sent</b>
+Status | Description |
+--- | --- |
+Delivered  | The message has been delivered to the recipient phone number
+DND Active on Phone Number | It means do-not-disturb is active on the recipient phone number
+Message Sent | It means the message has been delivered, but the telcos are yet to update the delivery report
+Received | The message has been delivered to the recipient phone number
+Message Failed | The message failed due to poor network from the recipient end
+Rejected |It means do-not-disturb is active on the recipient phone number
+Expired | It means the message 
 
 
-[comment]: <> (####  Webhook Notification Data)
-
-
-[comment]: <> (```JSON)
-
-[comment]: <> ({  )
-
-[comment]: <> (   "type":"outbound",)
-
-[comment]: <> (   "message_id":"5964465985113503103",)
-
-[comment]: <> (   "receiver":"2343459509389",)
-
-[comment]: <> (   "sender":"N-Alert",)
-
-[comment]: <> (   "message":"Your Termii confirmation code is 234u53.",)
-
-[comment]: <> (   "sent_at":"2020-12-16 11:34:36",)
-
-[comment]: <> (   "cost":"3.9",)
-
-[comment]: <> (   "command":"deliver",)
-
-[comment]: <> (   "status":"DELIVERED | Message delivered to handset",)
-
-[comment]: <> (   "channel":"Number Api")
-
-[comment]: <> (}	        )
-
-[comment]: <> (```)
 
 ## Device offline Notification
 You can receive your device offline notification update  directly in your application using Termii's Webhook Notiifcation.
-Add your webhook url in your <a href="https://termii.com/account/webhook/config">termii developer console</a>
+Add your webhook url in your <a style="color:#406DAD; text-decoration: underline;" href="https://accounts.termii.com/#/account/webhook/config" target="_blank">termii developer console</a>
 
 <b>Request Type : </b>
 `POST`

@@ -18,8 +18,8 @@ api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboa
 phone_number | yes |*string*<br>Represents the phone number to be verified. Phone number must be in the international format (`Example: 23490126727`)   | 
 
 
-<blockquote>DND represents Do-Not-Distrub routes and messages sent to phone numbers with DND settings activated are blocked by telcom providers. 
-To ensure your messages deliver, use the dnd channel.</blockquote>
+<alert>DND represents Do-Not-Distrub routes and messages sent to phone numbers with DND settings activated are blocked by telcom providers. 
+To ensure your messages deliver, use the dnd channel.</alert>
 
 <code-group>
    <code-block label="JSON" active>

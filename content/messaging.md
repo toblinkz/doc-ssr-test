@@ -8,22 +8,17 @@ category: Switch
 This API allows businesses send text messages to their customers across different messaging channels.
 The API accepts JSON request payload and returns JSON encoded responses, and uses standard HTTP response codes.
 
-<alert>
-<b>Note for Nigerian customers:</b> DND stands for Do-Not-Disturb and phone numbers with DND settings activated are blocked from receiving messages from the generic route by the Mobile Network Operators. 
-To deliver messages to phone numbers on DND, the Termii DND route needs to be activated on your account. Kindly reach out to our support team --Add Intercom trigger here--
-</alert>
+<b> Messaging Channels/Routes </b>
+Channel | Description |
+--- | --- |
+generic | This channel is used to send promotional messages and messages to phone number not on dnd | 
+dnd | On this channel all your messages  deliver whether there is dnd restriction or not on the phone number | 
+whatsapp | This channels sends messages via WhatsApp | 
+
 
 ## Send message
 <b>Endpoint : </b> `https://termii.com/api/sms/send`
 <br><br> <b>Request Type : </b>**`POST`**
-
-<b> Messaging Channels/Routes </b>
-Channel | Description |
---- | --- |
-generic |*string*<br> Your API key (It can be found on your Termii dashboard). | 
-dnd |*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  | 
-whatsapp |*string*<br>Represents a sender ID for sms or Device ID for Whatsapp which can be Alphanumeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  | 
-
 
 
 <b>Body params</b>
@@ -35,12 +30,25 @@ from |yes|*string*<br>Represents a sender ID for sms which can be Alphanumeric o
 sms |yes| *string*<br> Text of a message that would be sent to the destination phone number|
 type |yes|*string*<br>  The kind of message that is sent, which is  a `plain` message.  |
 channel |yes|*string*<br> This is the route through which the message is sent. It is either `dnd`, `whatsapp`, or `generic` |
-media |no|*object*<br> This is media object, it is only available for the High Volume WhatsApp. When using the media parameter, ensure you are not using the sms parameter|
+media |no|*object*<br> This is media object, it is only available for the `High Volume WhatsApp`. When using the media parameter, ensure you are not using the sms parameter|
 media.url |no|*string*<br> The url to the image resource,
 media.caption |no|*string*<br> The caption that should be added to the image,
 
+<b>Media Types</b>
+File | Supported Format |
+--- | --- 
+Image | JPG, JPEG, PNG
+Audio | MP3, OGG, AMR
+Documents | PDF
+Video | MP4 (<b>Note:</b>  WhatsApp currently does not support MP4 files without an audio)
 
 
+<alert>
+<b>Note:</b> For customers sending messages to Nigeria, DND stands for Do-Not-Disturb and phone numbers with DND settings activated are blocked from receiving messages from the generic route by the Mobile Network Operators. 
+To deliver messages to phone numbers on DND, the Termii DND route needs to be activated on your account. Kindly reach out to<a id="CHATID"  style="cursor:pointer; color:#406DAD; text-decoration: underline;">  our support team.</a>
+</alert>
+<br>
+<br>
 <code-group>
    <code-block label="JSON" active>
 
@@ -69,8 +77,12 @@ media.caption |no|*string*<br> The caption that should be added to the image,
             "sms":"Hi there, testing Termii",
             "type":"plain",
             "api_key":"Your API key",
-            "channel":"generic"
-            };
+            "channel":"generic",
+            "media": {
+              "url": "https://media.example.com/file",
+              "caption": "your media file"
+               }       
+          };
 
 var data = JSON.stringify(data);
 
@@ -101,8 +113,12 @@ var data = {
             "sms":"Hi there, testing Termii",
             "type":"plain",
             "api_key":"Your API key",
-            "channel":"generic"
-            };
+            "channel":"generic",
+             "media": {
+                "url": "https://media.example.com/file",
+                "caption": "your media file"
+              }   
+          };
 var options = {
   'method': 'POST',
   'url': 'https://termii.com/api/sms/send',
@@ -130,7 +146,11 @@ payload = {
              "sms": "Hi there, testing Termii ",
              "type": "plain",
              "channel": "generic",
-             "api_key": "Your API Key"
+             "api_key": "Your API Key",
+               "media": {
+                  "url": "https://media.example.com/file",
+                  "caption": "your media file"
+              }   
          }
 headers = {
   'Content-Type': 'application/json',
@@ -144,23 +164,15 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/sms/send");
-
-//Creating Json object
-JObject objectBody = new JObject();
-objectBody.Add("to","2347880234567");
-objectBody.Add("from","talert");
-objectBody.Add("sms","Hi there, testing Termii");
-objectBody.Add("type","plain");
-objectBody.Add("channel","generic");
-objectBody.Add("api_key","Your API Key");
-
-RestRequest restRequest = new RestRequest(Method.POST);
-
-restRequest.AddHeader("Content-Type", "application/json");
-restRequest.AddParameter("application/json", objectBody,  ParameterType.RequestBody);
-IRestResponse restResponse = restClient.Execute(restRequest);
-Console.WriteLine(restResponse.Content);
+var client = new RestClient("https://termii.com/api/sms/send");
+client.Timeout = -1;
+var request = new RestRequest(Method.POST);
+request.AddHeader("Content-Type", "application/json");
+request.AddParameter("application/json", "{\r\n \"to\":\"2347880234567\",\r\n  \"from\":\"talert\",\r\n  \"sms\":\"Hi there, testing Termii\",\r\n 
+   \"type\":\"plain\",\r\n  \"api_key\":\"Your API key\",\r\n \"channel\":\"generic\",\r\n  \"media\": {\r\n \"url\": \"https://media.example.com/file\",\r\n  \"caption\": \"your media file\"\r\n }   \r\n  };", 
+ ParameterType.RequestBody);
+IRestResponse response = client.Execute(request);
+Console.WriteLine(response.Content);
 
 
   ```
@@ -170,34 +182,42 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.POST("https://termii.com/api/sms/send")
+HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/send")
   .header("Content-Type", "application/json")
-  .body(" {\r\n \"to\": \"2347089545357\",\r\n  \"from\": \"talert\",\r\n   \"sms\": \"Hi there, testing Termii\",\r\n   \"type\": \"plain\",\r\n   \"channel\": \"whatsapp\",\r\n   \"api_key\": \"Your API Key\"\r\n  \r\n }")
+  .body("{\r\n \"to\":\"2347880234567\",\r\n \"from\":\"talert\",\r\n  \"sms\":\"Hi there, testing Termii\",\r\n \"type\":\"plain\",\r\n  \"api_key\":\"Your API key\",\r\n  \"channel\":\"generic\",\r\n  \"media\": {\r\n \"url\": \"https://media.example.com/file\",\r\n  \"caption\": \"your media file\"\r\n  } \r\n  };")
   .asString();
+
 
   ```
   </code-block>
 <code-block label="PHP" >
 
   ```bash
-  $curl = curl_init();
-$data = array("to" => "2347880234567","from" => "talert",
-"sms"=>"Hi there, testing Termii","type" => "plain","channel" => "generic","api_key" => "Your API key");
-
-$post_data = json_encode($data);
+ $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://termii.com/api/sms/send",
+  CURLOPT_URL => 'https://termii.com/api/sms/send',
   CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
+  CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 0,
   CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => $post_data,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>' {
+            "to": "2347880234567",
+             "from": "talert",
+             "sms": "Hi there, testing Termii ",
+             "type": "plain",
+             "channel": "generic",
+             "api_key": "Your API Key",
+               "media": {
+                  "url": "https://media.example.com/file",
+                  "caption": "your media file"
+              }   
+         }',
   CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/json"
+    'Content-Type: application/json'
   ),
 ));
 
@@ -205,6 +225,7 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 echo $response;
+
   ```
   </code-block>
 </code-group>

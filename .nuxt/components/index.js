@@ -1,3 +1,4 @@
+export { default as Alert } from '../..\\components\\Alert.vue'
 export { default as AlgoliaAppSearch } from '../..\\components\\AlgoliaAppSearch.vue'
 export { default as AppCopyButton } from '../..\\components\\AppCopyButton.vue'
 export { default as AppFooter } from '../..\\components\\AppFooter.vue'
@@ -37,6 +38,7 @@ export { default as IconsIconTranslate } from '../..\\components\\icons\\IconTra
 export { default as IconsIconTwitter } from '../..\\components\\icons\\IconTwitter.vue'
 export { default as IconsIconXCircle } from '../..\\components\\icons\\IconXCircle.vue'
 
+export const LazyAlert = import('../..\\components\\Alert.vue' /* webpackChunkName: "components/alert" */).then(c => c.default || c)
 export const LazyAlgoliaAppSearch = import('../..\\components\\AlgoliaAppSearch.vue' /* webpackChunkName: "components/algolia-app-search" */).then(c => c.default || c)
 export const LazyAppCopyButton = import('../..\\components\\AppCopyButton.vue' /* webpackChunkName: "components/app-copy-button" */).then(c => c.default || c)
 export const LazyAppFooter = import('../..\\components\\AppFooter.vue' /* webpackChunkName: "components/app-footer" */).then(c => c.default || c)

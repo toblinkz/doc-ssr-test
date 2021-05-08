@@ -12,8 +12,8 @@ This Inbox API returns reports for messages sent across the sms, voice & whatsap
 https://termii.com/api/sms/inbox?api_key=YourAPIKey
 `<br><br> <b>Request Type : </b> **`GET`**
 
-<blockquote>Message IDs are gotten when a message is sent on Termii. Find the ID in the JSON response and input it into the inbox API to get a specific delivery report,
- else we would return all reports on your account.</blockquote>
+<alert>Message IDs are gotten when a message is sent on Termii. Find the ID in the JSON response and input it into the inbox API to get a specific delivery report,
+ else we would return all reports on your account.</alert>
 
 <hr />
 

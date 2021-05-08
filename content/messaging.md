@@ -13,7 +13,7 @@ Channel | Description |
 --- | --- |
 generic | This channel is used to send promotional messages and messages to phone number not on dnd | 
 dnd | On this channel all your messages  deliver whether there is dnd restriction or not on the phone number | 
-whatsapp | This channels sends messages via WhatsApp | 
+whatsapp | This channel sends messages via WhatsApp | 
 
 
 ## Send message

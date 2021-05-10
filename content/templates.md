@@ -11,7 +11,7 @@ Templates is a feature that helps businesses set a template for the one-time-pas
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/device/send/template
+https://termii.com/api/send/template
 `<br><br> <b>Request Type : </b>**`POST`**
 
 Options | Required | Description |

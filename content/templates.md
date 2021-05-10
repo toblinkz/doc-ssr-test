@@ -19,7 +19,7 @@ Options | Required | Description |
 phone_number | yes |*string*<br> The destination phone number. Phone number must be in the international format (`Example: 23490126727`).  | 
 device_id | yes |*string*<br>Represents the Device ID for Whatsapp. It can be Alphanumeric. It should be passed when the message is sent via whatsapp (It can be found on the manage device page on your Termii dashboard) | 
 template_id | yes | *string*<br>  The ID of the template used| 
-api_key | yes | *string*<br> Your API key (It can be found on your Termii dashboard). |  
+api_key | yes | *string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>). |  
 data | yes |*object*<br> Represents an object of `key: value` pair. The keys for the data object can be found on the device subscription page on your dashboard. (`Example: {"product_name": "Termii",  "otp" : 120435, }`)| 
 
 

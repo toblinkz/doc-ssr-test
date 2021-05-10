@@ -15,7 +15,7 @@ https://termii.com/api/sms/otp/verify
 
 Options | Required | Description |
 --- | --- | --- |
-api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+api_key | yes |*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>). | 
 pin_id | yes |*string*<br> ID of the PIN sent (Example: `"c8dcd048-5e7f-4347-8c89-4470c3af0b"`)  | 
 pin | yes | *string*<br> The PIN code (Example: `"195558"`)| 
 

@@ -93,7 +93,7 @@ https://termii.com/api/sender-id/request
 
 Options |Required | Description |
 --- | --- | --- |
-api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard).  | 
+api_key | yes |*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>).  | 
 sender_id | yes |*string*<br>Represents the ID of the sender which can be alphanumeric or numeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  | 
 usecase | yes | *string*<br>A sample of the type of message sent. | 
 company | yes | *string*<br> Represents the name of the company with the sender ID.  | 

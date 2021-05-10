@@ -15,7 +15,7 @@ https://termii.com/api/get-balance?api_key=YourAPIKey
 
 Options | Required | Description |
 --- | --- | --- |
-api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+api_key | yes |*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>). | 
 
 
 

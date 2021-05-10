@@ -12,7 +12,7 @@ The API accepts JSON request payload and returns JSON encoded responses, and use
 Channel | Description |
 --- | --- |
 generic | This channel is used to send promotional messages and messages to phone number not on dnd | 
-dnd | On this channel all your messages  deliver whether there is dnd restriction or not on the phone number | 
+dnd | On this channel all your messages  deliver whether there is <a href="https://termii.medium.com/the-dnd-service-in-nigeria-everything-you-need-to-know-72b7247e3968" target="_blank" style="text-decoration:underline">dnd restriction</a> or not on the phone number | 
 whatsapp | This channel sends messages via WhatsApp | 
 
 
@@ -24,15 +24,16 @@ whatsapp | This channel sends messages via WhatsApp |
 <b>Body params</b>
 Options | Required |Description |
 --- | --- | --- |
-api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). |
+api_key | yes |*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>. |
 to |yes|*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  |
 from |yes|*string*<br>Represents a sender ID for sms which can be Alphanumeric or Device name for Whatsapp. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  |
 sms |yes| *string*<br> Text of a message that would be sent to the destination phone number|
 type |yes|*string*<br>  The kind of message that is sent, which is  a `plain` message.  |
 channel |yes|*string*<br> This is the route through which the message is sent. It is either `dnd`, `whatsapp`, or `generic` |
-media |no|*object*<br> This is media object, it is only available for the `High Volume WhatsApp`. When using the media parameter, ensure you are not using the sms parameter|
-media.url |no|*string*<br> The url to the image resource,
+media |no|*object*<br> This is a media object, it is only available for the `High Volume WhatsApp`. When using the media parameter, ensure you are not using the sms parameter|
+media.url |no|*string*<br> The url to the file resource,
 media.caption |no|*string*<br> The caption that should be added to the image,
+
 
 <b>Media Types</b>
 File | Supported Format |
@@ -44,7 +45,7 @@ Video | MP4 (<b>Note:</b>  WhatsApp currently does not support MP4 files without
 
 
 <alert>
-<b>Note:</b> For customers sending messages to Nigeria, DND stands for Do-Not-Disturb and phone numbers with DND settings activated are blocked from receiving messages from the generic route by the Mobile Network Operators. 
+<b>Note:</b> For customers sending messages to Nigeria, DND stands for <a href="https://termii.medium.com/the-dnd-service-in-nigeria-everything-you-need-to-know-72b7247e3968" target="_blank" style="text-decoration:underline">Do-Not-Disturb</a> and phone numbers with DND settings activated are blocked from receiving messages from the generic route by the Mobile Network Operators. 
 To deliver messages to phone numbers on DND, the Termii DND route needs to be activated on your account. Kindly reach out to<a id="CHATID"  style="cursor:pointer; color:#406DAD; text-decoration: underline;">  our support team.</a>
 </alert>
 <br>

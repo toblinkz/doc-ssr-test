@@ -16,7 +16,7 @@ https://termii.com/api/sms/otp/generate
 
 Options | Required | Description |
 --- | --- | --- |
-api_key | yes |*string*<br> Your live API key (It can be found on your Termii dashboard).  | 
+api_key | yes |*string*<br> Your live API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>).  | 
 pin_type | yes |Enum: `"NUMERIC"` `"ALPHANUMERIC"`<br> Type of PIN code that will be generated and sent as part of the OTP message. You can set PIN type to numeric or alphanumeric | 
 phone_number| yes | *string*<br> Represents the destination phone number.Phone number must be in the international format (`Example: 23490126727`)| 
 pin_attempts| yes |*integer*<br>Example: `3`<br> Represents the number of times the PIN can be attempted before expiration. It has a minimum of one attempt| 

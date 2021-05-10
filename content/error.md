@@ -49,32 +49,32 @@ The message volume activated on your device has reached the daily message limit.
 <br>
 <b>Invalid Sender Id: </b>
 <br>
-This prompt is received when the inputed sender ID is not registered or misspelt. Kindly confirm your sender ID on the <a href="https://accounts.termii.com/#/sms/sender-id-management" target="_blank" style="cursor:pointer; color:#406DAD">dashboard</a> or via <a href="https://developers.termii.com/sender-id" target="_blank" style="cursor:pointer; color:#406DAD">API</a>.
+This prompt is received when the inputed sender ID is not registered or misspelt. Kindly confirm your sender ID on the <a href="https://accounts.termii.com/#/sms/sender-id-management" target="_blank" style="cursor:pointer;text-decoration:underline; color:#406DAD">dashboard</a> or via <a href="https://developers.termii.com/sender-id" target="_blank" style="cursor:pointer; text-decoration:underline;  color:#406DAD">API</a>.
 <br> 
 <br> 
 <b>Device not found: </b>
 <br>
-This occurs when your device is not registered or recognised by our system. Visit your dashboard to <a href="https://accounts.termii.com/#/devices" target="_blank" style="cursor:pointer; color:#406DAD">register</a> your device.
+This occurs when your device is not registered or recognised by our system. Visit your dashboard to <a href="https://accounts.termii.com/#/devices" target="_blank" style="cursor:pointer;text-decoration:underline; color:#406DAD">register</a> your device.
 <br>
 <br>
 <b>Insufficient balance: </b>
 <br>
-Wallet balance is not sufficient to perform that particular transaction. Kindly visit your dashboard to <a href="https://accounts.termii.com/#/billing/fund" target="_blank" style="cursor:pointer; color:#406DAD">top-up</a> your account or request an invoice.
+Wallet balance is not sufficient to perform that particular transaction. Kindly visit your dashboard to <a href="https://accounts.termii.com/#/billing/fund" target="_blank" style="cursor:pointer;text-decoration:underline;color:#406DAD">top-up</a> your account or request an invoice.
 <br>
 <br>
 <b>No active subscription on your device:</b>
 <br>
-Your device subscription has expired. Visit your <a href="https://accounts.termii.com/#/devices" target="_blank" style="cursor:pointer; color:#406DAD">dashboard</a> to renew subscription.
+Your device subscription has expired. Visit your <a href="https://accounts.termii.com/#/devices" target="_blank" style="cursor:pointer;text-decoration:underline;  color:#406DAD">dashboard</a> to renew subscription.
 <br>
 <br>
 <b>Service temporarily unavailable:</b>
 <br>
-In this rare instance, Termii is experiencing a downtime. <a id="CHATID"  style="cursor:pointer; color:#406DAD">Kindly contact the administrator</a>.
+In this rare instance, Termii is experiencing a downtime. <a id="CHATID"  style="cursor:pointer;text-decoration:underline; color:#406DAD">Kindly contact the administrator</a>.
 <br>
 <br>
 <b>This service is currently not active on your account:</b>
 <br>
-The service in question is not active on your account. <a id="CHATID"  style="cursor:pointer; color:#406DAD">Kindly contact your account manager</a>.
+The service in question is not active on your account. <a id="CHATID"   style="cursor:pointer; text-decoration:underline; color:#406DAD">Kindly contact your account manager</a>.
 <br>
 <br>
 <b>Device not active:</b>
@@ -82,7 +82,7 @@ The service in question is not active on your account. <a id="CHATID"  style="cu
 Rescan device barcode to the web server and ensure the device is connected to an active internet.
 <br>
 <br>
-<b>This WhatsApp 'destination' is not in free form window and no template matched with your content:</b>
+<b>This WhatsApp 'destination' is not in a free-form window and no template matched with your content:</b>
 <br>
-This happens when you are trying to send a free form window message without your customer initiating the conversation or none of the registered approved templates matches the message content you are trying to send.
+This happens when you are trying to send a free-form window message without your customer initiating the conversation or none of the registered approved templates matches the message content you are trying to send.
 In cases like this, your customer must have initiated the conversation by sending a WhatsApp message to your business registered WhatsApp number

@@ -14,7 +14,7 @@ https://termii.com/api/check/dnd?api_key=my_api_key&phone_number=phone_number
 
 Options | Required | Description |
 --- | --- | --- |
-api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+api_key | yes |*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>). | 
 phone_number | yes |*string*<br>Represents the phone number to be verified. Phone number must be in the international format (`Example: 23490126727`)   | 
 
 

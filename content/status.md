@@ -14,7 +14,7 @@ https://termii.com/api/insight/number/query?phone_number=phone_number&api_key=ap
 
 Options | Required | Description |
 --- | --- |  --- |
-api_key | yes |*string*<br> Your API key (It can be found on your Termii dashboard). | 
+api_key | yes |*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>). | 
 phone_number| yes |*string*<br>Represents the phone number to be verified. Phone number must be in the international format (`Example: 2348753243651`)   | 
 country_code| yes |*string*<br>Represents short alphabetic codes developed to represent countries (`Example: NG `) .
 

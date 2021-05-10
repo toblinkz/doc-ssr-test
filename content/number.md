@@ -16,7 +16,7 @@ https://termii.com/api/sms/number/send
 
 Options | Required | Description |
 --- | --- | --- |
-api_key | yes | *string*<br> Your API key (It can be found on your Termii dashboard). | 
+api_key | yes | *string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>). | 
 to | yes |*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 2349012672711`)  | 
 sms | yes |*string*<br>Text of a message that would be sent to the destination phone number  | 
 

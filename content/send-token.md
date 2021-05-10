@@ -15,7 +15,7 @@ https://termii.com/api/sms/otp/send
 
 Options |Required| Description |
 --- | --- | --- |
-api_key |yes|*string*<br> Your API key (It can be found on your Termii dashboard). | 
+api_key |yes|*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>). | 
 message_type |yes| Enum: `"NUMERIC"` `"ALPHANUMERIC"`<br> Type of message that will be generated and sent as part of the OTP message. You can set message type to numeric or alphanumeric  | 
 to |yes |*string*<br> The destination phone number. Phone number must be in the international format (`Example: 23490126727`)| 
 from |yes|*string*<br> Represents a sender ID which can be alphanumeric or numeric. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)   | 

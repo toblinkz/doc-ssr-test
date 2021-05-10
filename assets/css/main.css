@@ -146,3 +146,7 @@ button, input {
 .algolia-autocomplete{
   width: 100%;
 }
+.link a {
+  color: #406DAD!important;
+  text-decoration: underline!important;
+}

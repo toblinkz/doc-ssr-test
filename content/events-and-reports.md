@@ -16,7 +16,7 @@ You can verify an event by validating the signature, a valid event is raised wit
 ## Outbound Message (Delivery Report)
 An outbound message is a message routed from a client or an application and delivered to the end user's mobile phone.
 You can receive delivery status report of your messages sent in your application using Termii's Webhook Notification.
-Add your webhook url in your <a style="" href="https://termii.com/account/webhook/config">termii developer console</a>
+Add your webhook url in your <a style="text-decoration:underline" href="https://termii.com/account/webhook/config">termii developer console</a>
 
 <b>Request Type : </b>
 `POST`
@@ -39,12 +39,12 @@ channel |*string*<br> This is the route through which the message is sent. It is
 Status | Description |
 --- | --- |
 Delivered  | The message has been delivered to the recipient phone number
-DND Active on Phone Number | It means do-not-disturb is active on the recipient phone number
-Message Sent | It means the message has been delivered, but the telcos are yet to update the delivery report
-Received | The message has been delivered to the recipient phone number
-Message Failed | The message failed due to poor network from the recipient end
-Rejected |It means do-not-disturb is active on the recipient phone number
-Expired | It means that the device may have been switched off or out of signal for a long period of time, and the networks' validity of the message has expired
+DND Active on Phone Number | It means <a href="https://termii.medium.com/the-dnd-service-in-nigeria-everything-you-need-to-know-72b7247e3968" target="_blank" style="text-decoration:underline">do-not-disturb</a> is active on the recipient's phone number
+Message Sent |This is first state of every message triggered on Termii. It means the message has been sent to the telecom providers, but we are yet to get the delivery report 
+Received | This applies to inbound messages when Termii receives an incoming message
+Message Failed | The message failed due to poor network from the recipient's end
+Rejected |It means <a href="https://termii.medium.com/the-dnd-service-in-nigeria-everything-you-need-to-know-72b7247e3968" target="_blank" style="text-decoration:underline">do-not-disturb</a>  is active on the recipient phone number
+Expired | It means that the recipient's device may have been switched off or out of signal for a long period of time, and the networks' validity of the message has expired
 
 
 

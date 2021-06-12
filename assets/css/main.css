@@ -150,3 +150,28 @@ button, input {
   color: #406DAD!important;
   text-decoration: underline!important;
 }
+
+.vm--container{
+  display: block;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.vm--modal {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px!important;
+  box-shadow: 0 20px 60px -2px rgb(27 33 58 / 40%);
+}
+.button-color{
+  background: linear-gradient(-48deg, #0DCBE5 -30%, #365899 60%) !important;
+}

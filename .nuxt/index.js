@@ -17,6 +17,7 @@ import nuxt_plugin_plugin_45c4dce5 from 'nuxt_plugin_plugin_45c4dce5' // Source:
 import nuxt_plugin_pluginclient_73f3431b from 'nuxt_plugin_pluginclient_73f3431b' // Source: .\\content\\plugin.client.js (mode: 'client')
 import nuxt_plugin_pluginserver_4ca696ba from 'nuxt_plugin_pluginserver_4ca696ba' // Source: .\\content\\plugin.server.js (mode: 'server')
 import nuxt_plugin_vuescrollactive_41e62aee from 'nuxt_plugin_vuescrollactive_41e62aee' // Source: ..\\plugins\\vue-scrollactive (mode: 'all')
+import nuxt_plugin_vuejsmodal_1dce8cf8 from 'nuxt_plugin_vuejsmodal_1dce8cf8' // Source: ..\\plugins\\vue-js-modal (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -223,6 +224,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vuescrollactive_41e62aee === 'function') {
     await nuxt_plugin_vuescrollactive_41e62aee(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_vuejsmodal_1dce8cf8 === 'function') {
+    await nuxt_plugin_vuejsmodal_1dce8cf8(app.context, inject)
   }
 
   // Lock enablePreview in context

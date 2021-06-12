@@ -6,29 +6,31 @@
    <div class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)">
      <ul class="p-10 ">
        <li class="mb-4">
-         <p class="mb-2 text-gray-700 font-semibold tracking-wider  text-sm lg:text-xs cursor-pointer">
+         <p class="mb-2 text-gray-700 font-semibold tracking-wider  text-sm lg:text-xs cursor-pointer" @click="toggleHomeDropdown">
          <NuxtLink
            to="/"
          >
            <i class="entypo-home mr-2"></i>Home
          </NuxtLink>
          </p>
-       </li>
-       <li class="mb-4">
-           <p class="mb-2 text-gray-700  tracking-wider font-semibold text-sm lg:text-xs cursor-pointer">
-             <NuxtLink to="authentication">
-               <i class="entypo-lock"></i> Authentication
+         <ul v-if="show_home_dropdown">
+           <li class="text-gray-700 dark:text-gray-300">
+             <NuxtLink
+               to="authentication"
+               class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+             >
+               Authentication
              </NuxtLink>
-           </p>
-       </li>
-       <li class="mb-4">
-
-           <p class="mb-2 text-gray-700  tracking-wider font-semibold text-sm lg:text-xs cursor-pointer">
-             <NuxtLink to="error">
-               <i class="entypo-code mr-2"></i>Error
+           </li>
+           <li class="text-gray-700 dark:text-gray-300">
+             <NuxtLink
+               to="error"
+               class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+             >
+               Error
              </NuxtLink>
-           </p>
-
+           </li>
+         </ul>
        </li>
 
        <li class="mb-4">
@@ -181,6 +183,25 @@
 
          </ul>
        </li>
+       <li class="mb-4">
+         <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
+           <nuxt-link
+             to="community-sdks"
+           >
+             <i class="icon-books mr-2"></i>Community SDKs
+           </nuxt-link>
+         </p>
+       </li>
+       <li class="mb-4">
+         <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
+           <a
+             target="_blank"
+             href="https://join.slack.com/t/termii-loop/shared_invite/zt-imbqlf68-w4lsPkOzibBXSQohu8_8dQ"
+           >
+             <i class="fa fa-slack mr-2"></i>Join Termii Loop
+           </a>
+         </p>
+       </li>
      </ul>
    </div>
  </aside>
@@ -191,6 +212,7 @@ export default {
   name: "AppSidebar",
   data(){
     return{
+       show_home_dropdown: true,
        show_inbox_dropdown: false,
        show_switch_dropdown:false,
        show_token_dropdown: false,
@@ -208,6 +230,9 @@ export default {
     },
   },
   methods:{
+    toggleHomeDropdown(){
+      this.show_home_dropdown = !this.show_home_dropdown;
+    },
     toggleInboxDropdown(){
       this.show_inbox_dropdown = !this.show_inbox_dropdown;
     },

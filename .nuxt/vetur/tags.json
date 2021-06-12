@@ -65,11 +65,23 @@
   "QuickNavigationCard": {
     "description": "Auto imported from components/QuickNavigationCard.vue"
   },
+  "SdkCard": {
+    "description": "Auto imported from components/SdkCard.vue"
+  },
+  "SubmitButton": {
+    "description": "Auto imported from components/SubmitButton.vue"
+  },
   "SwitchNavigationComponent": {
     "description": "Auto imported from components/SwitchNavigationComponent.vue"
   },
   "TokenNavigationComponent": {
     "description": "Auto imported from components/TokenNavigationComponent.vue"
+  },
+  "ModalsSubmitSdkModal": {
+    "description": "Auto imported from components/modals/SubmitSdkModal.vue"
+  },
+  "ModalsSuccessfullySubmittedSdkModal": {
+    "description": "Auto imported from components/modals/SuccessfullySubmittedSdkModal.vue"
   },
   "IconsBuiltWithNuxtDark": {
     "description": "Auto imported from components/icons/BuiltWithNuxtDark.vue"

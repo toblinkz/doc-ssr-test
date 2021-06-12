@@ -11,14 +11,19 @@
       <AppPrevNext :prev="prev" :next="next"/>
     </div>
     <AppToc v-if="!document.fullscreen" :toc="document.toc" />
+    <SubmitSdkModal></SubmitSdkModal>
+    <SuccessfullySubmittedSdkModal></SuccessfullySubmittedSdkModal>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
 import AppCopyButton from "@/components/AppCopyButton";
+import SubmitSdkModal from "@/components/modals/SubmitSdkModal";
+import SuccessfullySubmittedSdkModal from "@/components/modals/SuccessfullySubmittedSdkModal";
 
 export default {
+  components:{SubmitSdkModal, SuccessfullySubmittedSdkModal},
   mounted () {
     setTimeout(() => {
       const blocks = document.getElementsByClassName('nuxt-content-highlight')

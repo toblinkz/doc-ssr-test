@@ -73,3 +73,16 @@ form label {
   font-size: 13px;
   margin-bottom: 5px;
 }
+button[disabled] {
+  opacity: .5;
+  pointer-events: none;
+}
+.error_field_message {
+  font-size: 0.7rem;
+  color: red;
+  display: block;
+  margin-top: 10px;
+}
+input[type=email].error, input[type=number].error, input[type=password].error, input[type=tel].error, input[type=text].error{
+  border-color: red!important;
+}

@@ -12,7 +12,7 @@
 
               <p class="text-lg font-bold mb-3">You just helped a developer<br> ship faster!</p>
               <p class="text-sm mb-10 ">Thank you for your contribution. Our team would contact you after our review.</p>
-              <p class="underline text-base cursor-pointer" style="color: #FF313D">Be a part of our Dev Loop on Slack.</p>
+              <a href="https://join.slack.com/t/termii-loop/shared_invite/zt-imbqlf68-w4lsPkOzibBXSQohu8_8dQ" target="_blank" class="underline text-base cursor-pointer" style="color: #FF313D">Be a part of our Dev Loop on Slack.</a>
             </center>
           </div>
         </div>

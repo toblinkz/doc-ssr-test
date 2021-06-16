@@ -40,6 +40,7 @@ export default {
   plugins: [
     '@/plugins/vue-scrollactive',
     '@/plugins/vue-js-modal',
+    '@/plugins/services.plugin.js',
 
   ],
 
@@ -50,6 +51,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/axios',
+    '@nuxtjs/toast',
   ],
   loading:{
     color: '#1991bd',
@@ -59,10 +62,21 @@ export default {
   generate: {
     fallback: true, // if you want to use '404.html' instead of the default '200.html'
   },
+  axios: {
+    // proxyHeaders: false
+    baseURL: process.env.API_BASE_URL,
+
+  },
+  toast: {
+    position: 'bottom-center',
+    duration: 3000
+  },
+
   loadingIndicator: {
     name: '~/termii_bird_loader.html',
     background: 'white'
   },
+
   content: {
     markdown: {
       prism: {

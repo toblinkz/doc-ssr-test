@@ -6,7 +6,7 @@
           <div class="mt-3 rounded-sm rounded-md rounded-lg overflow-hidden bg-white hover:shadow-lg rounded-lg" style="border: 1px solid #E0E0E0">
             <div class="mx-6 my-5 ">
               <div class="flex items-center font-medium font-bold text-base text-blue-700 mb-3">Termii PHP <span class="ml-3"><i  class="icon-github text-black"></i></span></div>
-              <a class="flex font-normal text-gray-dark text-sm mb-2" style="text-decoration: underline!important;">
+              <a  href="https://github.com/Douglasokolaa/termiiphp" target="_blank" class="flex font-normal text-gray-dark text-sm mb-2" style="text-decoration: underline!important;">
                 Douglasokolaa/termiiphp
               </a>
             </div>
@@ -17,8 +17,8 @@
         <div class="mt-3 rounded-sm rounded-md rounded-lg overflow-hidden bg-white  hover:shadow-lg rounded-lg" style="border: 1px solid #E0E0E0">
           <div class="mx-6 my-5 ">
             <div class="flex items-center font-medium font-bold text-base text-blue-700 mb-3">Termii GO <span class="ml-3"><i class="icon-github text-black"></i></span></div>
-            <a class="flex font-normal text-gray-dark text-sm mb-2" style="text-decoration: underline!important;">
-              Douglasokolaa/termiiphp
+            <a  href="https://github.com/Uchencho/go-termii"  target="_blank" class="flex font-normal text-gray-dark text-sm mb-2" style="text-decoration: underline!important;">
+              Uchencho/go-termii
             </a>
           </div>
         </div>

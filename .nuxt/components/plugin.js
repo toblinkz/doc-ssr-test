@@ -27,8 +27,6 @@ const components = {
   SubmitButton: () => import('../..\\components\\SubmitButton.vue' /* webpackChunkName: "components/submit-button" */).then(c => c.default || c),
   SwitchNavigationComponent: () => import('../..\\components\\SwitchNavigationComponent.vue' /* webpackChunkName: "components/switch-navigation-component" */).then(c => c.default || c),
   TokenNavigationComponent: () => import('../..\\components\\TokenNavigationComponent.vue' /* webpackChunkName: "components/token-navigation-component" */).then(c => c.default || c),
-  ModalsSubmitSdkModal: () => import('../..\\components\\modals\\SubmitSdkModal.vue' /* webpackChunkName: "components/modals-submit-sdk-modal" */).then(c => c.default || c),
-  ModalsSuccessfullySubmittedSdkModal: () => import('../..\\components\\modals\\SuccessfullySubmittedSdkModal.vue' /* webpackChunkName: "components/modals-successfully-submitted-sdk-modal" */).then(c => c.default || c),
   IconsBuiltWithNuxtDark: () => import('../..\\components\\icons\\BuiltWithNuxtDark.vue' /* webpackChunkName: "components/icons-built-with-nuxt-dark" */).then(c => c.default || c),
   IconsBuiltWithNuxtLight: () => import('../..\\components\\icons\\BuiltWithNuxtLight.vue' /* webpackChunkName: "components/icons-built-with-nuxt-light" */).then(c => c.default || c),
   IconsIconBadgeCheck: () => import('../..\\components\\icons\\IconBadgeCheck.vue' /* webpackChunkName: "components/icons-icon-badge-check" */).then(c => c.default || c),
@@ -43,7 +41,9 @@ const components = {
   IconsIconSun: () => import('../..\\components\\icons\\IconSun.vue' /* webpackChunkName: "components/icons-icon-sun" */).then(c => c.default || c),
   IconsIconTranslate: () => import('../..\\components\\icons\\IconTranslate.vue' /* webpackChunkName: "components/icons-icon-translate" */).then(c => c.default || c),
   IconsIconTwitter: () => import('../..\\components\\icons\\IconTwitter.vue' /* webpackChunkName: "components/icons-icon-twitter" */).then(c => c.default || c),
-  IconsIconXCircle: () => import('../..\\components\\icons\\IconXCircle.vue' /* webpackChunkName: "components/icons-icon-x-circle" */).then(c => c.default || c)
+  IconsIconXCircle: () => import('../..\\components\\icons\\IconXCircle.vue' /* webpackChunkName: "components/icons-icon-x-circle" */).then(c => c.default || c),
+  ModalsSubmitSdkModal: () => import('../..\\components\\modals\\SubmitSdkModal.vue' /* webpackChunkName: "components/modals-submit-sdk-modal" */).then(c => c.default || c),
+  ModalsSuccessfullySubmittedSdkModal: () => import('../..\\components\\modals\\SuccessfullySubmittedSdkModal.vue' /* webpackChunkName: "components/modals-successfully-submitted-sdk-modal" */).then(c => c.default || c)
 }
 
 for (const name in components) {

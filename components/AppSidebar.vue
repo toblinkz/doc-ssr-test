@@ -184,7 +184,7 @@
          </ul>
        </li>
        <li class="mb-4">
-         <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
+         <p class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
            <nuxt-link
              to="community-sdks"
            >
@@ -193,7 +193,7 @@
          </p>
        </li>
        <li class="mb-4">
-         <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
+         <p class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
            <a
              target="_blank"
              href="https://join.slack.com/t/termii-loop/shared_invite/zt-imbqlf68-w4lsPkOzibBXSQohu8_8dQ"

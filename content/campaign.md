@@ -342,7 +342,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.post("http://termii.com/api/phonebooks")
+HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/campaigns/send")
   .header("Content-Type", "application/json")
   .body("{\r\n \"api_key\": \"Your API Key\",\r\n  \"phone_book\": \"Phone Test \",\r\n   \"description\": \"Phonebook for test\"\r\n    }")
   .asString();
@@ -354,7 +354,7 @@ HttpResponse<String> response = Unirest.post("http://termii.com/api/phonebooks")
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-CURLOPT_URL => 'https://termii.com/api/sms/send',
+CURLOPT_URL => 'https://termii.com/api/sms/campaigns/send',
 CURLOPT_RETURNTRANSFER => true,
 CURLOPT_ENCODING => '',
 CURLOPT_MAXREDIRS => 10,

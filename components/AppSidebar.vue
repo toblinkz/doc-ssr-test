@@ -75,6 +75,30 @@
                Templates
              </NuxtLink>
            </li>
+           <li class="text-gray-700 dark:text-gray-300">
+             <NuxtLink
+               to="phonebook"
+               class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+             >
+               Phonebooks
+             </NuxtLink>
+           </li>
+           <li class="text-gray-700 dark:text-gray-300">
+             <NuxtLink
+               to="contacts"
+               class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+             >
+               Contacts
+             </NuxtLink>
+           </li>
+           <li class="text-gray-700 dark:text-gray-300">
+             <NuxtLink
+               to="campaign"
+               class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+             >
+               Campaign
+             </NuxtLink>
+           </li>
          </ul>
        </li>
        <li class="mb-4">

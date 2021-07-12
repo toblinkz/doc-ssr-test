@@ -188,7 +188,7 @@
            <nuxt-link
              to="community-sdks"
            >
-             <i class="icon-books mr-2"></i>Community SDKs
+             <i class="icon-books mr-2"></i>Libraries and Plugins
            </nuxt-link>
          </p>
        </li>

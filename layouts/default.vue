@@ -1,5 +1,6 @@
 <template>
   <div class="pt-16">
+
    <AppHeader/>
 
     <main class="container mx-auto px-4 lg:px-8">

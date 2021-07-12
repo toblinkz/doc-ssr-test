@@ -23,7 +23,7 @@
                 <span class=" error_field_message" v-if="error_message.email">{{error_message.email}}</span>
               </div>
               <div class="mb-5">
-                <label>Which of our services SDK did you build?</label>
+                <label>Which of our products SDK did you build?</label>
                 <select class="form-control" v-model="service">
                   <option>Termii Switch</option>
                   <option>Insights by Termii</option>
@@ -32,7 +32,7 @@
                 </select>
               </div>
               <div class="mb-10">
-                <label>Link to git repo</label>
+                <label>Link to repository</label>
                 <input type="text" class="form-control" v-model="repository_link" :class="{'error' : hasLinkError }"/>
                 <span class=" error_field_message" v-if="error_message.repository_url">{{error_message.repository_url}}</span>
               </div>

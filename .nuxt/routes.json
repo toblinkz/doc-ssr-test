@@ -2,15 +2,13 @@
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Hp Pavilion x360\\\\Documents\\\\Termii\\\\termii-documentation-v2\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_4338e76a"
+    "component": "C:\\\\Users\\\\Termii Webtech\\\\termii-documentation-v2\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   },
   {
     "name": "slug",
     "path": "/:slug",
-    "component": "C:\\\\Users\\\\Hp Pavilion x360\\\\Documents\\\\Termii\\\\termii-documentation-v2\\\\pages\\\\_slug.vue",
-    "chunkName": "pages/_slug",
-    "_name": "_41824622"
+    "component": "C:\\\\Users\\\\Termii Webtech\\\\termii-documentation-v2\\\\pages\\\\_slug.vue",
+    "chunkName": "pages/_slug"
   }
 ]

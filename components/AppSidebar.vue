@@ -186,7 +186,7 @@
        <li class="mb-4">
          <p class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
            <nuxt-link
-             to="community-sdks"
+             to="libraries-and-plugins"
            >
              <i class="icon-books mr-2"></i>Libraries and Plugins
            </nuxt-link>

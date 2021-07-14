@@ -25,7 +25,7 @@ whatsapp | This channel sends messages via WhatsApp |
 Options | Required |Description |
 --- | --- | --- |
 api_key | yes |*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>. |
-to |yes|*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do that put numbers in an array (Example: `["23490555546", "23423490126999"]`  |
+to |yes|*string*<br> Represents the destination phone number. Phone number must be in the international format (`Example: 23490126727`). You can also send to multiple numbers. To do so put numbers in an array (Example: `["23490555546", "23423490126999"]`) Please note: the array takes only 100 phone numbers at a time |
 from |yes|*string*<br>Represents a sender ID for sms which can be Alphanumeric or Device name for Whatsapp. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  |
 sms |yes| *string*<br> Text of a message that would be sent to the destination phone number|
 type |yes|*string*<br>  The kind of message that is sent, which is  a `plain` message.  |

@@ -5,7 +5,7 @@ import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from '..\\layouts\\error.vue'
+import NuxtError from '../layouts/error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
@@ -13,14 +13,14 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_43de3b78 from 'nuxt_plugin_plugin_43de3b78' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_pluginclient_1b75bfa4 from 'nuxt_plugin_pluginclient_1b75bfa4' // Source: .\\content\\plugin.client.js (mode: 'client')
-import nuxt_plugin_pluginserver_57fe91b6 from 'nuxt_plugin_pluginserver_57fe91b6' // Source: .\\content\\plugin.server.js (mode: 'server')
-import nuxt_plugin_toast_76e9704a from 'nuxt_plugin_toast_76e9704a' // Source: .\\toast.js (mode: 'client')
-import nuxt_plugin_axios_aa8db8ca from 'nuxt_plugin_axios_aa8db8ca' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_vuescrollactive_41e62aee from 'nuxt_plugin_vuescrollactive_41e62aee' // Source: ..\\plugins\\vue-scrollactive (mode: 'all')
-import nuxt_plugin_vuejsmodal_1dce8cf8 from 'nuxt_plugin_vuejsmodal_1dce8cf8' // Source: ..\\plugins\\vue-js-modal (mode: 'all')
-import nuxt_plugin_servicesplugin_7982c148 from 'nuxt_plugin_servicesplugin_7982c148' // Source: ..\\plugins\\services.plugin.js (mode: 'all')
+import nuxt_plugin_plugin_44934416 from 'nuxt_plugin_plugin_44934416' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_pluginclient_4c3e26f1 from 'nuxt_plugin_pluginclient_4c3e26f1' // Source: ./content/plugin.client.js (mode: 'client')
+import nuxt_plugin_pluginserver_9c10cf0e from 'nuxt_plugin_pluginserver_9c10cf0e' // Source: ./content/plugin.server.js (mode: 'server')
+import nuxt_plugin_toast_1ed65d3a from 'nuxt_plugin_toast_1ed65d3a' // Source: ./toast.js (mode: 'client')
+import nuxt_plugin_axios_52a6108b from 'nuxt_plugin_axios_52a6108b' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_vuescrollactive_41e62aee from 'nuxt_plugin_vuescrollactive_41e62aee' // Source: ../plugins/vue-scrollactive (mode: 'all')
+import nuxt_plugin_vuejsmodal_1dce8cf8 from 'nuxt_plugin_vuejsmodal_1dce8cf8' // Source: ../plugins/vue-js-modal (mode: 'all')
+import nuxt_plugin_servicesplugin_7982c148 from 'nuxt_plugin_servicesplugin_7982c148' // Source: ../plugins/services.plugin.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -49,7 +49,11 @@ Vue.component(Nuxt.name, Nuxt)
 
 Object.defineProperty(Vue.prototype, '$nuxt', {
   get() {
-    return this.$root.$options.$nuxt
+    const globalNuxt = this.$root.$options.$nuxt
+    if (process.client && !globalNuxt && typeof window !== 'undefined') {
+      return window.$nuxt
+    }
+    return globalNuxt
   },
   configurable: true
 })
@@ -213,24 +217,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_45c4dce5 === 'function') {
-    await nuxt_plugin_plugin_45c4dce5(app.context, inject)
+  if (typeof nuxt_plugin_plugin_44934416 === 'function') {
+    await nuxt_plugin_plugin_44934416(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_pluginclient_73f3431b === 'function') {
-    await nuxt_plugin_pluginclient_73f3431b(app.context, inject)
+  if (process.client && typeof nuxt_plugin_pluginclient_4c3e26f1 === 'function') {
+    await nuxt_plugin_pluginclient_4c3e26f1(app.context, inject)
   }
 
-  if (process.server && typeof nuxt_plugin_pluginserver_4ca696ba === 'function') {
-    await nuxt_plugin_pluginserver_4ca696ba(app.context, inject)
+  if (process.server && typeof nuxt_plugin_pluginserver_9c10cf0e === 'function') {
+    await nuxt_plugin_pluginserver_9c10cf0e(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_toast_6e0d0d37 === 'function') {
-    await nuxt_plugin_toast_6e0d0d37(app.context, inject)
+  if (process.client && typeof nuxt_plugin_toast_1ed65d3a === 'function') {
+    await nuxt_plugin_toast_1ed65d3a(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_bc467ef0 === 'function') {
-    await nuxt_plugin_axios_bc467ef0(app.context, inject)
+  if (typeof nuxt_plugin_axios_52a6108b === 'function') {
+    await nuxt_plugin_axios_52a6108b(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vuescrollactive_41e62aee === 'function') {
@@ -252,26 +256,31 @@ async function createApp(ssrContext, config = {}) {
     }
   }
 
-  // If server-side, wait for async component to be resolved first
-  if (process.server && ssrContext && ssrContext.url) {
-    await new Promise((resolve, reject) => {
-      router.push(ssrContext.url, resolve, (err) => {
-        // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
-        if (!err._isRouter) return reject(err)
-        if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
+  // Wait for async component to be resolved first
+  await new Promise((resolve, reject) => {
+    const { route } = router.resolve(app.context.route.fullPath)
+    // Ignore 404s rather than blindly replacing URL
+    if (!route.matched.length && process.client) {
+      return resolve()
+    }
+    router.replace(route, resolve, (err) => {
+      // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
+      if (!err._isRouter) return reject(err)
+      if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
 
-        // navigated to a different route in router guard
-        const unregister = router.afterEach(async (to, from) => {
+      // navigated to a different route in router guard
+      const unregister = router.afterEach(async (to, from) => {
+        if (process.server && ssrContext && ssrContext.url) {
           ssrContext.url = to.fullPath
-          app.context.route = await getRouteData(to)
-          app.context.params = to.params || {}
-          app.context.query = to.query || {}
-          unregister()
-          resolve()
-        })
+        }
+        app.context.route = await getRouteData(to)
+        app.context.params = to.params || {}
+        app.context.query = to.query || {}
+        unregister()
+        resolve()
       })
     })
-  }
+  })
 
   return {
     store,

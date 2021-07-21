@@ -7,163 +7,8 @@ category: Switch
 
 Campaign API helps you manage the campaigns you send. You can view campaign and send a campaign to a phonebook.
 
-### Fetch Campaigns
 
-<b>Endpoint : </b>
-`
-http://termii.com/api/sms/campaigns?api_key=Your API KEY
-`<br><br> <b>Request Type : </b> **`GET`**
-
-
-#### Response
-
-```JSON
-
-{
-    "data": [
-        {
-            "campaign_id": "C60e30b2c806da",
-            "phone_book": "test",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2022-07-05 00:00:00",
-            "status": "Scheduled",
-            "created_at": "2021-07-05T13:37:48.000000Z"
-        },
-        {
-            "campaign_id": "C60e306e63478d",
-            "phone_book": "test",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2022-07-05 00:00:00",
-            "status": "Scheduled",
-            "created_at": "2021-07-05T13:19:34.000000Z"
-        },
-        {
-            "campaign_id": "C60e306c106c21",
-            "phone_book": "test",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2022-07-05 00:00:00",
-            "status": "Scheduled",
-            "created_at": "2021-07-05T13:18:57.000000Z"
-        },
-        {
-            "campaign_id": "C60e2f2a4782b8",
-            "phone_book": "test",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2021-07-22 00:00:00",
-            "status": "Scheduled",
-            "created_at": "2021-07-05T11:53:08.000000Z"
-        },
-        {
-            "campaign_id": "C60ddda932de77",
-            "phone_book": "test",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2021-07-22 00:00:00",
-            "status": "Scheduled",
-            "created_at": "2021-07-01T15:09:07.000000Z"
-        },
-        {
-            "campaign_id": "C60ddda80ea6cc",
-            "phone_book": "test",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2021-07-22 00:00:00",
-            "status": "Scheduled",
-            "created_at": "2021-07-01T15:08:48.000000Z"
-        },
-        {
-            "campaign_id": "C60dc5a8437e63",
-            "phone_book": "adeyinka",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2021-06-30 06:00:00",
-            "status": "Scheduled",
-            "created_at": "2021-06-30T11:50:28.000000Z"
-        },
-        {
-            "campaign_id": "C60db3fc2954a0",
-            "phone_book": "adeyinka",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2021-06-29 05:00:00",
-            "status": "Scheduled",
-            "created_at": "2021-06-29T15:44:02.000000Z"
-        },
-        {
-            "campaign_id": "C60db3f70c8df9",
-            "phone_book": "-",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2021-06-29 05:00:00",
-            "status": "Pending",
-            "created_at": "2021-06-29T15:42:40.000000Z"
-        },
-        {
-            "campaign_id": "C60db3ef5a3ceb",
-            "phone_book": "-",
-            "sender": "Termii",
-            "camp_type": "scheduled",
-            "channel": "-",
-            "total_recipients": 0,
-            "run_at": "2021-06-29 05:00:00",
-            "status": "Pending",
-            "created_at": "2021-06-29T15:40:37.000000Z"
-        },
-        {
-            "campaign_id": "C5dbae7faa2b65",
-            "phone_book": "-",
-            "sender": "Termii",
-            "camp_type": "regular",
-            "channel": "Sms",
-            "total_recipients": 2,
-            "run_at": "2019-10-31 15:56:10",
-            "status": "Delivered",
-            "created_at": "2019-10-31T14:56:10.000000Z"
-        }
-    ],
-    "links": {
-        "first": "http://termii.com/api/sms/campaigns?page=1",
-        "last": "http://termii.com/api/sms/campaigns?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http://termii.com/api/sms/campaigns",
-        "per_page": 15,
-        "to": 11,
-        "total": 11
-    }
-}
-
-```
-
-
-### Send a Campaign
+### Send a campaign
 
 <b>Endpoint :</b>
 `
@@ -405,7 +250,166 @@ echo $response;
 ```
 
 
-### Fetch a Campaign
+
+### Fetch campaigns
+
+<b>Endpoint : </b>
+`
+https://termii.com/api/sms/campaigns?api_key=Your API KEY
+`<br><br> <b>Request Type : </b> **`GET`**
+
+
+#### Response
+
+```JSON
+
+{
+    "data": [
+        {
+            "campaign_id": "C60e30b2c806da",
+            "phone_book": "test",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2022-07-05 00:00:00",
+            "status": "Scheduled",
+            "created_at": "2021-07-05T13:37:48.000000Z"
+        },
+        {
+            "campaign_id": "C60e306e63478d",
+            "phone_book": "test",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2022-07-05 00:00:00",
+            "status": "Scheduled",
+            "created_at": "2021-07-05T13:19:34.000000Z"
+        },
+        {
+            "campaign_id": "C60e306c106c21",
+            "phone_book": "test",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2022-07-05 00:00:00",
+            "status": "Scheduled",
+            "created_at": "2021-07-05T13:18:57.000000Z"
+        },
+        {
+            "campaign_id": "C60e2f2a4782b8",
+            "phone_book": "test",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2021-07-22 00:00:00",
+            "status": "Scheduled",
+            "created_at": "2021-07-05T11:53:08.000000Z"
+        },
+        {
+            "campaign_id": "C60ddda932de77",
+            "phone_book": "test",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2021-07-22 00:00:00",
+            "status": "Scheduled",
+            "created_at": "2021-07-01T15:09:07.000000Z"
+        },
+        {
+            "campaign_id": "C60ddda80ea6cc",
+            "phone_book": "test",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2021-07-22 00:00:00",
+            "status": "Scheduled",
+            "created_at": "2021-07-01T15:08:48.000000Z"
+        },
+        {
+            "campaign_id": "C60dc5a8437e63",
+            "phone_book": "adeyinka",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2021-06-30 06:00:00",
+            "status": "Scheduled",
+            "created_at": "2021-06-30T11:50:28.000000Z"
+        },
+        {
+            "campaign_id": "C60db3fc2954a0",
+            "phone_book": "adeyinka",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2021-06-29 05:00:00",
+            "status": "Scheduled",
+            "created_at": "2021-06-29T15:44:02.000000Z"
+        },
+        {
+            "campaign_id": "C60db3f70c8df9",
+            "phone_book": "-",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2021-06-29 05:00:00",
+            "status": "Pending",
+            "created_at": "2021-06-29T15:42:40.000000Z"
+        },
+        {
+            "campaign_id": "C60db3ef5a3ceb",
+            "phone_book": "-",
+            "sender": "Termii",
+            "camp_type": "scheduled",
+            "channel": "-",
+            "total_recipients": 0,
+            "run_at": "2021-06-29 05:00:00",
+            "status": "Pending",
+            "created_at": "2021-06-29T15:40:37.000000Z"
+        },
+        {
+            "campaign_id": "C5dbae7faa2b65",
+            "phone_book": "-",
+            "sender": "Termii",
+            "camp_type": "regular",
+            "channel": "Sms",
+            "total_recipients": 2,
+            "run_at": "2019-10-31 15:56:10",
+            "status": "Delivered",
+            "created_at": "2019-10-31T14:56:10.000000Z"
+        }
+    ],
+    "links": {
+        "first": "https://termii.com/api/sms/campaigns?page=1",
+        "last": "https://termii.com/api/sms/campaigns?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "https://termii.com/api/sms/campaigns",
+        "per_page": 15,
+        "to": 11,
+        "total": 11
+    }
+}
+
+```
+
+
+
+
+### Fetch campaign history 
 <b>Endpoint :</b>
 `
 https://termii.com/api/sms/campaigns/campaign_id?api_key=Your API KEY
@@ -417,56 +421,39 @@ https://termii.com/api/sms/campaigns/campaign_id?api_key=Your API KEY
 #### Response
 
 ```JSON
-  {
-      "data": [
-        {
-          "campaign_id": 6,
-          "phone_book": "-",
-          "sender": "TestAccount",
-          "camp_type": null,
-          "channel": "Sms",
-          "total_recipients": null,
-          "run_at": null,
-          "status": "Message Sent | Pending",
-          "created_at": "2020-01-26T06:47:16.000000Z"
-        },
-        {
-          "campaign_id": 6,
-          "phone_book": "-",
-          "sender": "TestAccount",
-          "camp_type": null,
-          "channel": "Sms",
-          "total_recipients": null,
-          "run_at": null,
-          "status": "Message Sent | Pending",
-          "created_at": "2020-01-26T06:29:23.000000Z"
-        },
-        {
-          "campaign_id": 6,
-          "phone_book": "-",
-          "sender": "TestAccount",
-          "camp_type": null,
-          "channel": "Sms",
-          "total_recipients": null,
-          "run_at": null,
-          "status": "Message Sent | Pending",
-          "created_at": "2020-01-26T06:24:30.000000Z"
-        }
-      ],
-      "links": {
-        "first": "http://termii.com/api/sms/campaigns/C60db3fc2954a0?page=1",
-        "last": "http://termii.com/api/sms/campaigns/C60db3fc2954a0?page=1",
-        "prev": null,
-        "next": null
-      },
-      "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http://termii.com/api/sms/campaigns/C60db3fc2954a0",
-        "per_page": 15,
-        "to": 3,
-        "total": 3
-      }
+
+{
+  "data": [
+    {
+      "id": 64,
+      "sender": "Termii",
+      "receiver": "2347089509657",
+      "message": "Hi This is from Termii Campaign",
+      "message_abbreviation": "Hi This is from Termii Campaign",
+      "amount": 1,
+      "channel": "Generic",
+      "sms_type": "plain",
+      "message_id": "0011551727393226622357573897694282599004522965786793671662369098835884420487860904021011663",
+      "status": "Sent",
+      "date_created": "2020-01-26 07:24:29",
+      "last_updated": "2020-01-26 07:24:29"
+    }
+  ],
+  "links": {
+    "first": "https://termii.com/api/sms/campaigns/C5dbae7faa2b65?page=1",
+    "last": "https://termii.com/api/sms/campaigns/C5dbae7faa2b65?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "https://termii.com/api/sms/campaigns/C5dbae7faa2b65",
+    "per_page": 15,
+    "to": 1,
+    "total": 1
+  }
 }
+
 ```

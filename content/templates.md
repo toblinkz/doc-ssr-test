@@ -1,11 +1,11 @@
 ---
-title: Templates
+title: Templates API
 description: 'Termii  Templates'
 position: 8
 category: Switch
 ---
 
-Templates is a feature that helps businesses set a template for the one-time-passwords (pins) sent to their customers via whatsapp or sms.
+Templates  API  helps businesses set a template for the one-time-passwords (pins) sent to their customers via whatsapp or sms.
 
 ## Device Template
 

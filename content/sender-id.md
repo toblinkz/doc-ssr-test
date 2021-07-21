@@ -1,5 +1,5 @@
 ---
-title: Sender ID
+title: Sender ID API
 description: 'Termii Sender Id'
 position: 5
 category: Switch

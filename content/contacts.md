@@ -7,11 +7,11 @@ category: Switch
 
 Contacts API allows you manage contacts in your phonebook. You can view, add and also delete contacts in your phonebook. 
 
-### Fetch contacts in a phonebook
+### Fetch contacts by phonebook ID
 
 <b>Endpoint : </b>
 `
-http://termii.com/api/phonebook/{phonebook_id}/contacts
+https://termii.com/api/phonebook/{phonebook_id}/contacts
 `<br><br> <b>Request Type : </b> **`GET`**
 
 
@@ -84,8 +84,8 @@ http://termii.com/api/phonebook/{phonebook_id}/contacts
     ],
   
     "links": {
-        "first": "http://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts?page=1",
-        "last": "http://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts?page=1",
+        "first": "https://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts?page=1",
+        "last": "https://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts?page=1",
         "prev": null,
         "next": null
     },
@@ -93,7 +93,7 @@ http://termii.com/api/phonebook/{phonebook_id}/contacts
         "current_page": 1,
         "from": 1,
         "last_page": 1,
-        "path": "http://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts",
+        "path": "https://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts",
         "per_page": 25,
         "to": 22,
         "total": 22
@@ -104,7 +104,7 @@ http://termii.com/api/phonebook/{phonebook_id}/contacts
 ### Add contacts to phonebook
 <b>Endpoint :</b>
 `
-http://termii.com/api/phonebooks/{phonebook_id}/contacts
+https://termii.com/api/phonebooks/{phonebook_id}/contacts
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 
@@ -141,7 +141,7 @@ country_code | yes |*string*<br>Represents short numeric geographical codes deve
     redirect: 'follow'
   };
   
-  fetch("http://termii.com/api/phonebooks/{phonebook_id}/contacts", requestOptions)
+  fetch("https://termii.com/api/phonebooks/{phonebook_id}/contacts", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
@@ -162,7 +162,7 @@ country_code | yes |*string*<br>Represents short numeric geographical codes deve
     
     var config = {
       method: 'post',
-      url: 'http://termii.com/api/phonebooks/{phonebook_id}/contacts',
+      url: 'https://termii.com/api/phonebooks/{phonebook_id}/contacts',
       data : data
     };
     
@@ -182,7 +182,7 @@ country_code | yes |*string*<br>Represents short numeric geographical codes deve
 
   import requests
   
-  url = "http://termii.com/api/phonebooks/{phonebook_id}/contacts"
+  url = "https://termii.com/api/phonebooks/{phonebook_id}/contacts"
   
   payload={'country_code': '234'}
   files=[
@@ -202,7 +202,7 @@ country_code | yes |*string*<br>Represents short numeric geographical codes deve
 <code-block label="C#" >
 
   ```bash
-var client = new RestClient("http://termii.com/api/phonebooks/{phonebook_id}/contacts");
+var client = new RestClient("https://termii.com/api/phonebooks/{phonebook_id}/contacts");
 client.Timeout = -1;
 
 var request = new RestRequest(Method.POST);
@@ -275,7 +275,7 @@ echo $response;
 ### Delete phonebook
 <b>Endpoint :</b>
 `
-http://termii.com/api/phonebook/contact/contact_id?api_key=YourAPIKey
+https://termii.com/api/phonebook/contact/contact_id?api_key=YourAPIKey
 `<br> <br> <b>Request Type : </b>**`DELETE`**
 
 

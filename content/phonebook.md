@@ -11,7 +11,7 @@ Phonebooks API allows you to manage phonebooks that are identified by a unique I
 
 <b>Endpoint : </b>
 `
-http://termii.com/api/phonebooks?api_key=YourAPIKey
+https://termii.com/api/phonebooks?api_key=YourAPIKey
 `<br><br> <b>Request Type : </b> **`GET`**
 
 
@@ -78,8 +78,8 @@ http://termii.com/api/phonebooks?api_key=YourAPIKey
         }
     ],
     "links": {
-        "first": "http://termii.com/api/phonebooks?page=1",
-        "last": "http://termii.com/api/phonebooks?page=1",
+        "first": "https://termii.com/api/phonebooks?page=1",
+        "last": "https://termii.com/api/phonebooks?page=1",
         "prev": null,
         "next": null
     },
@@ -87,7 +87,7 @@ http://termii.com/api/phonebooks?api_key=YourAPIKey
         "current_page": 1,
         "from": 1,
         "last_page": 1,
-        "path": "http://termii.com/api/phonebooks",
+        "path": "https://termii.com/api/phonebooks",
         "per_page": 15,
         "to": 8,
         "total": 8
@@ -98,7 +98,7 @@ http://termii.com/api/phonebooks?api_key=YourAPIKey
 ### Create  a Phonebook
 <b>Endpoint :</b>
 `
-http://termii.com/api/phonebooks
+https://termii.com/api/phonebooks
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 
@@ -181,7 +181,7 @@ request(options, function (error, response) {
   ```bash
 
 import requests
-url = "http://termii.com/api/phonebooks"
+url = "https://termii.com/api/phonebooks"
 payload = {
               "api_key": "Your API Key",
               "phonebook_name":"Phone test",
@@ -273,7 +273,7 @@ echo $response;
 ### Update Phonebook
 <b>Endpoint :</b>
 `
-http://termii.com/api/phonebooks/{phonebook_id}
+https://termii.com/api/phonebooks/{phonebook_id}
 `<br> <br> <b>Request Type : </b>**`PATCH`**
 
 
@@ -355,7 +355,7 @@ request(options, function (error, response) {
   ```bash
 
 import requests
-url = "http://termii.com/api/phonebooks/{phonebook_id}"
+url = "https://termii.com/api/phonebooks/{phonebook_id}"
 payload = {
               "api_key": "Your API Key",
               "phonebook_name":"Phone test",
@@ -448,7 +448,7 @@ echo $response;
 ### Delete phonebook
 <b>Endpoint :</b>
 `
-http://termii.com/api/phonebooks/{phonebook_id}?api_key=YourAPIKey
+https://termii.com/api/phonebooks/{phonebook_id}?api_key=YourAPIKey
 `<br> <br> <b>Request Type : </b>**`DELETE`**
 
 

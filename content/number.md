@@ -1,5 +1,5 @@
 ---
-title: Number
+title: Number API
 description: 'Termii Number'
 position: 7
 category: Switch

@@ -1,7 +1,7 @@
 ---
 title: Send Token
 description: 'Termii Send Token'
-position: 10
+position: 12
 category: Token
 ---
 

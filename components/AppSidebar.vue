@@ -48,7 +48,7 @@
                to="sender-id"
                class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
              >
-               Sender ID
+               Sender ID API
              </NuxtLink>
            </li>
            <li class="text-gray-700 dark:text-gray-300">
@@ -56,7 +56,7 @@
                to="messaging"
                class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
              >
-               Messaging
+               Messaging API
              </NuxtLink>
            </li>
            <li class="text-gray-700 dark:text-gray-300">
@@ -64,7 +64,7 @@
                to="number"
                class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
              >
-               Number
+               Number API
              </NuxtLink>
            </li>
            <li class="text-gray-700 dark:text-gray-300">
@@ -72,9 +72,48 @@
                to="templates"
                class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
              >
-               Templates
+               Templates API
              </NuxtLink>
            </li>
+           <li class="text-gray-700 dark:text-gray-300">
+             <p
+               @click="toggleCampaignApi"
+               class="px-2 rounded cursor-pointer font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+             >
+               Campaign API
+             </p>
+
+             <ul v-if="show_campaign_dropdown">
+               <li class="text-gray-700 dark:text-gray-300">
+                 <NuxtLink
+                   to="phonebook"
+                   class="ml-6 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+                 >
+                   Phonebooks
+                 </NuxtLink>
+               </li>
+               <li class="text-gray-700 dark:text-gray-300">
+                 <NuxtLink
+                   to="contacts"
+                   class="ml-6 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+                 >
+                   Contacts
+                 </NuxtLink>
+               </li>
+               <li class="text-gray-700 dark:text-gray-300">
+                 <NuxtLink
+                   to="campaign"
+                   class="ml-6 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+                 >
+                   Campaign
+                 </NuxtLink>
+               </li>
+             </ul>
+
+
+
+           </li>
+
          </ul>
        </li>
        <li class="mb-4">
@@ -216,7 +255,8 @@ export default {
        show_inbox_dropdown: false,
        show_switch_dropdown:false,
        show_token_dropdown: false,
-       show_insights_dropdown: false
+       show_insights_dropdown: false,
+       show_campaign_dropdown: false
     }
   },
   computed:{
@@ -244,6 +284,9 @@ export default {
     },
     toggleInsightsDropdown(){
       this.show_insights_dropdown = !this.show_insights_dropdown;
+    },
+    toggleCampaignApi(){
+      this.show_campaign_dropdown = !this.show_campaign_dropdown;
     }
   }
 }

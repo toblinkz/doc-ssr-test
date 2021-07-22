@@ -5,7 +5,7 @@ position: 9
 category: Switch
 ---
 
-Phonebooks API allows you to manage phonebooks that are identified by a unique ID. You can create, view, update or delete phonebooks.  The API accepts JSON request payload and returns JSON encoded responses, and uses standard HTTP response codes.
+Create, view & manage phonebooks using these APIs. Each phonebook can be identified by a unique ID, which makes it easier to edit or delete a phonebook. 
 
 ### Fetch Phonebooks
 

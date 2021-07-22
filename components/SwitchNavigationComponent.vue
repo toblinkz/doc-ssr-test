@@ -42,11 +42,11 @@
     </div>
     <div class="flex mt-5">
       <nuxt-link to="/phonebook" class="w-1/2 no-underline rounded-sm rounded-md rounded-lg overflow-hidden shadow-lg mr-4 cursor-pointer">
-        <div class="h-20 bg-cover hover:bg-gray" style="background-image: url('/number.svg')"></div>
+        <div class="h-20 bg-cover hover:bg-gray" style="background-image: url('/campaigns.svg')"></div>
         <div class="mx-6 my-4 ">
           <div class="flex items-center font-medium font-bold text-base text-blue-700 mb-4">Campaign API<icon-arrow-right class="w-4 h-4 ml-1 flex-shrink-0"/></div>
           <p class="font-normal text-gray-dark text-sm mb-2">
-            Send messages to customers using auto-generated messaging numbers.
+            Send and manage campaigns sent to your phonebook.
           </p>
         </div>
       </nuxt-link>

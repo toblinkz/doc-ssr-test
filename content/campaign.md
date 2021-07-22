@@ -5,7 +5,7 @@ position: 11
 category: Switch
 ---
 
-Campaign API helps you manage the campaigns you send. You can view campaign and send a campaign to a phonebook.
+Using our campaign APIs, you can view, manage and send a campaign to a phonebook.
 
 
 ### Send a campaign

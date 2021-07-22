@@ -5,7 +5,7 @@ position: 10
 category: Switch
 ---
 
-Contacts API allows you manage contacts in your phonebook. You can view, add and also delete contacts in your phonebook. 
+Contacts API allows you manage (i.e. edit, update, & delete) contacts in your phonebook. 
 
 ### Fetch contacts by phonebook ID
 

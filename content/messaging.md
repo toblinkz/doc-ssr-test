@@ -1,5 +1,5 @@
 ---
-title: Messaging
+title: Messaging API
 description: 'Termii Messaging'
 position: 6
 category: Switch

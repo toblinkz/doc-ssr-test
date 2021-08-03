@@ -11,7 +11,7 @@ Contacts API allows you manage (i.e. edit, update, & delete) contacts in your ph
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/phonebook/{phonebook_id}/contacts
+https://termii.com/api/phonebooks/{phonebook_id}/contacts
 `<br><br> <b>Request Type : </b> **`GET`**
 
 

@@ -36,9 +36,9 @@
        <li class="mb-4">
 
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleSwitchDropdown">
-             <nuxt-link to="switch">
+             <NuxtLink to="switch">
                <i class="entypo-switch mr-2"></i>Switch
-             </nuxt-link>
+             </NuxtLink>
            </p>
 
 
@@ -118,9 +118,9 @@
        </li>
        <li class="mb-4">
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleTokenDropdown">
-             <nuxt-link to="token">
+             <NuxtLink to="token">
                <i class="entypo-link mr-2"></i>Token
-             </nuxt-link>
+             </NuxtLink>
            </p>
          <ul v-if="show_token_dropdown">
            <li class="text-gray-700 dark:text-gray-300">
@@ -168,9 +168,9 @@
        <li class="mb-4">
 
            <p class="mb-2 text-gray-700 tracking-wider font-semibold text-sm lg:text-xs cursor-pointer" @click="toggleInsightsDropdown">
-             <nuxt-link to="insights">
+             <NuxtLink to="insights">
                <i class="entypo-chart-line mr-2"></i>Insights
-             </nuxt-link>
+             </NuxtLink>
            </p>
 
          <ul v-if="show_insights_dropdown">
@@ -218,11 +218,11 @@
        </li>
        <li class="mb-4">
          <p  @click="toggleInboxDropdown" class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
-           <nuxt-link
+           <NuxtLink
              to="inbox"
            >
              <i class="entypo-chat mr-2"></i>Inbox
-           </nuxt-link>
+           </NuxtLink>
          </p>
 
 
@@ -240,11 +240,11 @@
        </li>
        <li class="mb-4">
          <p class="mb-2 text-gray-700 font-semibold tracking-wider text-sm lg:text-xs cursor-pointer">
-           <nuxt-link
+           <NuxtLink
              to="libraries-and-plugins"
            >
              <i class="icon-books mr-2"></i>Libraries and Plugins
-           </nuxt-link>
+           </NuxtLink>
          </p>
        </li>
        <li class="mb-4">
@@ -309,11 +309,11 @@ export default {
 </script>
 
 <style scoped>
-a.nuxt-link-active {
+a.NuxtLink-active {
   font-weight: bold;
 }
 /* exact link will show the primary color for only the exact matching link */
-a.nuxt-link-exact-active {
+a.NuxtLink-exact-active {
   color: #406DAD;
 }
 p{

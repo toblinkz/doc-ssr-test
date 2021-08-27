@@ -44,8 +44,8 @@ let store
 const NUXT = window.__NUXT__ || {}
 
 const $config = NUXT.config || {}
-if ($config._app) {
-  __webpack_public_path__ = urlJoin($config._app.cdnURL, $config._app.assetsPath)
+if ($config.app) {
+  __webpack_public_path__ = urlJoin($config.app.cdnURL, $config.app.assetsPath)
 }
 
 Object.assign(Vue.config, {"silent":false,"performance":true})
@@ -216,8 +216,10 @@ function applySSRData (Component, ssrData) {
 }
 
 // Get matched components
-function resolveComponents (route) {
-  return flatMapComponents(route, async (Component, _, match, key, index) => {
+function resolveComponents (router) {
+  const path = getLocation(router.options.base, router.options.mode)
+
+  return flatMapComponents(router.match(path), async (Component, _, match, key, index) => {
     // If component is not resolved yet, resolve it
     if (typeof Component === 'function' && !Component.options) {
       Component = await Component()
@@ -760,7 +762,7 @@ async function mountApp (__app) {
   }
 
   // Resolve route components
-  const Components = await Promise.all(resolveComponents(app.context.route))
+  const Components = await Promise.all(resolveComponents(router))
 
   // Enable transitions
   _app.setTransitions = _app.$options.nuxt.setTransitions.bind(_app)

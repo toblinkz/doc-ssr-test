@@ -27,12 +27,9 @@ export default (ctx, inject) => {
   inject('content', $content)
   ctx.$content = $content
 
-      const logger = {
-        log: (...args) => console.log('[@nuxt/content]', ...args),
-        warn: (...args) => console.warn('[@nuxt/content]', ...args),
-      }
+  const logger = require('consola').withScope('@nuxt/content')
       if (!window.WebSocket) {
-        logger.warn('Could not activate hot reload, your browser does not support WebSocket.')
+        logger.warn('[@nuxt/content] Could not activate hot reload, your browser does not support WebSocket.')
         return
       }
       let ws = null

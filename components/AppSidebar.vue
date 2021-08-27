@@ -141,6 +141,14 @@
            </li>
            <li class="text-gray-700 dark:text-gray-300">
              <NuxtLink
+               to="voice-call"
+               class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+             >
+               Voice Call
+             </NuxtLink>
+           </li>
+           <li class="text-gray-700 dark:text-gray-300">
+             <NuxtLink
                to="verify-token"
                class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
              >

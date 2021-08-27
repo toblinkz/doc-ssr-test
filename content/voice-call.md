@@ -1,15 +1,15 @@
 ---
-title: Voice Token
-description: 'Termii Voice Token'
-position: 14
+title: Voice Call
+description: 'Termii Voice Call'
+position: 15
 category: Token
 ---
 
-The voice token API enables you to trigger one-time-passwords (OTP) through the voice channel to a phone number. OTPs created, are generated randomly. These OTPs  can only be verified using our <a href="/verify-token"  target="_blank"  style="text-decoration=underline; cursor: pointer;  color: rgb(64, 109, 173);">Verify Token API</a> .
+The voice call API enables you to send one-time-passwords (OTP) through the voice channel to a phone number. These OTPs can not be verified using our Verify Token API</a> .
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/sms/otp/send/voice
+https://termii.com/api/sms/otp/call
 `<br><br> <b>Request Type : </b> **`POST`**
 
 
@@ -17,9 +17,7 @@ Options |Required| Description |
 --- | --- | --- |
 api_key |yes|*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>). |
 phone_number |yes |*string*<br> The destination phone number. Phone number must be in the international format (`Example: 23490126727`)|
-pin_attempts |yes| Enum: `"NUMERIC"` `"ALPHANUMERIC"`<br> Type of PIN code that will be generated and sent as part of the OTP message. It has a minimum of one attempt. | 
-pin_time_to_live |yes|*integer*<br>Example: `1`<br> Represents how long the PIN is valid before expiration. The time is in minutes. The minimum time value is 0 and the maximum time value is 60  | 
-pin_length |yes|*integer*<br> Example: `4` <br> The length of the PIN code.It has a minimum of 4 and maximum of 8.| 
+code |yes|*numeric*<br> Example: `3344` <br> The code you want your users to receive. It has to be numeric and length must be between 4 and  8 digits.| 
 
 
 <code-group>
@@ -29,9 +27,8 @@ pin_length |yes|*integer*<br> Example: `4` <br> The length of the PIN code.It ha
    {
        "api_key" : "Your API key",
        "phone_number" : "23409800000000",
-       "pin_attempts" : 10,
-       "pin_time_to_live" :  5,
-       "pin_length" : 6,
+       "code" : 55675,
+      
    }
   ```
 
@@ -42,9 +39,7 @@ pin_length |yes|*integer*<br> Example: `4` <br> The length of the PIN code.It ha
  var data = {
                "api_key" : "Your API key",
                "phone_number" : "23409800000000",
-               "pin_attempts" : 10,
-               "pin_time_to_live" :  5,
-               "pin_length" : 6,
+               "code" : 55675
         };
 
 var data = JSON.stringify(data);
@@ -75,9 +70,7 @@ xhr.send(data);
     var data = {
                    "api_key" : "Your API key",
                    "phone_number" : "23409800000000",
-                   "pin_attempts" : 10,
-                   "pin_time_to_live" :  5,
-                   "pin_length" : 6,
+                   "code" : 55675
                 };
     var options = {
       'method': 'POST',
@@ -104,9 +97,7 @@ url = "https://termii.com/api/sms/otp/send/voice"
 payload = {
              "api_key" : "Your API key",
              "phone_number" : "23409800000000",
-             "pin_attempts" : 10,
-             "pin_time_to_live" :  5,
-             "pin_length" : 6,
+             "code" : 55675
          }
 headers = {
   'Content-Type': 'application/json',
@@ -126,9 +117,7 @@ RestClient restClient = new RestClient("https://termii.com/api/sms/otp/send/voic
     JObject objectBody = new JObject();
     objectBody.Add("api_key","Your API Key");
     objectBody.Add("phone_number","+2348109077743");
-    objectBody.Add("pin_attempts", 3);
-    objectBody.Add("pin_time_to_live", 0);
-    objectBody.Add("pin_length", 6);
+    objectBody.Add("code", 55675)
 
     RestRequest restRequest = new RestRequest(Method.POST);
     
@@ -146,8 +135,7 @@ RestClient restClient = new RestClient("https://termii.com/api/sms/otp/send/voic
   .header("Content-Type", "application/json")
   .body("{\n\n  \"api_key\" : \"Your API key\",\n    
          \"phone_number\" : \"23409800000000\",\n   
-             \"pin_attempts\" : 10,\n  \"pin_time_to_live\" :  5,\n  
-              \"pin_length\" : 6\n\n}")
+             \"code\" : 55675\n }")
   .asString();
 
 
@@ -165,7 +153,7 @@ curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://termii.com/api/sms/otp/send/voice',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_MAXREDIRS => 55675,
   CURLOPT_TIMEOUT => 0,
   CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
@@ -174,10 +162,7 @@ curl_setopt_array($curl, array(
 
        "api_key" : "Your API key",
        "phone_number" : "23409800000000",
-       "pin_attempts" : 10,
-       "pin_time_to_live" :  5,
-       "pin_length" : 6
-
+       "code" : 55675
 }',
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json'

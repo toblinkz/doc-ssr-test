@@ -1,10 +1,9 @@
 ---
 title: Libraries and Plugins
 description: 'Termii provides RESTful API which is based on simple HTTP POST/GET requests. Our API lets you create, send, and verify messages, as well as, track your delivery statistics.'
-position: 20
+position: 25
 category: Libraries and Plugins
 ---
-
 
 ## Community maintained Libraries
 Our open-source community provides SDKs in various languages and makes it easier for developers in Africa build quality products using Termii.

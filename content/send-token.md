@@ -1,11 +1,11 @@
 ---
 title: Send Token
 description: 'Termii Send Token'
-position: 12
+position: 13
 category: Token
 ---
 
-The send token API allows businesses trigger one-time-passwords (pins) across any available messaging channel on Termii. One-time-passwords created are generated randomly and there's an option to set an expiry time.
+The send token API allows businesses trigger one-time-passwords (OTP) across any available messaging channel on Termii. One-time-passwords created are generated randomly and there's an option to set an expiry time.
 
 <b>Endpoint : </b>
 `

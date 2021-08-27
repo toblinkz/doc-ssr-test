@@ -1,7 +1,7 @@
 ---
 title: Insights
 description: 'Termii provides RESTful API which is based on simple HTTP POST/GET requests. Our API lets you create, send, and verify messages, as well as, track your delivery statistics.'
-position: 13
+position: 17
 category: Insights
 ---
 

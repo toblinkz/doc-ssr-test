@@ -5,7 +5,7 @@ position: 14
 category: Token
 ---
 
-The voice token API enables you to trigger one-time-passwords (OTP) through the voice channel to a phone number. OTPs created, are generated randomly. These OTPs  can only be verified using our <a href="/verify-token"  target="_blank"  style="text-decoration=underline; cursor: pointer;  color: rgb(64, 109, 173);">Verify Token API</a> .
+The voice token API enables you to generate and trigger one-time passwords (OTP) through the voice channel to a phone number. OTPs are generated and sent to the phone number and can only be verified using our <a href="/verify-token"  target="_blank"  style="text-decoration=underline; cursor: pointer;  color: rgb(64, 109, 173);">Verify Token API</a> .
 
 <b>Endpoint : </b>
 `

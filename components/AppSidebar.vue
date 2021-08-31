@@ -243,7 +243,7 @@
            <NuxtLink
              to="libraries-and-plugins"
            >
-             <i class="icon-books mr-2"></i>Libraries and Plugins
+             <i class="icon-books mr-2"></i>Libraries
            </NuxtLink>
          </p>
        </li>
@@ -253,7 +253,7 @@
              target="_blank"
              href="https://join.slack.com/t/termii-loop/shared_invite/zt-imbqlf68-w4lsPkOzibBXSQohu8_8dQ"
            >
-             <i class="fa fa-slack mr-2"></i>Join Termii Loop
+             <i class="fa fa-slack mr-2"></i>Join Loop
            </a>
          </p>
        </li>

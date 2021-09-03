@@ -5,7 +5,7 @@ position: 15
 category: Token
 ---
 
-The voice call API enables you to send messages from your application through our voice channel to a phone number. Only one-time-passwords (OTP) are allowed for now, and these OTPs can not be verified using our Verify Token API
+The voice call API enables you to send messages from your application through our voice channel to a phone number. Only one-time-passwords (OTP) are allowed for now and these OTPs can not be verified using our Verify Token API.<br><br>
 <b>Endpoint : </b>
 `
 https://termii.com/api/sms/otp/call

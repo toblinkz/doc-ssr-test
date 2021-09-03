@@ -77,12 +77,6 @@
   "TokenNavigationComponent": {
     "description": "Auto imported from components/TokenNavigationComponent.vue"
   },
-  "ModalsSubmitSdkModal": {
-    "description": "Auto imported from components/modals/SubmitSdkModal.vue"
-  },
-  "ModalsSuccessfullySubmittedSdkModal": {
-    "description": "Auto imported from components/modals/SuccessfullySubmittedSdkModal.vue"
-  },
   "IconsBuiltWithNuxtDark": {
     "description": "Auto imported from components/icons/BuiltWithNuxtDark.vue"
   },
@@ -127,5 +121,11 @@
   },
   "IconsIconXCircle": {
     "description": "Auto imported from components/icons/IconXCircle.vue"
+  },
+  "ModalsSubmitSdkModal": {
+    "description": "Auto imported from components/modals/SubmitSdkModal.vue"
+  },
+  "ModalsSuccessfullySubmittedSdkModal": {
+    "description": "Auto imported from components/modals/SuccessfullySubmittedSdkModal.vue"
   }
 }

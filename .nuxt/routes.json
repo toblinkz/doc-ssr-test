@@ -2,15 +2,15 @@
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\User\\\\WebstormProjects\\\\untitled\\\\termii-documentation-v2\\\\pages\\\\index.vue",
+    "component": "/home/tobi/Documents/termii-documentation-v2/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_51328fdc"
+    "_name": "_078ade9a"
   },
   {
     "name": "slug",
     "path": "/:slug",
-    "component": "C:\\\\Users\\\\User\\\\WebstormProjects\\\\untitled\\\\termii-documentation-v2\\\\pages\\\\_slug.vue",
+    "component": "/home/tobi/Documents/termii-documentation-v2/pages/_slug.vue",
     "chunkName": "pages/_slug",
-    "_name": "_4f7bee94"
+    "_name": "_0af8212a"
   }
 ]

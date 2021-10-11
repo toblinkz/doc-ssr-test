@@ -5,7 +5,7 @@ import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from '..\\layouts\\error.vue'
+import NuxtError from '../layouts/error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
@@ -13,14 +13,14 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_c7a1cb66 from 'nuxt_plugin_plugin_c7a1cb66' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_pluginclient_329ee6fa from 'nuxt_plugin_pluginclient_329ee6fa' // Source: .\\content\\plugin.client.js (mode: 'client')
-import nuxt_plugin_pluginserver_4c69fe0b from 'nuxt_plugin_pluginserver_4c69fe0b' // Source: .\\content\\plugin.server.js (mode: 'server')
-import nuxt_plugin_toast_3f1a269f from 'nuxt_plugin_toast_3f1a269f' // Source: .\\toast.js (mode: 'client')
-import nuxt_plugin_axios_72e9d9f0 from 'nuxt_plugin_axios_72e9d9f0' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_vuescrollactive_41e62aee from 'nuxt_plugin_vuescrollactive_41e62aee' // Source: ..\\plugins\\vue-scrollactive (mode: 'all')
-import nuxt_plugin_vuejsmodal_1dce8cf8 from 'nuxt_plugin_vuejsmodal_1dce8cf8' // Source: ..\\plugins\\vue-js-modal (mode: 'all')
-import nuxt_plugin_servicesplugin_7982c148 from 'nuxt_plugin_servicesplugin_7982c148' // Source: ..\\plugins\\services.plugin.js (mode: 'all')
+import nuxt_plugin_plugin_44934416 from 'nuxt_plugin_plugin_44934416' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_pluginclient_4c3e26f1 from 'nuxt_plugin_pluginclient_4c3e26f1' // Source: ./content/plugin.client.js (mode: 'client')
+import nuxt_plugin_pluginserver_9c10cf0e from 'nuxt_plugin_pluginserver_9c10cf0e' // Source: ./content/plugin.server.js (mode: 'server')
+import nuxt_plugin_toast_1ed65d3a from 'nuxt_plugin_toast_1ed65d3a' // Source: ./toast.js (mode: 'client')
+import nuxt_plugin_axios_52a6108b from 'nuxt_plugin_axios_52a6108b' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_vuescrollactive_41e62aee from 'nuxt_plugin_vuescrollactive_41e62aee' // Source: ../plugins/vue-scrollactive (mode: 'all')
+import nuxt_plugin_vuejsmodal_1dce8cf8 from 'nuxt_plugin_vuejsmodal_1dce8cf8' // Source: ../plugins/vue-js-modal (mode: 'all')
+import nuxt_plugin_servicesplugin_7982c148 from 'nuxt_plugin_servicesplugin_7982c148' // Source: ../plugins/services.plugin.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -217,24 +217,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_c7a1cb66 === 'function') {
-    await nuxt_plugin_plugin_c7a1cb66(app.context, inject)
+  if (typeof nuxt_plugin_plugin_44934416 === 'function') {
+    await nuxt_plugin_plugin_44934416(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_pluginclient_329ee6fa === 'function') {
-    await nuxt_plugin_pluginclient_329ee6fa(app.context, inject)
+  if (process.client && typeof nuxt_plugin_pluginclient_4c3e26f1 === 'function') {
+    await nuxt_plugin_pluginclient_4c3e26f1(app.context, inject)
   }
 
-  if (process.server && typeof nuxt_plugin_pluginserver_4c69fe0b === 'function') {
-    await nuxt_plugin_pluginserver_4c69fe0b(app.context, inject)
+  if (process.server && typeof nuxt_plugin_pluginserver_9c10cf0e === 'function') {
+    await nuxt_plugin_pluginserver_9c10cf0e(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_toast_3f1a269f === 'function') {
-    await nuxt_plugin_toast_3f1a269f(app.context, inject)
+  if (process.client && typeof nuxt_plugin_toast_1ed65d3a === 'function') {
+    await nuxt_plugin_toast_1ed65d3a(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_72e9d9f0 === 'function') {
-    await nuxt_plugin_axios_72e9d9f0(app.context, inject)
+  if (typeof nuxt_plugin_axios_52a6108b === 'function') {
+    await nuxt_plugin_axios_52a6108b(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vuescrollactive_41e62aee === 'function') {

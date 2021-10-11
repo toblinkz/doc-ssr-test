@@ -95,7 +95,8 @@ xhr.send(data);
   ```bash
  var request = require('request');
 var data = {
-               "api_key":"Your API KEY",
+               "api_key":"TLtX0534XcuIpjfghpD8qOIKezptPlEAQoipJdcz
+                        2omiPwtQ6g2YypJEO570jg'",
                 "country_code":"234",
                 "sender_id" : "Termii",
                 "message":"Welcome to Termii.", 

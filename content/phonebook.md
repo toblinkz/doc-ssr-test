@@ -156,8 +156,8 @@ xhr.send(data);
  var request = require('request');
 var data = {
             "api_key": "Your API Key",
-            "phonebook_name":"Phone test",
-            "description":"Phonebook for test"
+            "phonebook_name":"Students",
+            "description":"Phonebook for students"
             };
 var options = {
   'method': 'POST',

@@ -17,7 +17,7 @@ whatsapp | This channel sends messages via WhatsApp |
 
 
 ## Send message
-<b>Endpoint : </b> `https://termii.com/api/sms/send`
+<b>Endpoint : </b> `https://api.ng.termii.com/api/sms/send`
 <br><br> <b>Request Type : </b>**`POST`**
 
 
@@ -96,7 +96,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://termii.com/api/sms/send");
+xhr.open("POST", "https://api.ng.termii.com/api/sms/send");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -122,7 +122,7 @@ var data = {
           };
 var options = {
   'method': 'POST',
-  'url': 'https://termii.com/api/sms/send',
+  'url': 'https://api.ng.termii.com/api/sms/send',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -140,7 +140,7 @@ request(options, function (error, response) {
 
   ```bash
 import requests
-url = "https://termii.com/api/sms/send"
+url = "https://api.ng.termii.com/api/sms/send"
 payload = {
             "to": "2347880234567",
              "from": "talert",
@@ -165,7 +165,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-var client = new RestClient("https://termii.com/api/sms/send");
+var client = new RestClient("https://api.ng.termii.com/api/sms/send");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
 request.AddHeader("Content-Type", "application/json");
@@ -183,7 +183,7 @@ Console.WriteLine(response.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/send")
+HttpResponse<String> response = Unirest.post("https://api.ng.termii.com/api/sms/send")
   .header("Content-Type", "application/json")
   .body("{\r\n \"to\":\"2347880234567\",\r\n \"from\":\"talert\",\r\n  \"sms\":\"Hi there, testing Termii\",\r\n \"type\":\"plain\",\r\n  \"api_key\":\"Your API key\",\r\n  \"channel\":\"generic\",\r\n  \"media\": {\r\n \"url\": \"https://media.example.com/file\",\r\n  \"caption\": \"your media file\"\r\n  } \r\n  };")
   .asString();
@@ -197,7 +197,7 @@ HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/send")
  $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://termii.com/api/sms/send',
+  CURLOPT_URL => 'https://api.ng.termii.com/api/sms/send',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,

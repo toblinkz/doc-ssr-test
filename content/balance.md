@@ -10,7 +10,7 @@ The Balance API returns your total balance and balance information from your wal
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/get-balance?api_key=YourAPIKey
+https://api.ng.termii.com/api/get-balance?api_key=YourAPIKey
 `<br><br> <b>Request Type : </b> **`GET`**
 
 Options | Required | Description |

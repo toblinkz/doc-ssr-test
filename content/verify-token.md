@@ -10,7 +10,7 @@ Verify token API, checks tokens sent to customers and returns a response confirm
 
 <b>Endpoint :</b>
 `
-https://termii.com/api/sms/otp/verify
+https://api.ng.termii.com/api/sms/otp/verify
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 Options | Required | Description |
@@ -55,7 +55,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://termii.com/api/sms/otp/verify");
+xhr.open("POST", "https://api.ng.termii.com/api/sms/otp/verify");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -76,7 +76,7 @@ var request = require('request');
                };
     var options = {
       'method': 'POST',
-      'url': 'https://termii.com/api/sms/otp/verify',
+      'url': 'https://api.ng.termii.com/api/sms/otp/verify',
       'headers': {
         'Content-Type': ['application/json', 'application/json']
       },
@@ -95,7 +95,7 @@ var request = require('request');
 
   ```bash
 import requests
-url = "https://termii.com/api/sms/otp/verify"
+url = "https://api.ng.termii.com/api/sms/otp/verify"
 payload = {
             "api_key": "Your API Key",
             "pin_id": "NUMERIC",
@@ -112,7 +112,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/sms/otp/verify");
+RestClient restClient = new RestClient("https://api.ng.termii.com/api/sms/otp/verify");
 
 //Creating Json object
 JObject objectBody = new JObject();
@@ -132,7 +132,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/otp/verify")
+HttpResponse<String> response = Unirest.post("https://api.ng.termii.com/api/sms/otp/verify")
   .header("Content-Type", "application/json")
   .body("{\r\n  \"api_key\": \"Your API key\",\r\n    \"pin_id\": \"c8dcd048-5e7f-4347-8c89-4470c3af0b\",\r\n    \"pin\": \"195558\"\r\n\t}")
   .asString();
@@ -153,7 +153,7 @@ $data = array ( "api_key" => "Your API key",
  $post_data = json_encode($data);
  
  curl_setopt_array($curl, array(
-   CURLOPT_URL => "https://termii.com/api/sms/otp/verify",
+   CURLOPT_URL => "https://api.ng.termii.com/api/sms/otp/verify",
    CURLOPT_RETURNTRANSFER => true,
    CURLOPT_ENCODING => "",
    CURLOPT_MAXREDIRS => 10,

@@ -11,7 +11,7 @@ Templates  API  helps businesses set a template for the one-time-passwords (pins
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/send/template
+https://api.ng.termii.com/api/send/template
 `<br><br> <b>Request Type : </b>**`POST`**
 
 Options | Required | Description |
@@ -67,7 +67,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", " https://termii.com/api/send/template");
+xhr.open("POST", " https://api.ng.termii.com/api/send/template");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -92,7 +92,7 @@ var data = {
             };
 var options = {
   'method': 'POST',
-  'url': ' https://termii.com/api/send/template',
+  'url': ' https://api.ng.termii.com/api/send/template',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -113,7 +113,7 @@ request(options, function (error, response) {
 
 
 import requests
-url = "https://termii.com/api/send/template"
+url = "https://api.ng.termii.com/api/send/template"
 payload = {
             "phone_number": "2347880234567",
              "device_id": "talert",
@@ -137,7 +137,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-var client = new RestClient("https://termii.com/api/send/template");
+var client = new RestClient("https://api.ng.termii.com/api/send/template");
 client.Timeout = -1;
 var request = new RestRequest(Method.GET);
 request.AddHeader("Content-Type", "application/json");
@@ -151,7 +151,7 @@ Console.WriteLine(response.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.POST(" https://termii.com/api/send/template")
+HttpResponse<String> response = Unirest.POST(" https://api.ng.termii.com/api/send/template")
   .header("Content-Type", "application/json")
   .body(" {\r\n \"phone_number\": \"2347880234567\",\r\n \"device_id\": \"talert\",\r\n \"template_id\": \"1493-csdn3-ns34w-sd3434-dfdf\",\r\n \"api_key\": \"plain\",\r\n \"data\": {\r\n \"product_name\": \"Termii\",\r\n \"otp\" : 120435,\r\n \"expiry_time\": \"10 minutes\"\r\n } \r\n   }")
   .asString();
@@ -164,7 +164,7 @@ HttpResponse<String> response = Unirest.POST(" https://termii.com/api/send/templ
  $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://termii.com/api/send/template',
+  CURLOPT_URL => 'https://api.ng.termii.com/api/send/template',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,

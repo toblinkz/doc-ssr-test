@@ -10,7 +10,7 @@ This API allows businesses retrieve the status of all registered sender ID and r
 ## Fetch Sender ID
 <b>Endpoint : </b>
 `
-https://termii.com/api/sender-id?api_key=api-key
+https://api.ng.termii.com/api/sender-id?api_key=api-key
 `<br> <br> <b>Request Type : </b>**`GET`**
 
 
@@ -69,12 +69,12 @@ https://termii.com/api/sender-id?api_key=api-key
           },
          
       ],
-      "first_page_url": "https://termii.com/api/sender-id?page=1",
+      "first_page_url": "https://api.ng.termii.com/api/sender-id?page=1",
       "from": 1,
       "last_page": 47,
-      "last_page_url": "https://termii.com/api/sender-id?page=47",
-      "next_page_url": "https://termii.com/api/sender-id?page=2",
-      "path": "https://termii.com/api/sender-id",
+      "last_page_url": "https://api.ng.termii.com/api/sender-id?page=47",
+      "next_page_url": "https://api.ng.termii.com/api/sender-id?page=2",
+      "path": "https://api.ng.termii.com/api/sender-id",
       "per_page": 10,
       "prev_page_url": null,
       "to": 15,
@@ -87,7 +87,7 @@ https://termii.com/api/sender-id?api_key=api-key
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/sender-id/request
+https://api.ng.termii.com/api/sender-id/request
 `<br> <br> <b>Request Type : </b><span class="lio" style="color:red !important"> <code>POST</code></span>
 
 
@@ -130,7 +130,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://termii.com/api/sender-id/request");
+xhr.open("POST", "https://api.ng.termii.com/api/sender-id/request");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -149,7 +149,7 @@ var data = {"api_key":"Your API key",
 
 var options = {
   'method': 'POST',
-  'url': 'https://termii.com/api/sender-id/request',
+  'url': 'https://api.ng.termii.com/api/sender-id/request',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -168,7 +168,7 @@ request(options, function (error, response) {
   ```bash
  
 import requests
-url = "https://termii.com/api/sender-id/request"
+url = "https://api.ng.termii.com/api/sender-id/request"
 payload = {
            "api_key":"Your API key",
            "sender_id": "Acme",
@@ -186,7 +186,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/sender-id/request");
+RestClient restClient = new RestClient("https://api.ng.termii.com/api/sender-id/request");
 
 //Creating Json object
 JObject objectBody = new JObject();
@@ -210,7 +210,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
- HttpResponse<String> response = Unirest.post("https://termii.com/api/sender-id/request")
+ HttpResponse<String> response = Unirest.post("https://api.ng.termii.com/api/sender-id/request")
    .header("Content-Type", "application/json")
    .body("   {\r\n \"api_key\":\"Your API key\",\r\n  \"sender_id\": \"Acme\",\r\n  \"usecase\": \"Your OTP code is zxsds\",\r\n   \"company\": \"Acme Corp\"\r\n    }")
    .asString();
@@ -226,7 +226,7 @@ $data = array("api_key" => "Your API key", "sender_id" => "Acme",
 $post_data = json_encode($data);
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://termii.com/api/sender-id/request",
+  CURLOPT_URL => "https://api.ng.termii.com/api/sender-id/request",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,

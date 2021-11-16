@@ -12,7 +12,7 @@ Using our campaign APIs, you can view, manage and send a campaign to a phonebook
 
 <b>Endpoint :</b>
 `
-https://termii.com/api/sms/campaigns/send
+https://api.ng.termii.com/api/sms/campaigns/send
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 
@@ -80,7 +80,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", " https://termii.com/api/sms/campaigns/send");
+xhr.open("POST", " https://api.ng.termii.com/api/sms/campaigns/send");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -111,7 +111,7 @@ var data = {
             };
 var options = {
   'method': 'POST',
-  'url': ' https://termii.com/api/sms/campaigns/send',
+  'url': ' https://api.ng.termii.com/api/sms/campaigns/send',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -131,7 +131,7 @@ request(options, function (error, response) {
   ```bash
 
 import requests
-url = " https://termii.com/api/sms/campaigns/send"
+url = " https://api.ng.termii.com/api/sms/campaigns/send"
 payload = {
                "api_key":"Your API KEY",
                 "country_code":"234",
@@ -157,7 +157,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient(" https://termii.com/api/sms/campaigns/send");
+RestClient restClient = new RestClient(" https://api.ng.termii.com/api/sms/campaigns/send");
 
 //Creating Json object
 JObject objectBody = new JObject();
@@ -188,7 +188,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/campaigns/send")
+HttpResponse<String> response = Unirest.post("https://api.ng.termii.com/api/sms/campaigns/send")
   .header("Content-Type", "application/json")
   .body("{\r\n \"api_key\": \"Your API Key\",\r\n  \"phone_book\": \"Phone Test \",\r\n   \"description\": \"Phonebook for test\"\r\n    }")
   .asString();
@@ -200,7 +200,7 @@ HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/campaig
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-CURLOPT_URL => 'https://termii.com/api/sms/campaigns/send',
+CURLOPT_URL => 'https://api.ng.termii.com/api/sms/campaigns/send',
 CURLOPT_RETURNTRANSFER => true,
 CURLOPT_ENCODING => '',
 CURLOPT_MAXREDIRS => 10,
@@ -256,7 +256,7 @@ echo $response;
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/sms/campaigns?api_key=Your API KEY
+https://api.ng.termii.com/api/sms/campaigns?api_key=Your API KEY
 `<br><br> <b>Request Type : </b> **`GET`**
 
 
@@ -389,8 +389,8 @@ https://termii.com/api/sms/campaigns?api_key=Your API KEY
         }
     ],
     "links": {
-        "first": "https://termii.com/api/sms/campaigns?page=1",
-        "last": "https://termii.com/api/sms/campaigns?page=1",
+        "first": "https://api.ng.termii.com/api/sms/campaigns?page=1",
+        "last": "https://api.ng.termii.com/api/sms/campaigns?page=1",
         "prev": null,
         "next": null
     },
@@ -398,7 +398,7 @@ https://termii.com/api/sms/campaigns?api_key=Your API KEY
         "current_page": 1,
         "from": 1,
         "last_page": 1,
-        "path": "https://termii.com/api/sms/campaigns",
+        "path": "https://api.ng.termii.com/api/sms/campaigns",
         "per_page": 15,
         "to": 11,
         "total": 11
@@ -413,7 +413,7 @@ https://termii.com/api/sms/campaigns?api_key=Your API KEY
 ### Fetch campaign history 
 <b>Endpoint :</b>
 `
-https://termii.com/api/sms/campaigns/campaign_id?api_key=Your API KEY
+https://api.ng.termii.com/api/sms/campaigns/campaign_id?api_key=Your API KEY
 `<br> <br> <b>Request Type : </b>**`GET`**
 
 
@@ -441,8 +441,8 @@ https://termii.com/api/sms/campaigns/campaign_id?api_key=Your API KEY
     }
   ],
   "links": {
-    "first": "https://termii.com/api/sms/campaigns/C5dbae7faa2b65?page=1",
-    "last": "https://termii.com/api/sms/campaigns/C5dbae7faa2b65?page=1",
+    "first": "https://api.ng.termii.com/api/sms/campaigns/C5dbae7faa2b65?page=1",
+    "last": "https://api.ng.termii.com/api/sms/campaigns/C5dbae7faa2b65?page=1",
     "prev": null,
     "next": null
   },
@@ -450,7 +450,7 @@ https://termii.com/api/sms/campaigns/campaign_id?api_key=Your API KEY
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "https://termii.com/api/sms/campaigns/C5dbae7faa2b65",
+    "path": "https://api.ng.termii.com/api/sms/campaigns/C5dbae7faa2b65",
     "per_page": 15,
     "to": 1,
     "total": 1

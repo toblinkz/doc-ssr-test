@@ -9,7 +9,7 @@ The send token API allows businesses trigger one-time-passwords (OTP) across any
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/sms/otp/send
+https://api.ng.termii.com/api/sms/otp/send
 `<br><br> <b>Request Type : </b> **`POST`**
 
 
@@ -76,7 +76,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://termii.com/api/sms/otp/send");
+xhr.open("POST", "https://api.ng.termii.com/api/sms/otp/send");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -105,7 +105,7 @@ xhr.send(data);
                 };
     var options = {
       'method': 'POST',
-      'url': 'https://termii.com/api/sms/otp/send',
+      'url': 'https://api.ng.termii.com/api/sms/otp/send',
       'headers': {
         'Content-Type': ['application/json', 'application/json']
       },
@@ -124,7 +124,7 @@ xhr.send(data);
 
   ```bash
 import requests
-url = "https://termii.com/api/sms/otp/send"
+url = "https://api.ng.termii.com/api/sms/otp/send"
 payload = {
            "api_key" : "Your API key",
             "message_type" : "NUMERIC",
@@ -150,7 +150,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/sms/otp/send");
+RestClient restClient = new RestClient("https://api.ng.termii.com/api/sms/otp/send");
     
     //Creating Json object
     JObject objectBody = new JObject();
@@ -179,7 +179,7 @@ RestClient restClient = new RestClient("https://termii.com/api/sms/otp/send");
 
   ```bash
   Unirest.setTimeouts(0, 0);
-  HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/otp/send")
+  HttpResponse<String> response = Unirest.post("https://api.ng.termii.com/api/sms/otp/send")
     .header("Content-Type", "application/json")
     .body("{\r\n  \"api_key\" : \"Your API key\",\r\n \"message_type\" : \"NUMERIC\",\r\n  \"to\" : \"eg. 2348109077743\",\r\n       \"from\" : \"Aproved Sender or Device IDs\",\r\n       \"channel\" : \"dnd\",\r\n       \"pin_attempts\" : 10,\r\n       \"pin_time_to_live\" :  5,\r\n       \"pin_length\" : 6,\r\n       \"pin_placeholder\" : \"< 1234 >\",\r\n       \"message_text\" : \"Your pin is < 1234 >\",\r\n       \"pin_type\" : \"NUMERIC\"\r\n   }\r\n      ")
     .asString();
@@ -206,7 +206,7 @@ $data = array( "api_key" => "Your API key",
  $post_data = json_encode($data);
  
  curl_setopt_array($curl, array(
-   CURLOPT_URL => "https://termii.com/api/sms/otp/send",
+   CURLOPT_URL => "https://api.ng.termii.com/api/sms/otp/send",
    CURLOPT_RETURNTRANSFER => true,
    CURLOPT_ENCODING => "",
    CURLOPT_MAXREDIRS => 10,

@@ -22,13 +22,19 @@ Ship your products faster & in any language you are proficient in by using SDKs 
 In order to use Termii's APIs, you need to first create an account for free at <a class="link">www.termii.com</a>. 
 
 <b>BASE URL</b>
-   <code-block active>
+<br>
+<br>
+Your Termii account has its own Base URL, which you should use in all API requests.  
+The base URL shown below is a sample base URL. Your base URL can be found on your <a style="cursor:pointer; text-decoration:underline; color:#406DAD"  href="https://accounts.termii.com/#/" target ="_blank">dashboard<a/>.
+ <code-block active>
 
   ```bash
 
- https://termii.com/api
+ https://api.ng.termii.com/api
   ```
+The base URL is used to route your request to the appropriate "regulatory region" and to optimize traffic between data centers with the region.
   </code-block>
+
 
   
 ## Explore Products

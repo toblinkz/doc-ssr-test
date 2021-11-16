@@ -10,7 +10,7 @@ Tokens are numeric or alpha-numeric codes generated to authenticate login reques
 <br>
 <b>Endpoint : </b>
 `
-https://termii.com/api/sms/otp/generate
+https://api.ng.termii.com/api/sms/otp/generate
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 
@@ -63,7 +63,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://termii.com/api/sms/otp/generate");
+xhr.open("POST", "https://api.ng.termii.com/api/sms/otp/generate");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -86,7 +86,7 @@ var data = {
             };
 var options = {
   'method': 'POST',
-  'url': 'https://termii.com/api/sms/otp/generate',
+  'url': 'https://api.ng.termii.com/api/sms/otp/generate',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -104,7 +104,7 @@ request(options, function (error, response) {
 
   ```bash
 import requests
-url = "https://termii.com/api/sms/otp/generate"
+url = "https://api.ng.termii.com/api/sms/otp/generate"
 payload = {
              "api_key": "Your API Key",
               "pin_type": "NUMERIC",
@@ -124,7 +124,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/sms/otp/generate");
+RestClient restClient = new RestClient("https://api.ng.termii.com/api/sms/otp/generate");
 
 //Creating Json object
 JObject objectBody = new JObject();
@@ -148,7 +148,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
   Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.post("https://termii.com/api/sms/otp/generate")
+HttpResponse<String> response = Unirest.post("https://api.ng.termii.com/api/sms/otp/generate")
   .header("Content-Type", "application/json")
   .body("{\r\n  \"api_key\": \"Your API Key\",\r\n    \"pin_type\": \"NUMERIC\",\r\n  \"phone_number\": \"2348109477743\",\r\n    \"pin_attempts\": 3,\r\n   \"pin_time_to_live\": 0,\r\n    \"pin_length\": 4\r\n }")
   .asString();
@@ -165,7 +165,7 @@ $data = array("api_key" => "Your API key", "pint_type" => "NUMERIC",
 $post_data = json_encode($data);
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://termii.com/api/sms/otp/generate",
+  CURLOPT_URL => "https://api.ng.termii.com/api/sms/otp/generate",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,

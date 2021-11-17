@@ -9,7 +9,7 @@ This Inbox API returns reports for messages sent across the sms, voice & whatsap
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/sms/inbox?api_key=YourAPIKey
+https://api.ng.termii.com/api/sms/inbox?api_key=YourAPIKey
 `<br><br> <b>Request Type : </b> **`GET`**
 
 <alert>Message IDs are gotten when a message is sent on Termii. Find the ID in the JSON response and input it into the inbox API to get a specific delivery report,

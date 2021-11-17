@@ -11,7 +11,7 @@ Contacts API allows you manage (i.e. edit, update, & delete) contacts in your ph
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/phonebooks/{phonebook_id}/contacts
+https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts
 `<br><br> <b>Request Type : </b> **`GET`**
 
 
@@ -84,8 +84,8 @@ https://termii.com/api/phonebooks/{phonebook_id}/contacts
     ],
   
     "links": {
-        "first": "https://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts?page=1",
-        "last": "https://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts?page=1",
+        "first": "https://api.ng.termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts?page=1",
+        "last": "https://api.ng.termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts?page=1",
         "prev": null,
         "next": null
     },
@@ -93,7 +93,7 @@ https://termii.com/api/phonebooks/{phonebook_id}/contacts
         "current_page": 1,
         "from": 1,
         "last_page": 1,
-        "path": "https://termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts",
+        "path": "https://api.ng.termii.com/api/phonebooks/04c3ebcc-3a7e-485a-88c1-68e731386f77/contacts",
         "per_page": 25,
         "to": 22,
         "total": 22
@@ -103,7 +103,7 @@ https://termii.com/api/phonebooks/{phonebook_id}/contacts
 ### Add single contacts to phonebook
 <b>Endpoint :</b>
 `
-https://termii.com/api/phonebooks/{phonebook_id}/contacts
+https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 
@@ -158,7 +158,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://termii.com/api/phonebooks/{phonebook_id}/contacts");
+xhr.open("POST", "https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -181,7 +181,7 @@ xhr.send(data);
                 };
     var options = {
       'method': 'POST',
-      'url': 'https://termii.com/api/phonebooks/{phonebook_id}/contacts',
+      'url': 'https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts',
       'headers': {
         'Content-Type': ['application/json', 'application/json']
       },
@@ -200,7 +200,7 @@ xhr.send(data);
   ```bash
 
   import requests
-  url = "https://termii.com/api/phonebooks/{phonebook_id}/contacts"
+  url = "https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts"
   payload = {
                 "api_key": "Your API Key",
                 "phone_number":"8123696237",
@@ -222,7 +222,7 @@ xhr.send(data);
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/phonebooks/{phonebook_id}/contacts");
+RestClient restClient = new RestClient("https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts");
 
 //Creating Json object
 JObject objectBody = new JObject();
@@ -247,7 +247,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.post("https://termii.com/api/phonebooks/{phonebook_id}/contacts")
+HttpResponse<String> response = Unirest.post("https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts")
   .header("Content-Type", "application/json")
   .body(" {\r\n    \"api_key\": \"Your API Key\",\r\n \
     "phone_number\":\"8123696237\",\r\n \
@@ -271,7 +271,7 @@ HttpResponse<String> response = Unirest.post("https://termii.com/api/phonebooks/
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://termii.com/api/phonebooks/{phonebook_id}/contacts',
+  CURLOPT_URL => 'https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -326,7 +326,7 @@ echo $response;
 ### Add multiple contacts to phonebook
 <b>Endpoint :</b>
 `
-https://termii.com/api/phonebooks/{phonebook_id}/contacts
+https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 
@@ -363,7 +363,7 @@ country_code | yes |*string*<br>Represents short numeric geographical codes deve
     redirect: 'follow'
   };
   
-  fetch("https://termii.com/api/phonebooks/{phonebook_id}/contacts", requestOptions)
+  fetch("https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
@@ -386,7 +386,7 @@ country_code | yes |*string*<br>Represents short numeric geographical codes deve
     
     var config = {
       method: 'post',
-      url: 'https://termii.com/api/phonebooks/{phonebook_id}/contacts',
+      url: 'https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts',
       data : data
     };
     
@@ -406,7 +406,7 @@ country_code | yes |*string*<br>Represents short numeric geographical codes deve
 
   import requests
   
-  url = "https://termii.com/api/phonebooks/{phonebook_id}/contacts"
+  url = "https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts"
   
   payload={'country_code': '234'}
   files=[
@@ -426,7 +426,7 @@ country_code | yes |*string*<br>Represents short numeric geographical codes deve
 <code-block label="C#" >
 
   ```bash
-var client = new RestClient("https://termii.com/api/phonebooks/{phonebook_id}/contacts");
+var client = new RestClient("https://api.ng.termii.com/api/phonebooks/{phonebook_id}/contacts");
 client.Timeout = -1;
 
 var request = new RestRequest(Method.POST);
@@ -499,7 +499,7 @@ echo $response;
 ### Delete phonebook
 <b>Endpoint :</b>
 `
-https://termii.com/api/phonebook/contact/contact_id?api_key=YourAPIKey
+https://api.ng.termii.com/api/phonebook/contact/contact_id?api_key=YourAPIKey
 `<br> <br> <b>Request Type : </b>**`DELETE`**
 
 

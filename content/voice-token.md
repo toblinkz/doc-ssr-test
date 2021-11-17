@@ -9,7 +9,7 @@ The voice token API enables you to generate and trigger one-time passwords (OTP)
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/sms/otp/send/voice
+https://api.ng.termii.com/api/sms/otp/send/voice
 `<br><br> <b>Request Type : </b> **`POST`**
 
 
@@ -58,7 +58,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://termii.com/api/sms/otp/send/voice");
+xhr.open("POST", "https://api.ng.termii.com/api/sms/otp/send/voice");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -81,7 +81,7 @@ xhr.send(data);
                 };
     var options = {
       'method': 'POST',
-      'url': 'https://termii.com/api/sms/otp/send/voice',
+      'url': 'https://api.ng.termii.com/api/sms/otp/send/voice',
       'headers': {
         'Content-Type': ['application/json', 'application/json']
       },
@@ -100,7 +100,7 @@ xhr.send(data);
 
   ```bash
 import requests
-url = "https://termii.com/api/sms/otp/send/voice"
+url = "https://api.ng.termii.com/api/sms/otp/send/voice"
 payload = {
              "api_key" : "Your API key",
              "phone_number" : "23409800000000",
@@ -120,7 +120,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/sms/otp/send/voice");
+RestClient restClient = new RestClient("https://api.ng.termii.com/api/sms/otp/send/voice");
     
     //Creating Json object
     JObject objectBody = new JObject();
@@ -142,7 +142,7 @@ RestClient restClient = new RestClient("https://termii.com/api/sms/otp/send/voic
 
   ```bash
  Unirest.setTimeouts(0, 0);
- HttpResponse<String> response = Unirest.get("https://termii.com/api/sms/otp/send/voice")
+ HttpResponse<String> response = Unirest.get("https://api.ng.termii.com/api/sms/otp/send/voice")
   .header("Content-Type", "application/json")
   .body("{\n\n  \"api_key\" : \"Your API key\",\n    
          \"phone_number\" : \"23409800000000\",\n   
@@ -162,7 +162,7 @@ RestClient restClient = new RestClient("https://termii.com/api/sms/otp/send/voic
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://termii.com/api/sms/otp/send/voice',
+  CURLOPT_URL => 'https://api.ng.termii.com/api/sms/otp/send/voice',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,

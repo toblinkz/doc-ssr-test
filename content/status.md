@@ -9,7 +9,7 @@ The status API allows businesses to detect if a number is fake or has ported to 
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/insight/number/query?phone_number=phone_number&api_key=api_key&country_code=NG
+https://api.ng.termii.com/api/insight/number/query?phone_number=phone_number&api_key=api_key&country_code=NG
 `<br> <br> <b>Request Type : </b> **`GET`**
 
 Options | Required | Description |
@@ -51,7 +51,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("GET", " https://termii.com/api/insight/number/query");
+xhr.open("GET", " https://api.ng.termii.com/api/insight/number/query");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -71,7 +71,7 @@ xhr.send(data);
                 };
     var options = {
       'method': 'GET',
-      'url': ' https://termii.com/api/insight/number/query',
+      'url': ' https://api.ng.termii.com/api/insight/number/query',
       'headers': {
         'Content-Type': ['application/json', 'application/json']
       },
@@ -92,7 +92,7 @@ xhr.send(data);
 
   ```bash
 import requests
-url = "https://termii.com/api/insight/number/query"
+url = "https://api.ng.termii.com/api/insight/number/query"
 payload = {
            "api_key": "Your API key",
            "phone_number": "2348753243651",
@@ -110,7 +110,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient(" https://termii.com/api/insight/number/query");
+RestClient restClient = new RestClient(" https://api.ng.termii.com/api/insight/number/query");
 
 //Creating Json object
 JObject objectBody = new JObject();
@@ -130,7 +130,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
  Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.get(" https://termii.com/api/insight/number/query")
+HttpResponse<String> response = Unirest.get(" https://api.ng.termii.com/api/insight/number/query")
   .header("Content-Type", "application/json")
   .body("{\r\n \"api_key\": \"Your API Key\",\r\n \"phone_number\": \"2348753243651\"\r\n \"country_code\": \"NG"\"\r\n }")
   .asString();
@@ -145,7 +145,7 @@ $data = array ( "api_key" => "Your API key","phone_number" => "+2348753243651", 
  $post_data = json_encode($data);
  
  curl_setopt_array($curl, array(
-   CURLOPT_URL => " https://termii.com/api/insight/number/query",
+   CURLOPT_URL => " https://api.ng.termii.com/api/insight/number/query",
    CURLOPT_RETURNTRANSFER => true,
    CURLOPT_ENCODING => "",
    CURLOPT_MAXREDIRS => 10,

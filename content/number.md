@@ -10,7 +10,7 @@ This API allows businesses send messages to customers using Termii's auto-genera
 ## Send Message
 <b>Endpoint :</b>
 `
-https://termii.com/api/sms/number/send
+https://api.ng.termii.com/api/sms/number/send
 `<br> <br> <b>Request Type : </b>**`POST`**
 
 
@@ -52,7 +52,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "https://termii.com/api/sms/number/send");
+xhr.open("POST", "https://api.ng.termii.com/api/sms/number/send");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -73,7 +73,7 @@ var data = {
             };
 var options = {
   'method': 'POST',
-  'url': 'https://termii.com/api/sms/number/send',
+  'url': 'https://api.ng.termii.com/api/sms/number/send',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -93,7 +93,7 @@ request(options, function (error, response) {
   ```bash
 
 import requests
-url = "https://termii.com/api/sms/number/send"
+url = "https://api.ng.termii.com/api/sms/number/send"
 payload = {
              "to": "2347089229611",
              "sms": "Hi there, testing Termii",
@@ -110,7 +110,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/sms/number/send");
+RestClient restClient = new RestClient("https://api.ng.termii.com/api/sms/number/send");
 
 //Creating Json object
 JObject objectBody = new JObject();
@@ -132,7 +132,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
 Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.post(" https://termii.com/api/sms/number/send")
+HttpResponse<String> response = Unirest.post(" https://api.ng.termii.com/api/sms/number/send")
   .header("Content-Type", "application/json")
   .body("{\r\n \"to\": \"2347089239667\",\r\n  \"sms\": \"Hi there, testing Termii \",\r\n   \"api_key\": \"Your API Key\"\r\n    }")
   .asString();
@@ -147,7 +147,7 @@ $data = array("to" => "2347230545644","sms"=>"Hi there, testing Termii","api_key
 $post_data = json_encode($data);
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://termii.com/api/sms/number/send",
+  CURLOPT_URL => "https://api.ng.termii.com/api/sms/number/send",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,

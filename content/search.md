@@ -9,7 +9,7 @@ The search API allows businesses verify phone numbers and automatically detect t
 
 <b>Endpoint : </b>
 `
-https://termii.com/api/check/dnd?api_key=my_api_key&phone_number=phone_number
+https://api.ng.termii.com/api/check/dnd?api_key=my_api_key&phone_number=phone_number
 `<br> <br> <b>Request Type : </b> **`GET`**
 
 Options | Required | Description |
@@ -51,7 +51,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("GET", "https://termii.com/api/check/dnd");
+xhr.open("GET", "https://api.ng.termii.com/api/check/dnd");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -70,7 +70,7 @@ xhr.send(data);
                 };
     var options = {
       'method': 'GET',
-      'url': 'https://termii.com/api/check/dnd',
+      'url': 'https://api.ng.termii.com/api/check/dnd',
       'headers': {
         'Content-Type': ['application/json', 'application/json']
       },
@@ -89,7 +89,7 @@ xhr.send(data);
 
   ```bash
 import requests
-url = "https://termii.com/api/check/dnd"
+url = "https://api.ng.termii.com/api/check/dnd"
 payload = {
            "api_key": "Your API key",
            "phone_number": "2348753243651"
@@ -105,7 +105,7 @@ print(response.text)
 <code-block label="C#" >
 
   ```bash
-RestClient restClient = new RestClient("https://termii.com/api/check/dnd");
+RestClient restClient = new RestClient("https://api.ng.termii.com/api/check/dnd");
 
 //Creating Json object
 JObject objectBody = new JObject();
@@ -125,7 +125,7 @@ Console.WriteLine(restResponse.Content);
 
   ```bash
  Unirest.setTimeouts(0, 0);
-HttpResponse<String> response = Unirest.get("https://termii.com/api/check/dnd")
+HttpResponse<String> response = Unirest.get("https://api.ng.termii.com/api/check/dnd")
   .header("Content-Type", "application/json")
   .body("{\r\n \"api_key\": \"Your API Key\",\r\n \"phone_number\": \"2348753243651\"\r\n }")
   .asString();
@@ -141,7 +141,7 @@ $data = array ( "api_key" => "Your API key","phone_number" => "+2348753243651",)
  $post_data = json_encode($data);
  
  curl_setopt_array($curl, array(
-   CURLOPT_URL => "https://termii.com/api/check/dnd",
+   CURLOPT_URL => "https://api.ng.termii.com/api/check/dnd",
    CURLOPT_RETURNTRANSFER => true,
    CURLOPT_ENCODING => "",
    CURLOPT_MAXREDIRS => 10,

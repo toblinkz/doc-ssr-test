@@ -2,15 +2,15 @@
   {
     "name": "index",
     "path": "/",
-    "component": "/home/tobi/Documents/termii-documentation-v2/pages/index.vue",
+    "component": "/Users/ayomideawe/Sandbox/termii-doc/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_078ade9a"
+    "_name": "_0c972bba"
   },
   {
     "name": "slug",
     "path": "/:slug",
-    "component": "/home/tobi/Documents/termii-documentation-v2/pages/_slug.vue",
+    "component": "/Users/ayomideawe/Sandbox/termii-doc/pages/_slug.vue",
     "chunkName": "pages/_slug",
-    "_name": "_0af8212a"
+    "_name": "_10046e4a"
   }
 ]

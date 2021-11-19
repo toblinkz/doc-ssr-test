@@ -30,7 +30,7 @@ The base URL shown below is a sample base URL. Your base URL can be found on you
 
   ```bash
 
- https://api.ng.termii.com/api
+ https://api.ng.termii.com
   ```
 The base URL is used to route your request to the appropriate "regulatory region" and to optimize traffic between data centers with the region.
   </code-block>

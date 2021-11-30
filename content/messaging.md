@@ -253,11 +253,11 @@ echo $response;
 Options | Required |Description |
 --- | --- | --- |
 api_key | yes |*string*<br> Your API key (It can be found on your <a href="https://accounts.termii.com/#/" target="_blank" style="text-decoration:underline; cursor:pointer">Termii dashboard</a>. |
-to |yes|*string*<br> Represents the array of phone numbers you are sending to (Example: `["23490555546", "23423490126999","23490555546"]`). Phone numbers must be in international format (`Example: 23490126727`). Please note: the array can only take 10,000 phone numbers |
+to |yes|*string*<br> Represents the array of phone numbers you are sending to (Example: `["23490555546", "23423490126999","23490555546"]`). Phone numbers must be in international format (`Example: 23490126727`). Please note: the array can take up to 10,000 phone numbers |
 from |yes|*string*<br>Represents a sender ID for sms which can be Alphanumeric or Device name for Whatsapp. Alphanumeric sender ID length should be between 3 and 11 characters (Example:`CompanyName`)  |
 sms |yes| *string*<br> Text of a message that would be sent to the destination phone number|
-type |yes|*string*<br>  The kind of message that is sent, which is  a `plain` message.  |
-channel |yes|*string*<br> This is the route through which the message is sent. It is either `dnd`, `whatsapp`, or `generic` |
+type |yes|*string*<br>  The type of message that is sent, which is  a `plain` message.  |
+channel |yes|*string*<br> This is the channel through which the message is sent. It is either `dnd`, `whatsapp`, or `generic` |
 
 
 <br>

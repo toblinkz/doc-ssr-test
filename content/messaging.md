@@ -194,38 +194,31 @@ HttpResponse<String> response = Unirest.post("https://api.ng.termii.com/api/sms/
 <code-block label="PHP" >
 
   ```bash
- $curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.ng.termii.com/api/sms/send',
+  $curl = curl_init();
+  $data = array("api_key" => "Your API key", "to" => "2347880234567",  "from" => "talert",
+  "sms" => "Hi there, testing Termii ",  "type" => "plain",  "channel" => "generic" );
+  
+  $post_data = json_encode($data);
+  
+  curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.ng.termii.com/api/sms/send",
   CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
+  CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 0,
   CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS =>' {
-            "to": "2347880234567",
-             "from": "talert",
-             "sms": "Hi there, testing Termii ",
-             "type": "plain",
-             "channel": "generic",
-             "api_key": "Your API Key",
-               "media": {
-                  "url": "https://media.example.com/file",
-                  "caption": "your media file"
-              }   
-         }',
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => $post_data,
   CURLOPT_HTTPHEADER => array(
-    'Content-Type: application/json'
+  "Content-Type: application/json"
   ),
-));
-
-$response = curl_exec($curl);
-
-curl_close($curl);
-echo $response;
+  ));
+  
+  $response = curl_exec($curl);
+  
+  curl_close($curl);
+  echo $response;
 
   ```
   </code-block>

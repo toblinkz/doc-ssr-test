@@ -26,6 +26,8 @@ export { default as SdkCard } from '../../components/SdkCard.vue'
 export { default as SubmitButton } from '../../components/SubmitButton.vue'
 export { default as SwitchNavigationComponent } from '../../components/SwitchNavigationComponent.vue'
 export { default as TokenNavigationComponent } from '../../components/TokenNavigationComponent.vue'
+export { default as ModalsSubmitSdkModal } from '../../components/modals/SubmitSdkModal.vue'
+export { default as ModalsSuccessfullySubmittedSdkModal } from '../../components/modals/SuccessfullySubmittedSdkModal.vue'
 export { default as IconsBuiltWithNuxtDark } from '../../components/icons/BuiltWithNuxtDark.vue'
 export { default as IconsBuiltWithNuxtLight } from '../../components/icons/BuiltWithNuxtLight.vue'
 export { default as IconsIconBadgeCheck } from '../../components/icons/IconBadgeCheck.vue'
@@ -41,8 +43,6 @@ export { default as IconsIconSun } from '../../components/icons/IconSun.vue'
 export { default as IconsIconTranslate } from '../../components/icons/IconTranslate.vue'
 export { default as IconsIconTwitter } from '../../components/icons/IconTwitter.vue'
 export { default as IconsIconXCircle } from '../../components/icons/IconXCircle.vue'
-export { default as ModalsSubmitSdkModal } from '../../components/modals/SubmitSdkModal.vue'
-export { default as ModalsSuccessfullySubmittedSdkModal } from '../../components/modals/SuccessfullySubmittedSdkModal.vue'
 
 export const LazyAlert = import('../../components/Alert.vue' /* webpackChunkName: "components/alert" */).then(c => wrapFunctional(c.default || c))
 export const LazyAlgoliaAppSearch = import('../../components/AlgoliaAppSearch.vue' /* webpackChunkName: "components/algolia-app-search" */).then(c => wrapFunctional(c.default || c))
@@ -70,6 +70,8 @@ export const LazySdkCard = import('../../components/SdkCard.vue' /* webpackChunk
 export const LazySubmitButton = import('../../components/SubmitButton.vue' /* webpackChunkName: "components/submit-button" */).then(c => wrapFunctional(c.default || c))
 export const LazySwitchNavigationComponent = import('../../components/SwitchNavigationComponent.vue' /* webpackChunkName: "components/switch-navigation-component" */).then(c => wrapFunctional(c.default || c))
 export const LazyTokenNavigationComponent = import('../../components/TokenNavigationComponent.vue' /* webpackChunkName: "components/token-navigation-component" */).then(c => wrapFunctional(c.default || c))
+export const LazyModalsSubmitSdkModal = import('../../components/modals/SubmitSdkModal.vue' /* webpackChunkName: "components/modals-submit-sdk-modal" */).then(c => wrapFunctional(c.default || c))
+export const LazyModalsSuccessfullySubmittedSdkModal = import('../../components/modals/SuccessfullySubmittedSdkModal.vue' /* webpackChunkName: "components/modals-successfully-submitted-sdk-modal" */).then(c => wrapFunctional(c.default || c))
 export const LazyIconsBuiltWithNuxtDark = import('../../components/icons/BuiltWithNuxtDark.vue' /* webpackChunkName: "components/icons-built-with-nuxt-dark" */).then(c => wrapFunctional(c.default || c))
 export const LazyIconsBuiltWithNuxtLight = import('../../components/icons/BuiltWithNuxtLight.vue' /* webpackChunkName: "components/icons-built-with-nuxt-light" */).then(c => wrapFunctional(c.default || c))
 export const LazyIconsIconBadgeCheck = import('../../components/icons/IconBadgeCheck.vue' /* webpackChunkName: "components/icons-icon-badge-check" */).then(c => wrapFunctional(c.default || c))
@@ -85,5 +87,3 @@ export const LazyIconsIconSun = import('../../components/icons/IconSun.vue' /* w
 export const LazyIconsIconTranslate = import('../../components/icons/IconTranslate.vue' /* webpackChunkName: "components/icons-icon-translate" */).then(c => wrapFunctional(c.default || c))
 export const LazyIconsIconTwitter = import('../../components/icons/IconTwitter.vue' /* webpackChunkName: "components/icons-icon-twitter" */).then(c => wrapFunctional(c.default || c))
 export const LazyIconsIconXCircle = import('../../components/icons/IconXCircle.vue' /* webpackChunkName: "components/icons-icon-x-circle" */).then(c => wrapFunctional(c.default || c))
-export const LazyModalsSubmitSdkModal = import('../../components/modals/SubmitSdkModal.vue' /* webpackChunkName: "components/modals-submit-sdk-modal" */).then(c => wrapFunctional(c.default || c))
-export const LazyModalsSuccessfullySubmittedSdkModal = import('../../components/modals/SuccessfullySubmittedSdkModal.vue' /* webpackChunkName: "components/modals-successfully-submitted-sdk-modal" */).then(c => wrapFunctional(c.default || c))

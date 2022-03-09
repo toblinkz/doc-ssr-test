@@ -2,15 +2,15 @@
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/ayomideawe/Sandbox/termii-doc/pages/index.vue",
+    "component": "/Users/mac/Documents/Termii_Projects/Documentation/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_0c972bba"
+    "_name": "_60942f31"
   },
   {
     "name": "slug",
     "path": "/:slug",
-    "component": "/Users/ayomideawe/Sandbox/termii-doc/pages/_slug.vue",
+    "component": "/Users/mac/Documents/Termii_Projects/Documentation/pages/_slug.vue",
     "chunkName": "pages/_slug",
-    "_name": "_10046e4a"
+    "_name": "_5edd8de9"
   }
 ]

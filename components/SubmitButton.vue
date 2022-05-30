@@ -6,6 +6,7 @@
      class="text-white rounded dark:text-gray-300 bg-blue button-color cursor-pointer  p-3  dark-hover:text-primary-500 mr-2"
    >
      Submit an SDK
+
    </a>
    & get a Termii Swag if it works!
  </div>
